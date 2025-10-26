@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function Header() {
@@ -19,8 +20,15 @@ export default function Header() {
       <nav className="container-custom py-4" aria-label="Navigazione principale">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="text-xl md:text-2xl font-bold text-white hover:text-accent transition-colors">
-            Mommy DJ
+          <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
+            <Image
+              src="/logo.svg"
+              alt="Mommy DJ Logo"
+              width={160}
+              height={45}
+              priority
+              className="h-10 md:h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
