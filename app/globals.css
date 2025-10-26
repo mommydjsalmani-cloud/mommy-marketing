@@ -12,13 +12,6 @@
   --gray-800: #262626;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-accent: var(--accent);
-  --font-sans: var(--font-geist-sans);
-}
-
 * {
   box-sizing: border-box;
 }
