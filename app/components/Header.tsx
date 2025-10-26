@@ -15,6 +15,7 @@ export default function Header() {
     { href: '/matrimoni', label: 'Matrimoni' },
     { href: '/eventi-privati', label: 'Eventi Privati' },
     { href: '/recensioni', label: 'Recensioni' },
+    { href: '/richiedi', label: 'Richiedi Canzone', highlight: true },
     { href: '/contatti', label: 'Contatti' },
   ];
 
@@ -108,8 +109,17 @@ export default function Header() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-200 hover:text-accent transition-colors font-sans font-medium text-sm uppercase tracking-wide"
+                    className={`${
+                      link.highlight
+                        ? 'bg-accent/10 text-accent hover:bg-accent/20 px-4 py-2 rounded-full border border-accent/30 inline-flex items-center gap-2'
+                        : 'text-gray-200 hover:text-accent'
+                    } transition-colors font-sans font-medium text-sm uppercase tracking-wide`}
                   >
+                    {link.highlight && (
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                      </svg>
+                    )}
                     {link.label}
                   </Link>
                 </li>
@@ -195,13 +205,22 @@ export default function Header() {
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="text-3xl font-display text-white hover:text-accent focus:text-accent focus:outline-none focus:ring-2 focus:ring-accent rounded px-4 py-2 transition-colors uppercase tracking-wider text-center"
+                      className={`text-3xl font-display ${
+                        link.highlight ? 'text-accent' : 'text-white'
+                      } hover:text-accent focus:text-accent focus:outline-none focus:ring-2 focus:ring-accent rounded px-4 py-2 transition-colors uppercase tracking-wider text-center ${
+                        link.highlight ? 'border-2 border-accent/30 bg-accent/5 inline-flex items-center justify-center gap-3' : ''
+                      }`}
                       onClick={() => setIsMenuOpen(false)}
                       style={{
                         animation: `slideIn 0.3s ease-out ${index * 0.08}s both`,
                       }}
                       tabIndex={0}
                     >
+                      {link.highlight && (
+                        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                        </svg>
+                      )}
                       {link.label}
                     </Link>
                   ))}
