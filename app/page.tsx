@@ -17,10 +17,10 @@ export default function Home() {
         </div>
 
         <div className="container-custom text-center relative z-20 px-4">
-          <h1 className="mb-6 max-w-4xl mx-auto text-white">
+          <h1 className="mb-6 max-w-4xl mx-auto text-white font-display uppercase tracking-hero">
             DJ per matrimoni ed eventi in Italia e Svizzera
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto font-light">
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto font-sans font-light tracking-normal">
             Musica su misura. Coordinamento semplice.
           </p>
           
@@ -63,14 +63,14 @@ export default function Home() {
       {/* 2. Chi sono - Short Section */}
       <section id="about" className="py-20 bg-gray-900">
         <div className="container-custom max-w-4xl text-center">
-          <h2 className="mb-8 text-white uppercase tracking-wider">Chi sono</h2>
-          <p className="text-gray-300 mb-4 leading-relaxed text-lg">
+          <h2 className="mb-8 text-white font-display uppercase tracking-wider">Chi sono</h2>
+          <p className="text-gray-300 mb-4 leading-relaxed text-lg font-sans">
             Sono <strong className="text-white">Mommy DJ</strong>.
           </p>
-          <p className="text-gray-400 mb-4 leading-relaxed">
+          <p className="text-gray-400 mb-4 leading-relaxed font-sans">
             DJ & Music Planner per matrimoni ed eventi privati.
           </p>
-          <p className="text-gray-400 mb-6 leading-relaxed">
+          <p className="text-gray-400 mb-6 leading-relaxed font-sans">
             Gestisco musica, tempi e coordinamento con planner, band e fornitori. Uso la mia web app per richieste in tempo reale.
           </p>
           <div className="flex flex-wrap gap-4 justify-center mt-8">
@@ -87,8 +87,8 @@ export default function Home() {
       {/* 3. Video Section */}
       <section id="video" className="py-20 bg-black">
         <div className="container-custom max-w-5xl">
-          <h2 className="text-center mb-4 text-white uppercase tracking-wider">Video highlight</h2>
-          <p className="text-center text-gray-400 mb-12">60 secondi: momenti chiave e dancefloor</p>
+          <h2 className="text-center mb-4 text-white font-display uppercase tracking-wider">Video highlight</h2>
+          <p className="text-center text-gray-400 mb-12 font-sans">60 secondi: momenti chiave e dancefloor</p>
           <div className="relative aspect-video bg-gray-900 rounded-2xl overflow-hidden shadow-2xl border border-gray-800">
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center text-white">
@@ -104,33 +104,33 @@ export default function Home() {
       {/* 4. Cosa faccio - 3 Cards */}
       <section className="py-20 bg-gray-900">
         <div className="container-custom">
-          <h2 className="text-center mb-16 text-white uppercase tracking-wider">Cosa faccio</h2>
+          <h2 className="text-center mb-16 text-white font-display uppercase tracking-wider">Cosa faccio</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <Link href="/matrimoni" className="group bg-gray-800 border border-gray-700 p-8 rounded-xl hover:border-accent hover:bg-gray-800/80 transition-all block">
               <div className="text-5xl mb-6">💍</div>
-              <h3 className="mb-4 text-white uppercase tracking-wide">Matrimoni</h3>
-              <p className="text-gray-400 mb-6 text-sm leading-relaxed">
+              <h3 className="mb-4 text-white font-display uppercase tracking-wide">Matrimoni</h3>
+              <p className="text-gray-400 mb-6 text-sm leading-relaxed font-sans">
                 Cerimonia, aperitivo, cena, party. Gestione completa di tutte le fasi.
               </p>
-              <span className="text-accent font-semibold text-sm uppercase tracking-wider group-hover:underline">Scopri di più →</span>
+              <span className="text-accent font-sans font-semibold text-sm uppercase tracking-wider group-hover:underline">Scopri di più →</span>
             </Link>
 
             <Link href="/eventi-privati" className="group bg-gray-800 border border-gray-700 p-8 rounded-xl hover:border-accent hover:bg-gray-800/80 transition-all block">
               <div className="text-5xl mb-6">🎉</div>
-              <h3 className="mb-4 text-white uppercase tracking-wide">Eventi Privati</h3>
-              <p className="text-gray-400 mb-6 text-sm leading-relaxed">
+              <h3 className="mb-4 text-white font-display uppercase tracking-wide">Eventi Privati</h3>
+              <p className="text-gray-400 mb-6 text-sm leading-relaxed font-sans">
                 18/30/40, anniversari, feste aziendali. Setup flessibile e playlist su misura.
               </p>
-              <span className="text-accent font-semibold text-sm uppercase tracking-wider group-hover:underline">Scopri di più →</span>
+              <span className="text-accent font-sans font-semibold text-sm uppercase tracking-wider group-hover:underline">Scopri di più →</span>
             </Link>
 
             <Link href="/eventi-privati#corporate" className="group bg-gray-800 border border-gray-700 p-8 rounded-xl hover:border-accent hover:bg-gray-800/80 transition-all block">
               <div className="text-5xl mb-6">🏢</div>
-              <h3 className="mb-4 text-white uppercase tracking-wide">Corporate</h3>
-              <p className="text-gray-400 mb-6 text-sm leading-relaxed">
+              <h3 className="mb-4 text-white font-display uppercase tracking-wide">Corporate</h3>
+              <p className="text-gray-400 mb-6 text-sm leading-relaxed font-sans">
                 Sfilate, presentazioni, cocktail. Professionalità e discrezione.
               </p>
-              <span className="text-accent font-semibold text-sm uppercase tracking-wider group-hover:underline">Scopri di più →</span>
+              <span className="text-accent font-sans font-semibold text-sm uppercase tracking-wider group-hover:underline">Scopri di più →</span>
             </Link>
           </div>
         </div>

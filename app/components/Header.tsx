@@ -108,7 +108,7 @@ export default function Header() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-200 hover:text-accent transition-colors font-medium text-sm uppercase tracking-wide"
+                    className="text-gray-200 hover:text-accent transition-colors font-sans font-medium text-sm uppercase tracking-wide"
                   >
                     {link.label}
                   </Link>
@@ -120,7 +120,7 @@ export default function Header() {
             <div className="hidden lg:flex items-center gap-4">
               <a
                 href="#contatto-rapido"
-                className="bg-accent hover:bg-accent-hover text-white px-6 py-2.5 rounded-full font-semibold transition-colors text-sm uppercase tracking-wide"
+                className="bg-accent hover:bg-accent-hover text-white px-6 py-2.5 rounded-full font-sans font-semibold transition-colors text-sm uppercase tracking-wide"
               >
                 Verifica disponibilità
               </a>
@@ -195,7 +195,7 @@ export default function Header() {
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="text-3xl font-bold text-white hover:text-accent focus:text-accent focus:outline-none focus:ring-2 focus:ring-accent rounded px-4 py-2 transition-colors uppercase tracking-wide text-center"
+                      className="text-3xl font-display text-white hover:text-accent focus:text-accent focus:outline-none focus:ring-2 focus:ring-accent rounded px-4 py-2 transition-colors uppercase tracking-wider text-center"
                       onClick={() => setIsMenuOpen(false)}
                       style={{
                         animation: `slideIn 0.3s ease-out ${index * 0.08}s both`,
@@ -211,7 +211,7 @@ export default function Header() {
                 <div className="mt-8">
                   <a
                     href="#contatto-rapido"
-                    className="block w-full bg-accent hover:bg-accent-hover focus:bg-accent-hover text-white px-8 py-4 rounded-full font-bold text-center transition-all text-lg uppercase tracking-wide focus:outline-none focus:ring-4 focus:ring-accent/50"
+                    className="block w-full bg-accent hover:bg-accent-hover focus:bg-accent-hover text-white px-8 py-4 rounded-full font-sans font-bold text-center transition-all text-lg uppercase tracking-wide focus:outline-none focus:ring-4 focus:ring-accent/50"
                     onClick={() => setIsMenuOpen(false)}
                     tabIndex={0}
                   >

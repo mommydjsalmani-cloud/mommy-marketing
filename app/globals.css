@@ -19,48 +19,80 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
+  font-family: var(--font-inter), Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Tipografia Titoli */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-michroma), Michroma, system-ui, sans-serif;
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--foreground);
 }
 
 h1 {
   font-size: 2.5rem;
-  line-height: 1.2;
-  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 h2 {
-  font-size: 1.75rem;
-  line-height: 1.3;
-  font-weight: 700;
+  font-size: 1.875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 h3 {
+  font-size: 1.5rem;
+  letter-spacing: 0.03em;
+}
+
+h4 {
   font-size: 1.25rem;
-  line-height: 1.4;
-  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
 @media (min-width: 768px) {
-  body {
+  html {
     font-size: 18px;
   }
   
   h1 {
     font-size: 3.5rem;
+    letter-spacing: 0.1em;
   }
   
   h2 {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
+    letter-spacing: 0.06em;
   }
+  
+  h3 {
+    font-size: 1.875rem;
+  }
+}
+
+/* Paragrafi e testo body */
+p {
+  font-family: var(--font-inter), Inter, system-ui, sans-serif;
+  letter-spacing: normal;
+  line-height: 1.6;
+}
+
+/* Link styling */
+a {
+  transition: color 0.2s ease;
 }
 
 /* Focus visible styles */
