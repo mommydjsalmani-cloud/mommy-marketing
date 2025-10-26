@@ -20,9 +20,10 @@ export default function EventiPrivati() {
       <section className="relative py-32 bg-gradient-to-b from-black via-gray-900 to-black">
         <div className="container-custom text-center">
           <div className="text-6xl mb-6">🎉</div>
-          <h1 className="mb-6 text-white">Eventi Privati</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            18/30/40, anniversari, feste aziendali, after dinner. Setup flessibile e playlist su misura.
+          <h1 className="mb-6 text-white font-display uppercase tracking-widest">DJ per compleanni, anniversari, aziendali</h1>
+          <p className="font-sans text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Trovare il "centro" della festa entro tre brani.<br />
+            Poi mantenerlo.
           </p>
         </div>
       </section>
@@ -30,27 +31,17 @@ export default function EventiPrivati() {
       {/* Format */}
       <section className="py-20 bg-gray-900">
         <div className="container-custom">
-          <h2 className="text-center mb-16 text-white uppercase tracking-wider">Format</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            <div className="bg-gray-800 border border-gray-700 p-6 rounded-xl text-center">
+          <h2 className="font-display text-center mb-16 text-white uppercase tracking-wider">Formato</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="bg-gray-800 border border-gray-700 p-8 rounded-xl">
               <div className="text-4xl mb-4">🎂</div>
-              <h3 className="text-white mb-2 uppercase tracking-wide text-sm">18/30/40 anni</h3>
-              <p className="text-gray-400 text-xs">Compleanni importanti</p>
+              <h3 className="font-display text-white mb-4 uppercase tracking-wide">18/30/40 e anniversari</h3>
+              <p className="font-sans text-gray-400 leading-relaxed">Set flessibile, momenti parlati chiari.</p>
             </div>
-            <div className="bg-gray-800 border border-gray-700 p-6 rounded-xl text-center">
-              <div className="text-4xl mb-4">❤️</div>
-              <h3 className="text-white mb-2 uppercase tracking-wide text-sm">Anniversari</h3>
-              <p className="text-gray-400 text-xs">Celebrazioni speciali</p>
-            </div>
-            <div className="bg-gray-800 border border-gray-700 p-6 rounded-xl text-center">
+            <div className="bg-gray-800 border border-gray-700 p-8 rounded-xl">
               <div className="text-4xl mb-4">🏢</div>
-              <h3 className="text-white mb-2 uppercase tracking-wide text-sm">Feste Aziendali</h3>
-              <p className="text-gray-400 text-xs">Team building ed eventi corporate</p>
-            </div>
-            <div className="bg-gray-800 border border-gray-700 p-6 rounded-xl text-center">
-              <div className="text-4xl mb-4">🍸</div>
-              <h3 className="text-white mb-2 uppercase tracking-wide text-sm">After Dinner</h3>
-              <p className="text-gray-400 text-xs">Dopocena e intrattenimento</p>
+              <h3 className="font-display text-white mb-4 uppercase tracking-wide">Aziendali</h3>
+              <p className="font-sans text-gray-400 leading-relaxed">Volumi controllati, finestre speech, transizioni pulite.</p>
             </div>
           </div>
         </div>
@@ -59,25 +50,16 @@ export default function EventiPrivati() {
       {/* Cosa porto */}
       <section className="py-20 bg-black">
         <div className="container-custom max-w-4xl">
-          <h2 className="text-center mb-12 text-white uppercase tracking-wider">Cosa porto</h2>
+          <h2 className="font-display text-center mb-12 text-white uppercase tracking-wider">Dotazione</h2>
           <div className="bg-gray-900 border border-gray-800 p-8 md:p-10 rounded-2xl">
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-white font-semibold mb-3 uppercase tracking-wide text-sm">Setup Base</h3>
-                <p className="text-gray-400 leading-relaxed">
-                  Consolle professionale, impianto audio adeguato al numero di ospiti, microfoni wireless, luci base per la pista.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-white font-semibold mb-3 uppercase tracking-wide text-sm">Extra Disponibili</h3>
-                <ul className="text-gray-400 space-y-2">
-                  <li>• Luci architetturali (uplighting, wash LED)</li>
-                  <li>• Seconda postazione DJ</li>
-                  <li>• Sax live per momenti speciali</li>
-                  <li>• Proiettore e schermo</li>
-                  <li>• Copertura cerimonia esterna</li>
-                </ul>
-              </div>
+            <p className="font-sans text-gray-300 leading-relaxed mb-6">
+              Consolle, impianto dimensionato, microfoni, luci base.
+            </p>
+            <div>
+              <h3 className="font-display text-white font-semibold mb-3 uppercase tracking-wide text-sm">Extra</h3>
+              <p className="font-sans text-gray-400 leading-relaxed">
+                uplighting, seconda postazione, sax live.
+              </p>
             </div>
           </div>
         </div>
@@ -148,13 +130,13 @@ export default function EventiPrivati() {
       {/* CTA */}
       <section className="py-20 bg-gray-900">
         <div className="container-custom text-center max-w-2xl">
-          <h2 className="mb-6 text-white uppercase tracking-wider">Chiedi un preventivo</h2>
-          <p className="text-gray-400 mb-10 leading-relaxed">
-            Ogni evento è diverso. Raccontami la tua idea e ti preparo un preventivo personalizzato.
+          <h2 className="font-display mb-6 text-white uppercase tracking-wider">Chiedi un preventivo</h2>
+          <p className="font-sans text-gray-400 mb-10 leading-relaxed">
+            Ogni evento è diverso. Raccontami la tua idea e ti preparo una proposta chiara.
           </p>
           <Link
             href="/contatti"
-            className="inline-block bg-accent hover:bg-accent-hover text-white px-12 py-4 rounded-full font-semibold transition-colors uppercase tracking-wider text-sm"
+            className="font-sans inline-block bg-accent hover:bg-accent-hover text-white px-12 py-4 rounded-full font-semibold transition-colors uppercase tracking-wider text-sm"
           >
             Contattami ora
           </Link>

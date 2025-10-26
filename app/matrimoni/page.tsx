@@ -11,29 +11,29 @@ export default function Matrimoni() {
       id: 0,
       title: "Cerimonia",
       icon: "💒",
-      description: "Ingresso, momenti chiave, uscita. Microfoni inclusi.",
-      details: "Musica d'ingresso, momenti chiave, uscita degli sposi. Gestione microfoni per letture e celebrante."
+      description: "Ingressi, momenti chiave, uscita. Microfoni testati prima.",
+      details: "Musica d'ingresso coordinata, momenti chiave (scambio fedi, firma), uscita. Microfoni wireless testati 30 minuti prima per letture e celebrante. Volume calibrato sulla location."
     },
     {
       id: 1,
       title: "Aperitivo",
       icon: "🥂",
-      description: "Selezione soft/lounge. Volume per parlare.",
-      details: "Selezione musicale lounge/soft. Volume calibrato per favorire le conversazioni."
+      description: "Musica che non copre le voci. Cambio mood a vista segnale.",
+      details: "Selezione musicale lounge/soft. Volume calibrato per conversazioni naturali. Cambio di mood su segnale del planner o catering. Transizioni impercettibili."
     },
     {
       id: 2,
       title: "Cena",
       icon: "🍽️",
-      description: "Entrata sposi, taglio torta, interventi. Timing con cucina e foto.",
-      details: "Entrata sposi, taglio torta, interventi. Coordinamento con cucina, fotografo e planner."
+      description: "Entrata sposi, brindisi, torta. Cue precisi con foto e cucina.",
+      details: "Entrata sposi coordinata, brindisi, taglio torta con cue sincronizzati al secondo. Timing condiviso con fotografo e cucina. Microfoni per interventi degli ospiti."
     },
     {
       id: 3,
       title: "Party",
       icon: "🎵",
-      description: "Mix veloce, lettura pista, nessuna pausa.",
-      details: "Mix veloce, lettura continua della pista, zero pause. Generi: hip hop, R&B, dance, '90/2000, latin. Richieste live tramite app."
+      description: "Primi tre brani decisi. Poi lettura della sala. Cambio in <8″ se serve.",
+      details: "Primi 3 brani concordati. Poi lettura continua della pista. Cambio traccia in meno di 8 secondi se il brano non funziona. Generi: commerciale italiano, 2000s, latino, hip hop/R&B. Richieste live via app."
     }
   ];
 
@@ -54,9 +54,10 @@ export default function Matrimoni() {
       <section className="relative py-32 bg-gradient-to-b from-black via-gray-900 to-black">
         <div className="container-custom text-center">
           <div className="text-6xl mb-6">💍</div>
-          <h1 className="mb-6 text-white">Matrimoni</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Seguo tutte le fasi e i tempi. Mi coordino con planner, band e fornitori.
+          <h1 className="mb-6 text-white font-display uppercase tracking-widest">Regia musicale del matrimonio</h1>
+          <p className="font-sans text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Ogni fase ha un obiettivo diverso. Io allineo tempi, volumi e passaggi.<br />
+            Zero corse. Zero fischi. Zero silenzi imbarazzanti.
           </p>
         </div>
       </section>
@@ -89,13 +90,13 @@ export default function Matrimoni() {
             <div className="flex items-start gap-6">
               <div className="text-6xl">{phases[activePhase].icon}</div>
               <div className="flex-1">
-                <h3 className="text-2xl font-bold text-white mb-4 uppercase tracking-wide">
+                <h3 className="font-display text-2xl font-bold text-white mb-4 uppercase tracking-wide">
                   {phases[activePhase].title}
                 </h3>
-                <p className="text-gray-300 mb-4 text-lg leading-relaxed">
+                <p className="font-sans text-gray-300 mb-4 text-lg leading-relaxed">
                   {phases[activePhase].description}
                 </p>
-                <p className="text-gray-400 leading-relaxed">
+                <p className="font-sans text-gray-400 leading-relaxed">
                   {phases[activePhase].details}
                 </p>
               </div>
@@ -131,22 +132,30 @@ export default function Matrimoni() {
       {/* Come scelgo la musica */}
       <section className="py-20 bg-gray-900">
         <div className="container-custom max-w-4xl">
-          <h2 className="text-center mb-12 text-white uppercase tracking-wider">Come scegliamo la musica</h2>
+          <h2 className="font-display text-center mb-12 text-white uppercase tracking-wider">Metodo</h2>
           <div className="bg-gray-800 border border-gray-700 p-8 md:p-10 rounded-2xl">
             <div className="space-y-6 text-gray-300 leading-relaxed">
-              <p>
-                <strong className="text-white">Nessuna scaletta fissa.</strong> La direzione musicale viene definita insieme.
+              <p className="font-sans">
+                <strong className="text-white">Call di 20 minuti.</strong>
               </p>
-              <p>
-                Dopo il primo contatto organizziamo una <strong className="text-white">call di 20 minuti</strong> dove ci conosciamo e capiamo i vostri gusti musicali.
+              <p className="font-sans">
+                <strong className="text-white">Lista Sì / No / Mai.</strong>
               </p>
-              <p>
-                Creo una <strong className="text-white">playlist condivisa</strong> su Spotify dove inserisco le proposte e voi potete aggiungere i vostri brani preferiti.
+              <p className="font-sans">
+                <strong className="text-white">Playlist condivisa.</strong>
               </p>
-              <p>
-                Durante il party, gli ospiti possono fare <strong className="text-white">richieste live</strong> tramite la mia web app.
+              <p className="font-sans">
+                <strong className="text-white">Backup sempre con me.</strong>
               </p>
             </div>
+          </div>
+          
+          <div className="mt-8 bg-gray-800 border border-gray-700 p-8 md:p-10 rounded-2xl">
+            <h3 className="font-display text-xl text-white mb-4 uppercase tracking-wide">Richieste brani</h3>
+            <p className="font-sans text-gray-300 leading-relaxed">
+              Le accetto. Le filtro. Le inserisco nel punto giusto.<br />
+              La tua app "Richiedi un brano" è disponibile con QR.
+            </p>
           </div>
         </div>
       </section>
@@ -154,13 +163,13 @@ export default function Matrimoni() {
       {/* CTA */}
       <section className="py-20 bg-black">
         <div className="container-custom text-center max-w-2xl">
-          <h2 className="mb-6 text-white uppercase tracking-wider">Verifica la disponibilità</h2>
-          <p className="text-gray-400 mb-10 leading-relaxed">
-            Le date estive si riempiono velocemente. Contattami per verificare la disponibilità per il tuo matrimonio.
+          <h2 className="font-display mb-6 text-white uppercase tracking-wider">Verifica la data</h2>
+          <p className="font-sans text-gray-400 mb-10 leading-relaxed">
+            Le date si riempiono velocemente. Contattami per verificare la disponibilità.
           </p>
           <Link
             href="/contatti"
-            className="inline-block bg-accent hover:bg-accent-hover text-white px-12 py-4 rounded-full font-semibold transition-colors uppercase tracking-wider text-sm"
+            className="font-sans inline-block bg-accent hover:bg-accent-hover text-white px-12 py-4 rounded-full font-semibold transition-colors uppercase tracking-wider text-sm"
           >
             Contattami ora
           </Link>
