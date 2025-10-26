@@ -1,34 +1,35 @@
 'use client';
 
+import Link from "next/link";
 import { useState } from "react";
-import type { Metadata } from "next";
 
 export default function Contatti() {
   const [formData, setFormData] = useState({
-    name: '',
+    nome: '',
     email: '',
-    phone: '',
-    eventType: '',
-    date: '',
-    message: '',
+    telefono: '',
+    tipoEvento: '',
+    data: '',
+    location: '',
+    messaggio: '',
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulazione invio form (nessun backend)
     console.log('Form data:', formData);
     setIsSubmitted(true);
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({
-        name: '',
+        nome: '',
         email: '',
-        phone: '',
-        eventType: '',
-        date: '',
-        message: '',
+        telefono: '',
+        tipoEvento: '',
+        data: '',
+        location: '',
+        messaggio: '',
       });
     }, 3000);
   };
@@ -42,203 +43,231 @@ export default function Contatti() {
 
   return (
     <div>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-teal-500 to-cyan-600 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Contattaci
-          </h1>
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto">
-            Siamo qui per trasformare i tuoi sogni in realtà. Parlaci del tuo evento!
+      {/* Breadcrumb */}
+      <nav aria-label="Breadcrumb" className="bg-gray-50 py-3">
+        <div className="container-custom">
+          <ol className="flex items-center space-x-2 text-sm">
+            <li>
+              <Link href="/" className="text-gray-600 hover:text-accent">Home</Link>
+            </li>
+            <li className="text-gray-400">/</li>
+            <li className="text-gray-900 font-medium" aria-current="page">Contatti</li>
+          </ol>
+        </div>
+      </nav>
+
+      {/* Hero */}
+      <section className="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
+        <div className="container-custom text-center">
+          <h1 className="mb-6">Contatti</h1>
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+            Scrivimi o chiamami per verificare la disponibilità e ricevere un preventivo personalizzato.
           </p>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            {/* Contact Info */}
+      {/* Contact Info + Form */}
+      <section className="py-16 bg-white">
+        <div className="container-custom max-w-5xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Left: Contact Info */}
             <div>
-              <h2 className="text-3xl font-bold mb-8">Informazioni di Contatto</h2>
+              <h2 className="mb-8">Informazioni di contatto</h2>
               
               <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="text-3xl mr-4">📧</div>
+                <div className="flex items-start gap-4">
+                  <div className="text-3xl">📧</div>
                   <div>
-                    <h3 className="font-bold text-lg mb-1">Email</h3>
-                    <p className="text-gray-600">info@mommyevents.it</p>
-                    <p className="text-gray-600">preventivi@mommyevents.it</p>
+                    <h3 className="font-bold mb-1">Email</h3>
+                    <a href="mailto:info@djmommy.it" className="text-accent hover:underline">
+                      info@djmommy.it
+                    </a>
                   </div>
                 </div>
 
-                <div className="flex items-start">
-                  <div className="text-3xl mr-4">📱</div>
+                <div className="flex items-start gap-4">
+                  <div className="text-3xl">📱</div>
                   <div>
-                    <h3 className="font-bold text-lg mb-1">Telefono</h3>
-                    <p className="text-gray-600">+39 123 456 7890</p>
-                    <p className="text-gray-600">+39 098 765 4321</p>
+                    <h3 className="font-bold mb-1">Telefono</h3>
+                    <a href="tel:+391234567890" className="text-accent hover:underline">
+                      +39 123 456 7890
+                    </a>
                   </div>
                 </div>
 
-                <div className="flex items-start">
-                  <div className="text-3xl mr-4">📍</div>
+                <div className="flex items-start gap-4">
+                  <div className="text-3xl">💬</div>
                   <div>
-                    <h3 className="font-bold text-lg mb-1">Indirizzo</h3>
-                    <p className="text-gray-600">Via Example, 123</p>
-                    <p className="text-gray-600">00100 Roma, Italia</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="text-3xl mr-4">⏰</div>
-                  <div>
-                    <h3 className="font-bold text-lg mb-1">Orari</h3>
-                    <p className="text-gray-600">Lun - Ven: 9:00 - 18:00</p>
-                    <p className="text-gray-600">Sab: 10:00 - 14:00</p>
-                    <p className="text-gray-600">Dom: Chiuso</p>
+                    <h3 className="font-bold mb-1">WhatsApp</h3>
+                    <a 
+                      href="https://wa.me/391234567890" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-semibold transition-colors text-sm"
+                    >
+                      Scrivimi su WhatsApp
+                    </a>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-8">
-                <h3 className="font-bold text-lg mb-4">Seguici sui Social</h3>
-                <div className="flex gap-4">
-                  <a href="#" className="text-4xl hover:scale-110 transition-transform">📘</a>
-                  <a href="#" className="text-4xl hover:scale-110 transition-transform">📷</a>
-                  <a href="#" className="text-4xl hover:scale-110 transition-transform">🐦</a>
-                  <a href="#" className="text-4xl hover:scale-110 transition-transform">📌</a>
-                </div>
+              {/* Zone coperte */}
+              <div className="mt-12 card bg-gray-50 p-6">
+                <h3 className="mb-4">📍 Zone coperte</h3>
+                <p className="text-gray-700 mb-3">
+                  Opero principalmente in Lombardia e nelle regioni limitrofe:
+                </p>
+                <ul className="space-y-1 text-gray-700 text-sm">
+                  <li>• Milano e provincia</li>
+                  <li>• Bergamo e provincia</li>
+                  <li>• Brescia e provincia</li>
+                  <li>• Como e Lecco</li>
+                  <li>• Emilia Romagna (Bologna, Modena, Parma)</li>
+                  <li>• Piemonte (Torino, Alessandria, Novara)</li>
+                </ul>
+                <p className="text-sm text-gray-600 mt-4">
+                  Per eventi in altre zone, contattami per valutare la fattibilità.
+                </p>
               </div>
             </div>
 
-            {/* Contact Form */}
-            <div className="bg-white p-8 rounded-lg shadow-xl">
-              <h2 className="text-3xl font-bold mb-6">Richiedi un Preventivo</h2>
-              
-              {isSubmitted ? (
-                <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4">
-                  <strong className="font-bold">Grazie!</strong>
-                  <span className="block sm:inline"> Il tuo messaggio è stato inviato con successo. Ti contatteremo presto!</span>
-                </div>
-              ) : null}
+            {/* Right: Form */}
+            <div>
+              <div className="card bg-gray-50 p-8">
+                <h2 className="mb-6">Richiesta informazioni</h2>
+                
+                {isSubmitted && (
+                  <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6">
+                    <strong>Grazie!</strong> Ti risponderò al più presto.
+                  </div>
+                )}
 
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                    Nome Completo *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
-                  />
-                </div>
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div>
+                    <label htmlFor="nome" className="block text-sm font-medium text-gray-700 mb-1">
+                      Nome e Cognome *
+                    </label>
+                    <input
+                      type="text"
+                      id="nome"
+                      name="nome"
+                      required
+                      value={formData.nome}
+                      onChange={handleChange}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent"
+                    />
+                  </div>
 
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                    Email *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
-                  />
-                </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                        Email *
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        value={formData.email}
+                        onChange={handleChange}
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent"
+                      />
+                    </div>
 
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                    Telefono *
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    required
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
-                  />
-                </div>
+                    <div>
+                      <label htmlFor="telefono" className="block text-sm font-medium text-gray-700 mb-1">
+                        Telefono
+                      </label>
+                      <input
+                        type="tel"
+                        id="telefono"
+                        name="telefono"
+                        value={formData.telefono}
+                        onChange={handleChange}
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent"
+                      />
+                    </div>
+                  </div>
 
-                <div>
-                  <label htmlFor="eventType" className="block text-sm font-medium text-gray-700 mb-1">
-                    Tipo di Evento *
-                  </label>
-                  <select
-                    id="eventType"
-                    name="eventType"
-                    required
-                    value={formData.eventType}
-                    onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label htmlFor="tipoEvento" className="block text-sm font-medium text-gray-700 mb-1">
+                        Tipo di evento *
+                      </label>
+                      <select
+                        id="tipoEvento"
+                        name="tipoEvento"
+                        required
+                        value={formData.tipoEvento}
+                        onChange={handleChange}
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent"
+                      >
+                        <option value="">Seleziona...</option>
+                        <option value="matrimonio">Matrimonio</option>
+                        <option value="18-anni">18 anni</option>
+                        <option value="30-anni">30 anni</option>
+                        <option value="40-anni">40 anni</option>
+                        <option value="50-anni">50 anni</option>
+                        <option value="anniversario">Anniversario</option>
+                        <option value="aziendale">Evento Aziendale</option>
+                        <option value="altro">Altro</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label htmlFor="data" className="block text-sm font-medium text-gray-700 mb-1">
+                        Data evento
+                      </label>
+                      <input
+                        type="date"
+                        id="data"
+                        name="data"
+                        value={formData.data}
+                        onChange={handleChange}
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label htmlFor="location" className="block text-sm font-medium text-gray-700 mb-1">
+                      Location / Città
+                    </label>
+                    <input
+                      type="text"
+                      id="location"
+                      name="location"
+                      placeholder="es. Milano"
+                      value={formData.location}
+                      onChange={handleChange}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="messaggio" className="block text-sm font-medium text-gray-700 mb-1">
+                      Messaggio
+                    </label>
+                    <textarea
+                      id="messaggio"
+                      name="messaggio"
+                      rows={4}
+                      value={formData.messaggio}
+                      onChange={handleChange}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent"
+                      placeholder="Raccontami del tuo evento..."
+                    ></textarea>
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full bg-accent hover:bg-accent-hover text-white px-8 py-3 rounded-lg font-semibold transition-colors"
                   >
-                    <option value="">Seleziona un tipo</option>
-                    <option value="matrimonio">Matrimonio</option>
-                    <option value="compleanno">Compleanno</option>
-                    <option value="anniversario">Anniversario</option>
-                    <option value="aziendale">Evento Aziendale</option>
-                    <option value="baby-shower">Baby Shower</option>
-                    <option value="altro">Altro</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="date" className="block text-sm font-medium text-gray-700 mb-1">
-                    Data Prevista
-                  </label>
-                  <input
-                    type="date"
-                    id="date"
-                    name="date"
-                    value={formData.date}
-                    onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                    Messaggio *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={4}
-                    value={formData.message}
-                    onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
-                    placeholder="Raccontaci del tuo evento..."
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-pink-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-pink-700 hover:to-purple-700 transition-colors"
-                >
-                  Invia Richiesta
-                </button>
-              </form>
+                    Invia richiesta
+                  </button>
+                </form>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Map Section (Placeholder) */}
-      <section className="py-20 bg-gray-100">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8">Dove Siamo</h2>
-          <div className="max-w-4xl mx-auto bg-gray-300 rounded-lg h-96 flex items-center justify-center">
-            <p className="text-gray-600 text-lg">🗺️ Mappa Google (Placeholder)</p>
           </div>
         </div>
       </section>

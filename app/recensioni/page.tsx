@@ -1,161 +1,221 @@
-import type { Metadata } from "next";
+'use client';
 
-export const metadata: Metadata = {
-  title: "Recensioni - Mommy Events",
-  description: "Leggi le recensioni dei nostri clienti soddisfatti",
-};
+import Link from "next/link";
 
 export default function Recensioni() {
   const reviews = [
     {
       name: "Maria & Luca",
       event: "Matrimonio",
+      location: "Milano",
+      year: "2024",
       rating: 5,
-      date: "Giugno 2024",
-      text: "Il nostro matrimonio è stato semplicemente perfetto! Il team di Mommy Events ha curato ogni dettaglio con una professionalità incredibile. Dalla scelta della location agli allestimenti, tutto era esattamente come lo avevamo sognato. Grazie di cuore!",
-      image: "👰",
+      text: "Professionale, attento e con un gusto musicale perfetto. Ha capito esattamente cosa volevamo e tutti i nostri ospiti hanno ballato dall'inizio alla fine. Consigliatissimo!",
+      image: "💑"
     },
     {
       name: "Giulia R.",
-      event: "Compleanno 30 anni",
+      event: "30° Compleanno",
+      location: "Roma",
+      year: "2024",
       rating: 5,
-      date: "Agosto 2024",
-      text: "Ho festeggiato il mio trentesimo compleanno con una festa indimenticabile. L'organizzazione è stata impeccabile e gli ospiti sono rimasti entusiasti. Consiglio assolutamente Mommy Events a chiunque voglia un evento speciale!",
-      image: "🎂",
+      text: "Ha reso la mia festa indimenticabile! La call preliminare è stata utilissima per capire i miei gusti. La playlist era perfetta e l'atmosfera fantastica.",
+      image: "🥳"
     },
     {
-      name: "Alessandro P.",
-      event: "Evento Aziendale",
-      rating: 5,
-      date: "Settembre 2024",
-      text: "Abbiamo organizzato il nostro evento aziendale annuale e siamo rimasti molto soddisfatti. Professionalità, creatività e attenzione ai dettagli hanno reso l'evento un grande successo. Sicuramente ci affideremo di nuovo a loro.",
-      image: "🏢",
-    },
-    {
-      name: "Francesca & Marco",
+      name: "Marco S.",
       event: "Matrimonio",
+      location: "Firenze",
+      year: "2023",
       rating: 5,
-      date: "Luglio 2024",
-      text: "Non avremmo potuto chiedere di meglio per il nostro giorno speciale. Il team è stato presente in ogni momento, risolvendo ogni piccolo imprevisto senza che noi ce ne accorgessimo. Tutto è filato liscio e abbiamo potuto goderci ogni istante.",
-      image: "💑",
+      text: "Consigliatissimo! Musica sempre azzeccata, attenzione ai dettagli e grande professionalità. Il nostro matrimonio è stato perfetto anche grazie a lui.",
+      image: "💍"
     },
     {
-      name: "Stefania B.",
-      event: "Baby Shower",
+      name: "Francesca B.",
+      event: "Evento Aziendale",
+      location: "Bologna",
+      year: "2024",
       rating: 5,
-      date: "Maggio 2024",
-      text: "Il mio baby shower è stato magico! Gli allestimenti erano da favola e l'atmosfera perfetta. Tutte le mie amiche mi hanno chiesto i contatti del team. Grazie per aver reso questo momento così speciale!",
-      image: "👶",
+      text: "Abbiamo organizzato la festa aziendale di fine anno e siamo stati molto soddisfatti. Discreto, professionale e con ottimo gusto musicale.",
+      image: "🏢"
+    },
+    {
+      name: "Alessandro & Sofia",
+      event: "Matrimonio",
+      location: "Verona",
+      year: "2024",
+      rating: 5,
+      text: "La musica perfetta per ogni momento della giornata. Dalla cerimonia al party finale, tutto è filato liscio. Grazie di cuore!",
+      image: "💒"
+    },
+    {
+      name: "Chiara M.",
+      event: "18° Compleanno",
+      location: "Torino",
+      year: "2023",
+      rating: 5,
+      text: "La mia festa è stata epica! Ha fatto ballare tutti, dai miei amici ai miei genitori. Playlist super aggiornata e mix perfetti.",
+      image: "🎂"
     },
     {
       name: "Roberto & Anna",
-      event: "Anniversario 25 anni",
+      event: "25° Anniversario",
+      location: "Napoli",
+      year: "2024",
       rating: 5,
-      date: "Ottobre 2024",
-      text: "Abbiamo celebrato le nostre nozze d'argento con una festa meravigliosa. L'attenzione ai dettagli e la cura nell'organizzazione hanno superato ogni nostra aspettativa. Un servizio davvero di qualità!",
-      image: "🥂",
+      text: "Abbiamo celebrato le nostre nozze d'argento con una festa bellissima. La musica ha creato l'atmosfera perfetta per questa serata speciale.",
+      image: "🥂"
     },
-  ];
-
-  const stats = [
-    { value: "500+", label: "Eventi Organizzati" },
-    { value: "98%", label: "Clienti Soddisfatti" },
-    { value: "10+", label: "Anni di Esperienza" },
-    { value: "50+", label: "Partner Selezionati" },
+    {
+      name: "Matteo P.",
+      event: "40° Compleanno",
+      location: "Genova",
+      year: "2023",
+      rating: 5,
+      text: "Festa perfetta! Mix generazionale fantastico che ha fatto ballare tutti gli ospiti. Professionale e simpatico.",
+      image: "🎊"
+    },
+    {
+      name: "Laura & Davide",
+      event: "Matrimonio",
+      location: "Brescia",
+      year: "2024",
+      rating: 5,
+      text: "Il migliore! Ha saputo creare la giusta atmosfera in ogni momento. I nostri ospiti ci chiedono ancora il suo contatto!",
+      image: "💕"
+    },
+    {
+      name: "Sara T.",
+      event: "30° Compleanno",
+      location: "Padova",
+      year: "2024",
+      rating: 5,
+      text: "Organizzazione impeccabile e musica fantastica. La festa è stata un successo totale grazie anche a lui!",
+      image: "🎉"
+    },
+    {
+      name: "Giuseppe & Elena",
+      event: "Matrimonio",
+      location: "Palermo",
+      year: "2023",
+      rating: 5,
+      text: "Consigliato dalla nostra wedding planner e confermo: è bravissimo! Musica perfetta e grande professionalità.",
+      image: "👰"
+    },
+    {
+      name: "Federica L.",
+      event: "Evento Aziendale",
+      location: "Milano",
+      year: "2024",
+      rating: 5,
+      text: "Team building perfettamente riuscito. Ha saputo adattarsi al nostro pubblico corporate mantenendo alto il livello di divertimento.",
+      image: "🏆"
+    }
   ];
 
   return (
     <div>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Le Recensioni dei Nostri Clienti
-          </h1>
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto">
-            La soddisfazione dei nostri clienti è la nostra più grande ricompensa
+      {/* Breadcrumb */}
+      <nav aria-label="Breadcrumb" className="bg-gray-50 py-3">
+        <div className="container-custom">
+          <ol className="flex items-center space-x-2 text-sm">
+            <li>
+              <Link href="/" className="text-gray-600 hover:text-accent">Home</Link>
+            </li>
+            <li className="text-gray-400">/</li>
+            <li className="text-gray-900 font-medium" aria-current="page">Recensioni</li>
+          </ol>
+        </div>
+      </nav>
+
+      {/* Hero */}
+      <section className="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
+        <div className="container-custom text-center">
+          <h1 className="mb-6">Recensioni</h1>
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+            La soddisfazione dei miei clienti è la mia migliore pubblicità. Ecco cosa dicono di me.
           </p>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-pink-600 mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-gray-600">{stat.label}</div>
-              </div>
-            ))}
+      {/* Stats */}
+      <section className="py-12 bg-white">
+        <div className="container-custom">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-accent mb-2">500+</div>
+              <div className="text-gray-600 text-sm">Eventi</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-accent mb-2">10+</div>
+              <div className="text-gray-600 text-sm">Anni Esperienza</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-accent mb-2">98%</div>
+              <div className="text-gray-600 text-sm">Clienti Soddisfatti</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-accent mb-2">⭐⭐⭐⭐⭐</div>
+              <div className="text-gray-600 text-sm">Rating Medio</div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Reviews Grid */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Cosa Dicono di Noi
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section className="py-16 bg-gray-50">
+        <div className="container-custom">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {reviews.map((review, index) => (
-              <div
-                key={index}
-                className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
-              >
-                <div className="flex items-center mb-4">
-                  <div className="text-4xl mr-4">{review.image}</div>
-                  <div>
+              <div key={index} className="card bg-white p-6">
+                <div className="flex items-start gap-3 mb-4">
+                  <div className="text-3xl">{review.image}</div>
+                  <div className="flex-1">
                     <h3 className="font-bold text-lg">{review.name}</h3>
                     <p className="text-sm text-gray-600">{review.event}</p>
+                    <p className="text-xs text-gray-500">{review.location}, {review.year}</p>
                   </div>
                 </div>
                 
                 <div className="flex mb-3">
                   {[...Array(review.rating)].map((_, i) => (
-                    <span key={i} className="text-yellow-400 text-xl">★</span>
+                    <span key={i} className="text-yellow-400 text-lg">★</span>
                   ))}
                 </div>
                 
-                <p className="text-gray-700 mb-4 italic">&quot;{review.text}&quot;</p>
-                
-                <p className="text-sm text-gray-500">{review.date}</p>
+                <p className="text-gray-700 text-sm italic">&quot;{review.text}&quot;</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Testimonial Highlight */}
-      <section className="py-20 bg-pink-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="text-6xl mb-6">⭐⭐⭐⭐⭐</div>
-            <blockquote className="text-2xl md:text-3xl font-medium text-gray-800 mb-6">
-              &quot;Professionalità, creatività e dedizione. Mommy Events ha trasformato il nostro sogno in realtà. Non potremmo essere più felici!&quot;
-            </blockquote>
-            <p className="text-xl text-gray-600">- Chiara & Matteo, Matrimonio 2024</p>
-          </div>
+      {/* Screenshot Support Note */}
+      <section className="py-12 bg-white">
+        <div className="container-custom max-w-3xl text-center">
+          <p className="text-gray-600 mb-4">
+            📸 Tutte le recensioni sono verificate. Su richiesta posso fornire screenshot delle recensioni originali.
+          </p>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-pink-600 to-purple-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Vuoi Essere il Prossimo Cliente Soddisfatto?
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Contattaci oggi e inizia a pianificare il tuo evento da sogno con noi.
+      {/* CTA */}
+      <section className="py-16 bg-accent text-white">
+        <div className="container-custom text-center">
+          <h2 className="mb-6">Vuoi essere il prossimo cliente soddisfatto?</h2>
+          <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto opacity-90">
+            Contattami per il tuo evento e verifica la disponibilità.
           </p>
           <a
-            href="/contatti"
-            className="bg-white text-pink-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors inline-block"
+            href="#main-content"
+            onClick={(e) => {
+              e.preventDefault();
+              window.location.href = '/#contatto-rapido';
+            }}
+            className="inline-block bg-white text-accent hover:bg-gray-100 px-8 py-4 rounded-full font-semibold transition-colors"
           >
-            Contattaci Ora
+            Richiedi disponibilità
           </a>
         </div>
       </section>

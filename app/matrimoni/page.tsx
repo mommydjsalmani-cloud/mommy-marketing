@@ -1,152 +1,154 @@
-import Link from "next/link";
-import type { Metadata } from "next";
+'use client';
 
-export const metadata: Metadata = {
-  title: "Matrimoni - Mommy Events",
-  description: "Organizziamo matrimoni da sogno con cura e attenzione ai dettagli",
-};
+import Link from "next/link";
 
 export default function Matrimoni() {
-  const services = [
+  const timeline = [
     {
-      title: "Consulenza Completa",
-      description: "Ti affianchiamo in ogni fase della pianificazione del tuo matrimonio",
-      icon: "💬",
+      title: "Cerimonia",
+      icon: "💒",
+      description: "Musica d'ingresso, accompagnamento e uscita. Sottofondo discreto ed emozionante per il momento più importante.",
+      time: "30-45 min"
     },
     {
-      title: "Selezione Location",
-      description: "Troviamo la location perfetta per il tuo stile e budget",
-      icon: "🏰",
+      title: "Aperitivo",
+      icon: "🥂",
+      description: "Atmosfera rilassata e conviviale. Musica lounge, jazz, soul per accogliere gli ospiti e creare la giusta energia.",
+      time: "1-2 ore"
     },
     {
-      title: "Coordinamento Fornitori",
-      description: "Gestiamo tutti i fornitori per garantire un servizio impeccabile",
-      icon: "🤝",
-    },
-    {
-      title: "Allestimenti Personalizzati",
-      description: "Creiamo allestimenti unici che rispecchiano la vostra personalità",
-      icon: "🌸",
-    },
-    {
-      title: "Catering & Menu",
-      description: "Menu su misura per soddisfare tutti i palati dei vostri ospiti",
+      title: "Cena",
       icon: "🍽️",
+      description: "Sottofondo elegante che permette la conversazione. Graduale crescita del ritmo verso la fine del pasto.",
+      time: "2-3 ore"
     },
     {
-      title: "Regia del Giorno",
-      description: "Coordinamento perfetto di tutta la giornata, dall'inizio alla fine",
-      icon: "⏰",
-    },
+      title: "Party",
+      icon: "🎊",
+      description: "Il momento clou! Playlist costruita sui vostri gusti e su ciò che fa ballare tutti. Dal primo all'ultimo brano.",
+      time: "3-4 ore"
+    }
   ];
 
   return (
     <div>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-pink-400 to-rose-500 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Matrimoni da Sogno
-          </h1>
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto">
-            Il tuo giorno speciale merita un&apos;organizzazione perfetta. Ci occupiamo di ogni dettaglio per rendere il vostro matrimonio indimenticabile.
+      {/* Breadcrumb */}
+      <nav aria-label="Breadcrumb" className="bg-gray-50 py-3">
+        <div className="container-custom">
+          <ol className="flex items-center space-x-2 text-sm">
+            <li>
+              <Link href="/" className="text-gray-600 hover:text-accent">Home</Link>
+            </li>
+            <li className="text-gray-400">/</li>
+            <li className="text-gray-900 font-medium" aria-current="page">Matrimoni</li>
+          </ol>
+        </div>
+      </nav>
+
+      {/* Hero */}
+      <section className="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
+        <div className="container-custom text-center">
+          <h1 className="mb-6">Musica per Matrimoni</h1>
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+            La colonna sonora del vostro giorno speciale, curata in ogni dettaglio. Dalla cerimonia al party finale.
           </p>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            I Nostri Servizi per Matrimoni
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
-              >
-                <div className="text-5xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
+      {/* Timeline - 4 Cards */}
+      <section className="py-16 bg-white">
+        <div className="container-custom">
+          <h2 className="text-center mb-12">Le fasi del matrimonio</h2>
+          <div className="max-w-5xl mx-auto space-y-8">
+            {timeline.map((phase, index) => (
+              <div key={index} className="flex flex-col md:flex-row gap-6 items-start">
+                <div className="flex-shrink-0 w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center text-2xl font-bold">
+                  {index + 1}
+                </div>
+                <div className="card bg-gray-50 p-6 flex-1">
+                  <div className="flex items-start gap-4">
+                    <div className="text-5xl">{phase.icon}</div>
+                    <div className="flex-1">
+                      <div className="flex items-center justify-between mb-2">
+                        <h3 className="text-xl">{phase.title}</h3>
+                        <span className="text-sm text-gray-500 bg-white px-3 py-1 rounded-full">{phase.time}</span>
+                      </div>
+                      <p className="text-gray-700">{phase.description}</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Come Lavoriamo
-          </h2>
-          <div className="max-w-3xl mx-auto space-y-8">
-            <div className="flex gap-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-pink-600 text-white rounded-full flex items-center justify-center font-bold">
-                1
+      {/* Come scelgo la musica */}
+      <section className="py-16 bg-gray-50">
+        <div className="container-custom max-w-4xl">
+          <h2 className="text-center mb-8">Come scelgo la musica</h2>
+          <div className="card bg-white p-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <div className="text-4xl mb-4">📞</div>
+                <h3 className="mb-3">Call conoscitiva 20'</h3>
+                <p className="text-gray-700">
+                  Ci parliamo al telefono o via video. Vi faccio domande sui vostri gusti musicali, sul tipo di atmosfera che volete e sui momenti chiave della giornata.
+                </p>
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2">Primo Incontro</h3>
-                <p className="text-gray-600">
-                  Ci conosciamo e raccogliamo tutti i vostri desideri e necessità
+                <div className="text-4xl mb-4">🎵</div>
+                <h3 className="mb-3">Playlist condivisa</h3>
+                <p className="text-gray-700">
+                  Vi creo una playlist Spotify condivisa dove potete aggiungere i brani che amate e segnalare quelli da evitare. La affiniamo insieme fino al giorno del matrimonio.
                 </p>
               </div>
             </div>
-            <div className="flex gap-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-pink-600 text-white rounded-full flex items-center justify-center font-bold">
-                2
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">Pianificazione</h3>
-                <p className="text-gray-600">
-                  Creiamo un piano dettagliato e selezioniamo i migliori fornitori
-                </p>
-              </div>
+            <div className="mt-8 p-6 bg-accent bg-opacity-10 rounded-lg">
+              <p className="text-gray-800 font-medium text-center">
+                💡 L&apos;obiettivo è semplice: farvi godere la festa senza pensieri e far ballare tutti i vostri ospiti!
+              </p>
             </div>
-            <div className="flex gap-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-pink-600 text-white rounded-full flex items-center justify-center font-bold">
-                3
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">Coordinamento</h3>
-                <p className="text-gray-600">
-                  Gestiamo tutti i dettagli e le comunicazioni con i fornitori
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-pink-600 text-white rounded-full flex items-center justify-center font-bold">
-                4
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">Il Grande Giorno</h3>
-                <p className="text-gray-600">
-                  Coordiniamo tutto in modo che voi possiate godervi ogni momento
-                </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Video/Foto Placeholder */}
+      <section className="py-16 bg-white">
+        <div className="container-custom max-w-4xl">
+          <h2 className="text-center mb-8">Un assaggio dei miei matrimoni</h2>
+          <div className="card bg-gray-800 rounded-2xl overflow-hidden aspect-video relative">
+            <div className="absolute inset-0 flex items-center justify-center text-white">
+              <div className="text-center">
+                <div className="text-6xl mb-4">📸</div>
+                <p className="text-lg">Foto/Video Gallery</p>
+                <p className="text-sm text-gray-300 mt-2">(Placeholder - inserire gallery reale)</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-pink-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Inizia a Pianificare il Tuo Matrimonio
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Contattaci per una consulenza gratuita e scopri come possiamo rendere il tuo matrimonio perfetto.
+      {/* CTA */}
+      <section className="py-16 bg-accent text-white">
+        <div className="container-custom text-center">
+          <h2 className="mb-6">Vuoi la musica perfetta per il tuo matrimonio?</h2>
+          <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto opacity-90">
+            Verifica subito se sono disponibile nella tua data.
           </p>
-          <Link
-            href="/contatti"
-            className="bg-white text-pink-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors inline-block"
+          <a
+            href="#main-content"
+            onClick={(e) => {
+              e.preventDefault();
+              window.location.href = '/#contatto-rapido';
+            }}
+            className="inline-block bg-white text-accent hover:bg-gray-100 px-8 py-4 rounded-full font-semibold transition-colors"
           >
-            Richiedi Consulenza Gratuita
-          </Link>
+            Verifica data disponibile
+          </a>
         </div>
       </section>
     </div>
   );
 }
+

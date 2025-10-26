@@ -1,220 +1,208 @@
-import Link from "next/link";
-import type { Metadata } from "next";
+'use client';
 
-export const metadata: Metadata = {
-  title: "Eventi Privati - Mommy Events",
-  description: "Organizziamo eventi privati indimenticabili: compleanni, anniversari, feste aziendali",
-};
+import Link from "next/link";
 
 export default function EventiPrivati() {
-  const eventTypes = [
+  const formats = [
     {
-      title: "Compleanni",
-      description: "Feste di compleanno uniche per tutte le età",
+      title: "18 anni",
       icon: "🎂",
+      description: "La festa della maggiore età. Energia, divertimento e musica che spacca dall'inizio alla fine.",
+      guests: "50-150 persone"
+    },
+    {
+      title: "30 anni",
+      icon: "🥳",
+      description: "Festa elegante ma divertente. Mix perfetto tra musica da ballare e momenti più rilassati.",
+      guests: "40-100 persone"
+    },
+    {
+      title: "40 anni",
+      icon: "🎊",
+      description: "Celebrazione raffinata. Musica che piace a tutti, dal disco degli anni '80 ai successi recenti.",
+      guests: "50-120 persone"
     },
     {
       title: "Anniversari",
-      description: "Celebra i momenti importanti con stile",
-      icon: "🥂",
+      icon: "💑",
+      description: "10, 25, 50 anni insieme. Musica romantica e brani speciali per una serata indimenticabile.",
+      guests: "30-80 persone"
     },
     {
-      title: "Baby Shower",
-      description: "Accogliamo i nuovi arrivi con dolcezza",
-      icon: "👶",
-    },
-    {
-      title: "Feste Aziendali",
-      description: "Eventi corporate di successo",
+      title: "Aziendali",
       icon: "🏢",
-    },
-    {
-      title: "Addii al Celibato/Nubilato",
-      description: "Festeggia l'ultimo giorno da single",
-      icon: "🎊",
-    },
-    {
-      title: "Lauree",
-      description: "Celebra il tuo successo accademico",
-      icon: "🎓",
-    },
+      id: "corporate",
+      description: "Team building, inaugurazioni, feste di fine anno. Professionalità e discrezione.",
+      guests: "30-200 persone"
+    }
   ];
 
   return (
     <div>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Eventi Privati Indimenticabili
-          </h1>
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto">
-            Ogni occasione merita di essere celebrata. Organizziamo eventi privati su misura per rendere speciale ogni momento.
+      {/* Breadcrumb */}
+      <nav aria-label="Breadcrumb" className="bg-gray-50 py-3">
+        <div className="container-custom">
+          <ol className="flex items-center space-x-2 text-sm">
+            <li>
+              <Link href="/" className="text-gray-600 hover:text-accent">Home</Link>
+            </li>
+            <li className="text-gray-400">/</li>
+            <li className="text-gray-900 font-medium" aria-current="page">Eventi Privati</li>
+          </ol>
+        </div>
+      </nav>
+
+      {/* Hero */}
+      <section className="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
+        <div className="container-custom text-center">
+          <h1 className="mb-6">Eventi Privati</h1>
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+            Compleanni, anniversari, feste aziendali. Ogni evento merita la sua colonna sonora perfetta.
           </p>
         </div>
       </section>
 
-      {/* Event Types Grid */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Tipologie di Eventi
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {eventTypes.map((event, index) => (
-              <div
-                key={index}
-                className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
-              >
-                <div className="text-5xl mb-4">{event.icon}</div>
-                <h3 className="text-xl font-bold mb-3">{event.title}</h3>
-                <p className="text-gray-600">{event.description}</p>
+      {/* Format tipici */}
+      <section className="py-16 bg-white">
+        <div className="container-custom">
+          <h2 className="text-center mb-12">Format tipici</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {formats.map((format, index) => (
+              <div key={index} id={format.id} className="card bg-gray-50 p-6">
+                <div className="text-5xl mb-4">{format.icon}</div>
+                <h3 className="mb-2">{format.title}</h3>
+                <p className="text-sm text-gray-500 mb-3">{format.guests}</p>
+                <p className="text-gray-700">{format.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Cosa Offriamo
-          </h2>
-          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-3">🎨 Tema Personalizzato</h3>
-              <p className="text-gray-600">
-                Creiamo un tema unico che rispecchia la tua personalità e i tuoi gusti
+      {/* Durata, Setup, Extra */}
+      <section className="py-16 bg-gray-50">
+        <div className="container-custom max-w-5xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Durata */}
+            <div className="card bg-white p-6">
+              <div className="text-4xl mb-4">⏰</div>
+              <h3 className="mb-3">Durata</h3>
+              <ul className="space-y-2 text-gray-700">
+                <li>• <strong>4 ore</strong> - formato standard</li>
+                <li>• <strong>5-6 ore</strong> - serata completa</li>
+                <li>• <strong>Open bar</strong> - fino a chiusura</li>
+              </ul>
+              <p className="text-sm text-gray-600 mt-4">
+                La durata si adatta alle vostre esigenze e al tipo di location.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-3">📍 Location Esclusiva</h3>
-              <p className="text-gray-600">
-                Selezioniamo la location perfetta per il tuo evento
+
+            {/* Setup */}
+            <div className="card bg-white p-6">
+              <div className="text-4xl mb-4">🎛️</div>
+              <h3 className="mb-3">Setup</h3>
+              <ul className="space-y-2 text-gray-700">
+                <li>• Console professionale</li>
+                <li>• Impianto audio adeguato</li>
+                <li>• Luci d'atmosfera</li>
+                <li>• Microfono per annunci</li>
+              </ul>
+              <p className="text-sm text-gray-600 mt-4">
+                Tutto il necessario per una festa perfetta, adattato allo spazio.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-3">🍰 Catering di Qualità</h3>
-              <p className="text-gray-600">
-                Menu personalizzati con prodotti di eccellenza
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-3">🎵 Intrattenimento</h3>
-              <p className="text-gray-600">
-                Musica, animazione e spettacoli per tutti i gusti
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-3">📸 Fotografia & Video</h3>
-              <p className="text-gray-600">
-                Immortaliamo ogni momento speciale del tuo evento
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-3">🎁 Coordinamento Totale</h3>
-              <p className="text-gray-600">
-                Ci occupiamo di ogni dettaglio, dal setup alla chiusura
+
+            {/* Extra */}
+            <div className="card bg-white p-6">
+              <div className="text-4xl mb-4">✨</div>
+              <h3 className="mb-3">Extra</h3>
+              <ul className="space-y-2 text-gray-700">
+                <li>• Luci scenografiche</li>
+                <li>• Effetti speciali</li>
+                <li>• Video LED wall</li>
+                <li>• Karaoke</li>
+              </ul>
+              <p className="text-sm text-gray-600 mt-4">
+                Servizi aggiuntivi su richiesta per rendere l'evento unico.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Packages Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            I Nostri Pacchetti
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white p-8 rounded-lg shadow-lg border-2 border-gray-200">
-              <h3 className="text-2xl font-bold mb-4">Basic</h3>
-              <p className="text-gray-600 mb-6">Perfetto per eventi intimi</p>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <span>Consulenza iniziale</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <span>Selezione location</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <span>Coordinamento base</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-gradient-to-b from-purple-500 to-indigo-600 text-white p-8 rounded-lg shadow-xl transform md:-translate-y-4">
-              <div className="bg-yellow-400 text-purple-900 text-xs font-bold px-3 py-1 rounded-full inline-block mb-4">
-                POPOLARE
+      {/* Come funziona */}
+      <section className="py-16 bg-white">
+        <div className="container-custom max-w-4xl">
+          <h2 className="text-center mb-12">Come funziona</h2>
+          <div className="space-y-6">
+            <div className="flex gap-4 items-start">
+              <div className="flex-shrink-0 w-12 h-12 bg-accent text-white rounded-full flex items-center justify-center font-bold text-lg">
+                1
               </div>
-              <h3 className="text-2xl font-bold mb-4">Premium</h3>
-              <p className="mb-6">La scelta ideale</p>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start">
-                  <span className="mr-2">✓</span>
-                  <span>Tutto del Basic</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">✓</span>
-                  <span>Allestimenti personalizzati</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">✓</span>
-                  <span>Catering completo</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">✓</span>
-                  <span>Intrattenimento</span>
-                </li>
-              </ul>
+              <div>
+                <h3 className="mb-2">Contatto iniziale</h3>
+                <p className="text-gray-700">
+                  Mi racconti del tuo evento: tipo di festa, numero ospiti, location, data.
+                </p>
+              </div>
             </div>
 
-            <div className="bg-white p-8 rounded-lg shadow-lg border-2 border-gray-200">
-              <h3 className="text-2xl font-bold mb-4">Luxury</h3>
-              <p className="text-gray-600 mb-6">Esperienza esclusiva</p>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <span>Tutto del Premium</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <span>Location esclusiva</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <span>Servizio fotografico</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <span>Wedding planner dedicato</span>
-                </li>
-              </ul>
+            <div className="flex gap-4 items-start">
+              <div className="flex-shrink-0 w-12 h-12 bg-accent text-white rounded-full flex items-center justify-center font-bold text-lg">
+                2
+              </div>
+              <div>
+                <h3 className="mb-2">Preventivo personalizzato</h3>
+                <p className="text-gray-700">
+                  Ti invio un preventivo su misura in base alle tue esigenze (durata, setup, extra).
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-4 items-start">
+              <div className="flex-shrink-0 w-12 h-12 bg-accent text-white rounded-full flex items-center justify-center font-bold text-lg">
+                3
+              </div>
+              <div>
+                <h3 className="mb-2">Playlist condivisa</h3>
+                <p className="text-gray-700">
+                  Creiamo insieme la scaletta perfetta per i tuoi ospiti. Tu aggiungi i brani che ami, io faccio il resto.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-4 items-start">
+              <div className="flex-shrink-0 w-12 h-12 bg-accent text-white rounded-full flex items-center justify-center font-bold text-lg">
+                4
+              </div>
+              <div>
+                <h3 className="mb-2">Il giorno della festa</h3>
+                <p className="text-gray-700">
+                  Arrivo in anticipo per il setup, gestisco la musica e l'energia della serata. Tu ti godi la festa!
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-purple-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Rendi Speciale il Tuo Prossimo Evento
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Contattaci per discutere delle tue idee e ricevere un preventivo personalizzato.
+      {/* CTA */}
+      <section className="py-16 bg-accent text-white">
+        <div className="container-custom text-center">
+          <h2 className="mb-6">Pronto per la tua festa?</h2>
+          <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto opacity-90">
+            Raccontami del tuo evento e verifichiamo subito la disponibilità.
           </p>
-          <Link
-            href="/contatti"
-            className="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors inline-block"
+          <a
+            href="#main-content"
+            onClick={(e) => {
+              e.preventDefault();
+              window.location.href = '/#contatto-rapido';
+            }}
+            className="inline-block bg-white text-accent hover:bg-gray-100 px-8 py-4 rounded-full font-semibold transition-colors"
           >
-            Richiedi Preventivo
-          </Link>
+            Richiedi preventivo
+          </a>
         </div>
       </section>
     </div>
