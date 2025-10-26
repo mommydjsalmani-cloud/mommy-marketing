@@ -17,11 +17,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DJ Mommy - Musica per Matrimoni ed Eventi Privati",
+  title: "DJ Luca - Musica per Matrimoni ed Eventi Privati",
   description: "DJ professionista per matrimoni ed eventi privati. Musica su misura, playlist personalizzate e regia impeccabile per il tuo giorno speciale.",
   keywords: "dj matrimoni, dj eventi, musica matrimonio, intrattenimento matrimonio, dj professionista",
   openGraph: {
-    title: "DJ Mommy - Musica per Matrimoni ed Eventi Privati",
+    title: "DJ Luca - Musica per Matrimoni ed Eventi Privati",
     description: "DJ professionista per matrimoni ed eventi privati. Musica su misura per il tuo giorno speciale.",
     type: "website",
     locale: "it_IT",
@@ -36,14 +36,14 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "DJ Mommy",
+    "name": "DJ Luca",
     "description": "DJ professionista per matrimoni ed eventi privati",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "IT"
     },
     "telephone": "+39-123-456-7890",
-    "email": "info@djmommy.it",
+    "email": "info@djluca.it",
     "priceRange": "€€",
     "url": "https://mommy-marketing.vercel.app"
   };

@@ -4,57 +4,53 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-800 text-white py-12">
+    <footer className="bg-gray-800 text-white py-12 border-t border-gray-700">
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* About */}
           <div>
-            <h3 className="text-xl font-bold mb-4">DJ Mommy</h3>
-            <p className="text-gray-300 text-sm">
-              Musica su misura per matrimoni ed eventi privati. Professionalità e passione dal 2015.
+            <h3 className="text-xl font-bold mb-4">DJ Luca</h3>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              Musica su misura per matrimoni ed eventi privati.
             </p>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h3 className="text-lg font-bold mb-4">Link Utili</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/matrimoni" className="text-gray-300 hover:text-accent transition-colors text-sm">
+                <Link href="/matrimoni" className="text-gray-400 hover:text-accent transition-colors text-sm">
                   Matrimoni
                 </Link>
               </li>
               <li>
-                <Link href="/eventi-privati" className="text-gray-300 hover:text-accent transition-colors text-sm">
+                <Link href="/eventi-privati" className="text-gray-400 hover:text-accent transition-colors text-sm">
                   Eventi Privati
                 </Link>
               </li>
               <li>
-                <Link href="/recensioni" className="text-gray-300 hover:text-accent transition-colors text-sm">
+                <Link href="/recensioni" className="text-gray-400 hover:text-accent transition-colors text-sm">
                   Recensioni
                 </Link>
               </li>
               <li>
-                <Link href="/contatti" className="text-gray-300 hover:text-accent transition-colors text-sm">
+                <Link href="/contatti" className="text-gray-400 hover:text-accent transition-colors text-sm">
                   Contatti
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Contact Info */}
           <div>
             <h3 className="text-lg font-bold mb-4">Contatti</h3>
-            <ul className="space-y-2 text-gray-300 text-sm">
-              <li>Email: info@djmommy.it</li>
+            <ul className="space-y-2 text-gray-400 text-sm">
+              <li>Email: info@djluca.it</li>
               <li>Tel: +39 123 456 7890</li>
-              <li>WhatsApp: +39 123 456 7890</li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
-          <p>&copy; {currentYear} DJ Mommy. Tutti i diritti riservati.</p>
+          <p>&copy; {currentYear} DJ Luca. Tutti i diritti riservati.</p>
         </div>
       </div>
     </footer>
