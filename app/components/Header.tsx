@@ -22,7 +22,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
             <Image
-              src="/logo.svg"
+              src="/Logo_Bianco.png"
               alt="Mommy DJ Logo"
               width={160}
               height={45}
