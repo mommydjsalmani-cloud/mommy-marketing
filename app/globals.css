@@ -148,3 +148,17 @@ section:nth-child(4) { animation-delay: 0.2s; }
 section:nth-child(5) { animation-delay: 0.25s; }
 section:nth-child(6) { animation-delay: 0.3s; }
 section:nth-child(7) { animation-delay: 0.35s; }
+
+/* Scroll margin per ancore (evita che finiscano sotto l'header) */
+section[id],
+div[id] {
+  scroll-margin-top: 80px;
+}
+
+@media (min-width: 768px) {
+  section[id],
+  div[id] {
+    scroll-margin-top: 88px;
+  }
+}
+
