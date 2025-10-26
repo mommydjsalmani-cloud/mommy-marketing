@@ -20,7 +20,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="text-xl md:text-2xl font-bold text-white hover:text-accent transition-colors">
-            DJ Luca
+            Mommy DJ
           </Link>
 
           {/* Desktop Navigation */}
