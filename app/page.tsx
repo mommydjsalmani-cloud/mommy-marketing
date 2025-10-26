@@ -17,20 +17,38 @@ export default function Home() {
         </div>
 
         <div className="container-custom text-center relative z-20 px-4">
-          <h1 className="mb-6 max-w-4xl mx-auto text-white uppercase tracking-wide">
-            Leggende di Mare
+          <h1 className="mb-6 max-w-4xl mx-auto text-white">
+            DJ per matrimoni ed eventi in Italia e Svizzera
           </h1>
-          <p className="text-lg md:text-xl text-gray-300 mb-4 max-w-2xl mx-auto uppercase tracking-widest text-sm">
-            Nato da pescatori, stregato dal mare, rapito dalla musica.
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto font-light">
+            Musica su misura. Coordinamento semplice.
           </p>
-          <p className="text-base md:text-lg text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Credo che il mare sia un luogo interiore ed esteriore. Esploro il mare che c'è fuori, perché sono curioso. Esploro il mare che le persone hanno dentro, per conoscere le loro emozioni. La musica è ciò che mi permettere di fare tutto questo.
-          </p>
+          
+          {/* Bullet rapidi */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-4xl mx-auto mb-12">
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-accent mb-1">20</div>
+              <div className="text-xs md:text-sm text-gray-400">anni dietro alla consolle</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-accent mb-1">5</div>
+              <div className="text-xs md:text-sm text-gray-400">anni su matrimoni</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-accent mb-1">🇮🇹🇨🇭</div>
+              <div className="text-xs md:text-sm text-gray-400">Italia e Svizzera</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-accent mb-1">📱</div>
+              <div className="text-xs md:text-sm text-gray-400">App richieste live</div>
+            </div>
+          </div>
+
           <a
-            href="#about"
+            href="#contatto-rapido"
             className="inline-block border-2 border-accent hover:bg-accent text-white px-12 py-4 rounded-full font-semibold transition-all uppercase tracking-wider text-sm"
           >
-            Scopri come diventare DJ Producer
+            Verifica disponibilità
           </a>
         </div>
 
@@ -45,26 +63,32 @@ export default function Home() {
       {/* 2. Chi sono - Short Section */}
       <section id="about" className="py-20 bg-gray-900">
         <div className="container-custom max-w-4xl text-center">
-          <h2 className="mb-4 text-white uppercase tracking-wider">Aperitivo Vista Mare</h2>
+          <h2 className="mb-8 text-white uppercase tracking-wider">Chi sono</h2>
+          <p className="text-gray-300 mb-4 leading-relaxed text-lg">
+            Sono <strong className="text-white">Mommy DJ</strong>.
+          </p>
+          <p className="text-gray-400 mb-4 leading-relaxed">
+            DJ & Music Planner per matrimoni ed eventi privati.
+          </p>
           <p className="text-gray-400 mb-6 leading-relaxed">
-            Liberi di volare, di crescere e di prendere forma. Sappiamo che quando questa piccola parte sarà cresciuta sarà diventata Grande, allora, solo allora... con tutta la sua esperienza sarà capace di compiere grandi azioni, perfino di zittire chi non ha mai creduto in Lei.
+            Gestisco musica, tempi e coordinamento con planner, band e fornitori. Uso la mia web app per richieste in tempo reale.
           </p>
-          <p className="text-gray-400 mb-8 leading-relaxed">
-            In questo spazio racconto pensieri, parole e sogni non solo della mia vita ma anche dell'immaginazione. Racconto la mia storia e di come sono riuscito a sconfiggere le innumerevoli difficoltà e se non ti saranno d'aiuto, almeno lo faccio per me stesso.
-          </p>
-          <Link
-            href="/contatti"
-            className="inline-block border-2 border-accent hover:bg-accent text-white px-10 py-3 rounded-full font-semibold transition-all uppercase tracking-wider text-sm"
-          >
-            Connettiti
-          </Link>
+          <div className="flex flex-wrap gap-4 justify-center mt-8">
+            <Link href="/matrimoni" className="text-accent hover:underline font-semibold uppercase tracking-wide text-sm">
+              Matrimoni →
+            </Link>
+            <Link href="/eventi-privati" className="text-accent hover:underline font-semibold uppercase tracking-wide text-sm">
+              Eventi Privati →
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* 3. Video Section */}
       <section id="video" className="py-20 bg-black">
         <div className="container-custom max-w-5xl">
-          <h2 className="text-center mb-12 text-white uppercase tracking-wider">Guarda il video</h2>
+          <h2 className="text-center mb-4 text-white uppercase tracking-wider">Video highlight</h2>
+          <p className="text-center text-gray-400 mb-12">60 secondi: momenti chiave e dancefloor</p>
           <div className="relative aspect-video bg-gray-900 rounded-2xl overflow-hidden shadow-2xl border border-gray-800">
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center text-white">
@@ -81,12 +105,12 @@ export default function Home() {
       <section className="py-20 bg-gray-900">
         <div className="container-custom">
           <h2 className="text-center mb-16 text-white uppercase tracking-wider">Cosa faccio</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <Link href="/matrimoni" className="group bg-gray-800 border border-gray-700 p-8 rounded-xl hover:border-accent hover:bg-gray-800/80 transition-all block">
               <div className="text-5xl mb-6">💍</div>
               <h3 className="mb-4 text-white uppercase tracking-wide">Matrimoni</h3>
               <p className="text-gray-400 mb-6 text-sm leading-relaxed">
-                Musica per ogni momento: cerimonia, aperitivo, cena e party. Scaletta personalizzata dopo call conoscitiva.
+                Cerimonia, aperitivo, cena, party. Gestione completa di tutte le fasi.
               </p>
               <span className="text-accent font-semibold text-sm uppercase tracking-wider group-hover:underline">Scopri di più →</span>
             </Link>
@@ -95,7 +119,7 @@ export default function Home() {
               <div className="text-5xl mb-6">🎉</div>
               <h3 className="mb-4 text-white uppercase tracking-wide">Eventi Privati</h3>
               <p className="text-gray-400 mb-6 text-sm leading-relaxed">
-                Compleanni 18/30/40, anniversari, feste aziendali. Setup flessibile e playlist su misura.
+                18/30/40, anniversari, feste aziendali. Setup flessibile e playlist su misura.
               </p>
               <span className="text-accent font-semibold text-sm uppercase tracking-wider group-hover:underline">Scopri di più →</span>
             </Link>
@@ -104,7 +128,7 @@ export default function Home() {
               <div className="text-5xl mb-6">🏢</div>
               <h3 className="mb-4 text-white uppercase tracking-wide">Corporate</h3>
               <p className="text-gray-400 mb-6 text-sm leading-relaxed">
-                Feste aziendali, team building, inaugurazioni. Professionalità e discrezione.
+                Sfilate, presentazioni, cocktail. Professionalità e discrezione.
               </p>
               <span className="text-accent font-semibold text-sm uppercase tracking-wider group-hover:underline">Scopri di più →</span>
             </Link>
@@ -112,42 +136,71 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. Recensioni - 3 Box */}
+      {/* 5. Processo - 4 Step */}
       <section className="py-20 bg-black">
+        <div className="container-custom">
+          <h2 className="text-center mb-16 text-white uppercase tracking-wider">Come lavoriamo</h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
+              <h3 className="text-white mb-3 uppercase tracking-wide text-sm">Contatto</h3>
+              <p className="text-gray-400 text-sm">Primo contatto e verifica disponibilità</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
+              <h3 className="text-white mb-3 uppercase tracking-wide text-sm">Call 20'</h3>
+              <p className="text-gray-400 text-sm">Conosciamoci e definiamo lo stile</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
+              <h3 className="text-white mb-3 uppercase tracking-wide text-sm">Playlist & Timeline</h3>
+              <p className="text-gray-400 text-sm">Playlist condivisa e timing evento</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">4</div>
+              <h3 className="text-white mb-3 uppercase tracking-wide text-sm">Evento</h3>
+              <p className="text-gray-400 text-sm">Setup, regia e divertimento</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. Recensioni - 3 Box */}
+      <section className="py-20 bg-gray-900">
         <div className="container-custom">
           <h2 className="text-center mb-16 text-white uppercase tracking-wider">Dicono di me</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-gray-900 border border-gray-800 p-8 rounded-xl">
+            <div className="bg-gray-800 border border-gray-700 p-8 rounded-xl">
               <div className="flex items-center mb-4">
                 <div className="text-2xl mr-2">⭐⭐⭐⭐⭐</div>
               </div>
               <p className="text-gray-400 mb-6 italic text-sm leading-relaxed">
-                &quot;Professionale, attento e con un gusto musicale perfetto. Tutti hanno ballato!&quot;
+                &quot;Pista sempre piena. Professionale dall'inizio alla fine.&quot;
               </p>
-              <p className="font-semibold text-white">Maria & Luca</p>
+              <p className="font-semibold text-white">Sara & Marco</p>
+              <p className="text-xs text-gray-500">Como, 2024</p>
+            </div>
+
+            <div className="bg-gray-800 border border-gray-700 p-8 rounded-xl">
+              <div className="flex items-center mb-4">
+                <div className="text-2xl mr-2">⭐⭐⭐⭐⭐</div>
+              </div>
+              <p className="text-gray-400 mb-6 italic text-sm leading-relaxed">
+                &quot;Organizzazione e musica perfette. Coordinamento impeccabile.&quot;
+              </p>
+              <p className="font-semibold text-white">Giulia & Luca</p>
               <p className="text-xs text-gray-500">Milano, 2024</p>
             </div>
 
-            <div className="bg-gray-900 border border-gray-800 p-8 rounded-xl">
+            <div className="bg-gray-800 border border-gray-700 p-8 rounded-xl">
               <div className="flex items-center mb-4">
                 <div className="text-2xl mr-2">⭐⭐⭐⭐⭐</div>
               </div>
               <p className="text-gray-400 mb-6 italic text-sm leading-relaxed">
-                &quot;Ha capito subito cosa volevamo. La festa è stata un successo totale.&quot;
+                &quot;Ha gestito tutto senza stress. Lo richiameremo sicuramente.&quot;
               </p>
-              <p className="font-semibold text-white">Giulia R.</p>
-              <p className="text-xs text-gray-500">Roma, 2024</p>
-            </div>
-
-            <div className="bg-gray-900 border border-gray-800 p-8 rounded-xl">
-              <div className="flex items-center mb-4">
-                <div className="text-2xl mr-2">⭐⭐⭐⭐⭐</div>
-              </div>
-              <p className="text-gray-400 mb-6 italic text-sm leading-relaxed">
-                &quot;Consigliatissimo! Musica sempre azzeccata e attenzione ai dettagli.&quot;
-              </p>
-              <p className="font-semibold text-white">Marco S.</p>
-              <p className="text-xs text-gray-500">Firenze, 2023</p>
+              <p className="font-semibold text-white">Francesca & Andrea</p>
+              <p className="text-xs text-gray-500">Lugano, 2023</p>
             </div>
           </div>
           <div className="text-center mt-12">
@@ -158,25 +211,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 6. Contatto Rapido */}
-      <section id="contatto-rapido" className="py-20 bg-gray-900">
+      {/* 7. Contatto Rapido */}
+      <section id="contatto-rapido" className="py-20 bg-black">
         <div className="container-custom max-w-3xl">
           <h2 className="text-center mb-12 text-white uppercase tracking-wider">Contatto rapido</h2>
-          <div className="bg-gray-800 border border-gray-700 p-8 md:p-10 rounded-xl">
+          <div className="bg-gray-900 border border-gray-800 p-8 md:p-10 rounded-xl">
             <form className="space-y-6">
+              <div>
+                <label htmlFor="nome" className="block text-sm font-medium text-gray-300 mb-2">
+                  Nome e cognome *
+                </label>
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  required
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent text-white placeholder-gray-500"
+                />
+              </div>
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="nome" className="block text-sm font-medium text-gray-300 mb-2">
-                    Nome *
-                  </label>
-                  <input
-                    type="text"
-                    id="nome"
-                    name="nome"
-                    required
-                    className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent text-white placeholder-gray-500"
-                  />
-                </div>
                 <div>
                   <label htmlFor="data" className="block text-sm font-medium text-gray-300 mb-2">
                     Data evento
@@ -185,22 +239,7 @@ export default function Home() {
                     type="date"
                     id="data"
                     name="data"
-                    className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent text-white"
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="location" className="block text-sm font-medium text-gray-300 mb-2">
-                    Location
-                  </label>
-                  <input
-                    type="text"
-                    id="location"
-                    name="location"
-                    placeholder="es. Milano"
-                    className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent text-white placeholder-gray-500"
+                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent text-white"
                   />
                 </div>
                 <div>
@@ -212,9 +251,22 @@ export default function Home() {
                     id="ospiti"
                     name="ospiti"
                     placeholder="es. 100"
-                    className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent text-white placeholder-gray-500"
+                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent text-white placeholder-gray-500"
                   />
                 </div>
+              </div>
+
+              <div>
+                <label htmlFor="location" className="block text-sm font-medium text-gray-300 mb-2">
+                  Location
+                </label>
+                <input
+                  type="text"
+                  id="location"
+                  name="location"
+                  placeholder="es. Como, Milano..."
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent text-white placeholder-gray-500"
+                />
               </div>
 
               <div>
@@ -225,7 +277,7 @@ export default function Home() {
                   id="messaggio"
                   name="messaggio"
                   rows={4}
-                  className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent text-white placeholder-gray-500"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent text-white placeholder-gray-500"
                   placeholder="Raccontami del tuo evento..."
                 ></textarea>
               </div>
@@ -253,7 +305,7 @@ export default function Home() {
           </div>
 
           {/* Richiedi un brano */}
-          <div className="mt-10 text-center p-8 bg-gray-800/50 border-2 border-accent border-dashed rounded-xl">
+          <div className="mt-10 text-center p-8 bg-gray-900/50 border-2 border-accent border-dashed rounded-xl">
             <p className="text-lg mb-4 text-white">Hai una canzone del cuore?</p>
             <Link
               href="/richiedi"
@@ -270,5 +322,3 @@ export default function Home() {
     </div>
   );
 }
-
-

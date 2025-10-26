@@ -17,14 +17,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DJ Luca - Musica per Matrimoni ed Eventi Privati",
-  description: "DJ professionista per matrimoni ed eventi privati. Musica su misura, playlist personalizzate e regia impeccabile per il tuo giorno speciale.",
-  keywords: "dj matrimoni, dj eventi, musica matrimonio, intrattenimento matrimonio, dj professionista",
+  title: "Mommy DJ - DJ per Matrimoni ed Eventi in Italia e Svizzera",
+  description: "DJ professionista per matrimoni, eventi privati e aziendali. 20 anni di esperienza, app richieste live, coordinamento con planner e fornitori.",
   openGraph: {
-    title: "DJ Luca - Musica per Matrimoni ed Eventi Privati",
-    description: "DJ professionista per matrimoni ed eventi privati. Musica su misura per il tuo giorno speciale.",
+    title: "Mommy DJ - DJ per Matrimoni ed Eventi",
+    description: "DJ professionista per matrimoni, eventi privati e aziendali in Italia e Svizzera.",
     type: "website",
-    locale: "it_IT",
   },
 };
 
@@ -36,15 +34,16 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "DJ Luca",
-    "description": "DJ professionista per matrimoni ed eventi privati",
+    "name": "Mommy DJ",
+    "description": "DJ professionista per matrimoni ed eventi privati in Italia e Svizzera",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "IT"
     },
+    "areaServed": ["IT", "CH"],
     "telephone": "+39-123-456-7890",
-    "email": "info@djluca.it",
-    "priceRange": "€€",
+    "email": "info@mommydj.com",
+    "priceRange": "€€-€€€",
     "url": "https://mommy-marketing.vercel.app"
   };
 
