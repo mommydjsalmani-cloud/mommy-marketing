@@ -51,10 +51,10 @@ export default function LogoIntro() {
         <Image
           src="/Logo_Bianco.png"
           alt="Mommy DJ"
-          width={400}
-          height={120}
+          width={800}
+          height={240}
           priority
-          className="w-auto h-24 md:h-32"
+          className="w-auto h-32 md:h-48 lg:h-56"
         />
       </div>
 
