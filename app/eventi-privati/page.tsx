@@ -8,7 +8,7 @@ export default function EventiPrivati() {
       {/* Breadcrumb */}
       <nav className="bg-gray-900 border-b border-gray-800 py-3">
         <div className="container-custom">
-          <div className="flex items-center gap-2 text-sm text-gray-400">
+          <div className="flex items-center gap-2 text-sm text-gray-400 font-sans">
             <Link href="/" className="hover:text-accent transition-colors">Home</Link>
             <span>/</span>
             <span className="text-white">Eventi Privati</span>
@@ -20,7 +20,7 @@ export default function EventiPrivati() {
       <section className="relative py-32 bg-gradient-to-b from-black via-gray-900 to-black">
         <div className="container-custom text-center">
           <div className="text-6xl mb-6">🎉</div>
-          <h1 className="mb-6 text-white font-display uppercase tracking-widest">DJ per compleanni, anniversari, aziendali</h1>
+          <h1 className="mb-6 text-white font-display">DJ per compleanni, anniversari, aziendali</h1>
           <p className="font-sans text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Trovare il "centro" della festa entro tre brani.<br />
             Poi mantenerlo.
@@ -31,16 +31,16 @@ export default function EventiPrivati() {
       {/* Format */}
       <section className="py-20 bg-gray-900">
         <div className="container-custom">
-          <h2 className="font-display text-center mb-16 text-white uppercase tracking-wider">Formato</h2>
+          <h2 className="font-display text-center mb-16 text-white">Formato</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-gray-800 border border-gray-700 p-8 rounded-xl">
               <div className="text-4xl mb-4">🎂</div>
-              <h3 className="font-display text-white mb-4 uppercase tracking-wide">18/30/40 e anniversari</h3>
+              <h3 className="font-display text-white mb-4">18/30/40 e anniversari</h3>
               <p className="font-sans text-gray-400 leading-relaxed">Set flessibile, momenti parlati chiari.</p>
             </div>
             <div className="bg-gray-800 border border-gray-700 p-8 rounded-xl">
               <div className="text-4xl mb-4">🏢</div>
-              <h3 className="font-display text-white mb-4 uppercase tracking-wide">Aziendali</h3>
+              <h3 className="font-display text-white mb-4">Aziendali</h3>
               <p className="font-sans text-gray-400 leading-relaxed">Volumi controllati, finestre speech, transizioni pulite.</p>
             </div>
           </div>
@@ -50,13 +50,13 @@ export default function EventiPrivati() {
       {/* Cosa porto */}
       <section className="py-20 bg-black">
         <div className="container-custom max-w-4xl">
-          <h2 className="font-display text-center mb-12 text-white uppercase tracking-wider">Dotazione</h2>
+          <h2 className="font-display text-center mb-12 text-white">Dotazione</h2>
           <div className="bg-gray-900 border border-gray-800 p-8 md:p-10 rounded-2xl">
             <p className="font-sans text-gray-300 leading-relaxed mb-6">
               Consolle, impianto dimensionato, microfoni, luci base.
             </p>
             <div>
-              <h3 className="font-display text-white font-semibold mb-3 uppercase tracking-wide text-sm">Extra</h3>
+              <h3 className="font-display text-white font-semibold mb-3 text-sm">Extra</h3>
               <p className="font-sans text-gray-400 leading-relaxed">
                 uplighting, seconda postazione, sax live.
               </p>
@@ -130,7 +130,7 @@ export default function EventiPrivati() {
       {/* CTA */}
       <section className="py-20 bg-gray-900">
         <div className="container-custom text-center max-w-2xl">
-          <h2 className="font-display mb-6 text-white uppercase tracking-wider">Chiedi un preventivo</h2>
+          <h2 className="font-display mb-6 text-white">Chiedi un preventivo</h2>
           <p className="font-sans text-gray-400 mb-10 leading-relaxed">
             Ogni evento è diverso. Raccontami la tua idea e ti preparo una proposta chiara.
           </p>

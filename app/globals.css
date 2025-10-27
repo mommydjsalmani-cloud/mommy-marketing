@@ -39,18 +39,17 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   font-weight: 400;
   color: var(--foreground);
+  text-transform: uppercase;
 }
 
 h1 {
   font-size: 2.5rem;
   letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
 h2 {
   font-size: 1.875rem;
   letter-spacing: 0.05em;
-  text-transform: uppercase;
 }
 
 h3 {

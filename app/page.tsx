@@ -14,7 +14,7 @@ export default function Home() {
 
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
-          <h1 className="font-display uppercase tracking-hero text-4xl md:text-6xl lg:text-7xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-[#4169e1]">
+          <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-[#4169e1]">
             Regia musicale per matrimoni ed eventi.
           </h1>
           <p className="font-sans text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
@@ -88,7 +88,7 @@ export default function Home() {
             </h2>
           </div>
           <div className="bg-black/50 border border-[#4169e1]/30 rounded-2xl p-8 md:p-12">
-            <div className="space-y-4 font-mono text-gray-300">
+            <div className="space-y-4 text-gray-300">
               <p className="font-sans text-lg"><span className="text-[#4169e1] font-semibold">18:40</span> catering chiede 10′ di buffer.</p>
               <p className="font-sans text-lg">Allungo l'aperitivo con un set morbido.</p>
               <p className="font-sans text-lg"><span className="text-[#4169e1] font-semibold">19:10</span> fotografo pronto: cue torta al 00:47.</p>

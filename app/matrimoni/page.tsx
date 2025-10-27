@@ -42,7 +42,7 @@ export default function Matrimoni() {
       {/* Breadcrumb */}
       <nav className="bg-gray-900 border-b border-gray-800 py-3">
         <div className="container-custom">
-          <div className="flex items-center gap-2 text-sm text-gray-400">
+          <div className="flex items-center gap-2 text-sm text-gray-400 font-sans">
             <Link href="/" className="hover:text-accent transition-colors">Home</Link>
             <span>/</span>
             <span className="text-white">Matrimoni</span>
@@ -54,7 +54,7 @@ export default function Matrimoni() {
       <section className="relative py-32 bg-gradient-to-b from-black via-gray-900 to-black">
         <div className="container-custom text-center">
           <div className="text-6xl mb-6">💍</div>
-          <h1 className="mb-6 text-white font-display uppercase tracking-widest">Regia musicale del matrimonio</h1>
+          <h1 className="mb-6 text-white font-display">Regia musicale del matrimonio</h1>
           <p className="font-sans text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Ogni fase ha un obiettivo diverso. Io allineo tempi, volumi e passaggi.<br />
             Zero corse. Zero fischi. Zero silenzi imbarazzanti.
@@ -80,7 +80,7 @@ export default function Matrimoni() {
                 }`}
               >
                 <div className="text-4xl mb-3">{phase.icon}</div>
-                <h3 className="text-sm uppercase tracking-wide font-semibold">{phase.title}</h3>
+                <h3 className="font-display text-sm font-semibold">{phase.title}</h3>
               </button>
             ))}
           </div>
@@ -90,7 +90,7 @@ export default function Matrimoni() {
             <div className="flex items-start gap-6">
               <div className="text-6xl">{phases[activePhase].icon}</div>
               <div className="flex-1">
-                <h3 className="font-display text-2xl font-bold text-white mb-4 uppercase tracking-wide">
+                <h3 className="font-display text-2xl font-bold text-white mb-4">
                   {phases[activePhase].title}
                 </h3>
                 <p className="font-sans text-gray-300 mb-4 text-lg leading-relaxed">
@@ -132,7 +132,7 @@ export default function Matrimoni() {
       {/* Come scelgo la musica */}
       <section className="py-20 bg-gray-900">
         <div className="container-custom max-w-4xl">
-          <h2 className="font-display text-center mb-12 text-white uppercase tracking-wider">Metodo</h2>
+          <h2 className="font-display text-center mb-12 text-white">Metodo</h2>
           <div className="bg-gray-800 border border-gray-700 p-8 md:p-10 rounded-2xl">
             <div className="space-y-6 text-gray-300 leading-relaxed">
               <p className="font-sans">
@@ -151,7 +151,7 @@ export default function Matrimoni() {
           </div>
           
           <div className="mt-8 bg-gray-800 border border-gray-700 p-8 md:p-10 rounded-2xl">
-            <h3 className="font-display text-xl text-white mb-4 uppercase tracking-wide">Richieste brani</h3>
+            <h3 className="font-display text-xl text-white mb-4">Richieste brani</h3>
             <p className="font-sans text-gray-300 leading-relaxed">
               Le accetto. Le filtro. Le inserisco nel punto giusto.<br />
               La tua app "Richiedi un brano" è disponibile con QR.
@@ -163,7 +163,7 @@ export default function Matrimoni() {
       {/* CTA */}
       <section className="py-20 bg-black">
         <div className="container-custom text-center max-w-2xl">
-          <h2 className="font-display mb-6 text-white uppercase tracking-wider">Verifica la data</h2>
+          <h2 className="font-display mb-6 text-white">Verifica la data</h2>
           <p className="font-sans text-gray-400 mb-10 leading-relaxed">
             Le date si riempiono velocemente. Contattami per verificare la disponibilità.
           </p>
