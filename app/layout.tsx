@@ -3,12 +3,12 @@ import { Inter, Michroma } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import LogoIntro from "./components/LogoIntro";
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
-  preload: true,
 });
 
 const michroma = Michroma({
@@ -16,7 +16,6 @@ const michroma = Michroma({
   weight: "400",
   subsets: ["latin"],
   display: "swap",
-  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -61,6 +60,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${michroma.variable} antialiased`}
       >
+        <LogoIntro />
         <a href="#main-content" className="skip-to-content">
           Salta al contenuto
         </a>
