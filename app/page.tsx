@@ -14,11 +14,14 @@ export default function Home() {
 
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
-          <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-[#4169e1]">
-            Regia musicale per matrimoni ed eventi.
+          <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-[#4169e1]">
+            DJ & Music Planner
           </h1>
-          <p className="font-sans text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Definiamo i momenti. Allineiamo i fornitori. Costruiamo il party senza buchi.
+          <p className="font-sans text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Matrimoni | Eventi Privati | Locali | Destination Wedding
+          </p>
+          <p className="font-sans text-base md:text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
+            Dal 2003 — musica e regia per eventi in Svizzera, Toscana, Lombardia e Veneto
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a
@@ -31,7 +34,7 @@ export default function Home() {
               href="#processo"
               className="font-sans font-semibold px-10 py-4 border-2 border-white/20 text-white rounded-full hover:border-[#4169e1] hover:text-[#4169e1] transition-all duration-300"
             >
-              Scopri il Processo
+              Guarda il video di presentazione
             </a>
           </div>
         </div>
@@ -44,7 +47,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Tre Punti Chiave */}
+      {/* Cosa Faccio */}
       <section className="py-24 bg-black relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#4169e1] to-transparent"></div>
@@ -53,263 +56,130 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-12">
             <div className="text-center">
               <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-4">
-                Timing
+                Matrimonio & Destination Wedding
               </h3>
               <p className="font-sans text-lg text-gray-300 leading-relaxed">
-                Rispetto della scaletta al minuto.
+                Eventi curati nei dettagli, con musica pensata per ogni momento.
               </p>
             </div>
             <div className="text-center">
               <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-4">
-                Regia
+                Eventi Privati & Locali
               </h3>
               <p className="font-sans text-lg text-gray-300 leading-relaxed">
-                Coordinamento con planner, catering, foto/video, band.
+                Feste, anniversari, corporate e serate live con regia musicale completa.
               </p>
             </div>
             <div className="text-center">
               <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-4">
-                Pista
+                Regia & Collaborazioni
               </h3>
               <p className="font-sans text-lg text-gray-300 leading-relaxed">
-                Set dinamico, richieste filtrate con criterio.
+                Gestione e coordinamento di musicisti, performer e cantanti dal vivo.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Dietro le quinte */}
+      {/* Approccio */}
       <section className="py-24 bg-[#0a0a0a]">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-6">
-              Dietro le quinte
+              Approccio
             </h2>
           </div>
           <div className="bg-black/50 border border-[#4169e1]/30 rounded-2xl p-8 md:p-12">
             <div className="space-y-4 text-gray-300">
-              <p className="font-sans text-lg"><span className="text-[#4169e1] font-semibold">18:40</span> catering chiede 10′ di buffer.</p>
-              <p className="font-sans text-lg">Allungo l'aperitivo con un set morbido.</p>
-              <p className="font-sans text-lg"><span className="text-[#4169e1] font-semibold">19:10</span> fotografo pronto: cue torta al 00:47.</p>
-              <p className="font-sans text-lg">Si parte. Nessuno aspetta.</p>
+              <p className="font-sans text-lg leading-relaxed">
+                Da oltre vent'anni mi occupo di musica e direzione artistica per eventi.
+              </p>
+              <p className="font-sans text-lg leading-relaxed">
+                In ogni serata creo un percorso musicale che spazia da house, pop, R&B e hip hop fino ai classici '70–'80 e ai ritmi latini.
+              </p>
+              <p className="font-sans text-lg leading-relaxed">
+                Grazie a un'applicazione che ho sviluppato, gli ospiti possono inviare richieste musicali in tempo reale, rendendo ogni evento ancora più personale.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="servizi" className="py-24 bg-black">
+      {/* Esperienza Internazionale */}
+      <section id="esperienza" className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-6">
-              Servizi & Pacchetti
+              Esperienza Internazionale
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <div className="bg-gradient-to-b from-[#4169e1]/10 to-transparent border border-[#4169e1]/30 rounded-2xl p-8 hover:border-[#4169e1] transition-all duration-300">
-              <h3 className="font-display text-2xl font-bold text-white mb-4">Base</h3>
-              <p className="font-sans text-gray-300 mb-6">Consolle, impianto adeguato agli ospiti, 1 microfono, playlist su misura.</p>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-black/50 border border-[#4169e1]/30 rounded-2xl p-8 md:p-12 mb-12">
+              <p className="font-sans text-lg text-gray-300 leading-relaxed mb-6">
+                Ho curato la musica per matrimoni ed eventi con ospiti provenienti da Irlanda, Stati Uniti, India, Australia e molti altri paesi.
+              </p>
+              <p className="font-sans text-lg text-gray-300 leading-relaxed">
+                Collaboro spesso con wedding planner e venue internazionali, lavorando in contesti esclusivi in <strong className="text-white">Svizzera, Toscana, Lombardia e Veneto</strong>.
+              </p>
             </div>
 
-            <div className="bg-gradient-to-b from-[#4169e1]/20 to-transparent border-2 border-[#4169e1] rounded-2xl p-8 transform scale-105 shadow-xl shadow-[#4169e1]/20">
-              <h3 className="font-display text-2xl font-bold text-white mb-4">Plus</h3>
-              <p className="font-sans text-gray-300 mb-6">Base + luci party + supporto cerimonia/aperitivo + 2° microfono.</p>
-            </div>
-
-            <div className="bg-gradient-to-b from-[#4169e1]/10 to-transparent border border-[#4169e1]/30 rounded-2xl p-8 hover:border-[#4169e1] transition-all duration-300">
-              <h3 className="font-display text-2xl font-bold text-white mb-4">Premium</h3>
-              <p className="font-sans text-gray-300 mb-6">Plus + uplighting sala + seconda postazione.</p>
-            </div>
-          </div>
-
-          <div className="bg-black/50 border border-[#4169e1]/30 rounded-2xl p-8 mb-12">
-            <h3 className="font-display text-2xl font-bold text-white mb-6">Extra</h3>
-            <p className="font-sans text-gray-300 mb-4">
-              Sax live, proiettore, copertura esterni, monitoraggio dB se richiesto.
-            </p>
-            <p className="font-sans text-gray-400 text-sm">
-              SIAE/SCF: da definire insieme in base al caso.
-            </p>
-          </div>
-
-          <div className="bg-black/50 border border-[#4169e1]/30 rounded-2xl p-8">
-            <h3 className="font-display text-2xl font-bold text-white mb-6">Tempi e logistica</h3>
-            <div className="grid md:grid-cols-3 gap-6 text-gray-300">
-              <div>
-                <p className="font-sans"><strong className="text-white">Montaggio:</strong> 90–120′ (location permettendo).</p>
+            {/* Numeri */}
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-gradient-to-b from-[#4169e1]/10 to-transparent border border-[#4169e1]/30 rounded-2xl p-8 text-center hover:border-[#4169e1] transition-all duration-300">
+                <div className="text-5xl font-bold text-[#4169e1] mb-4">1000+</div>
+                <p className="font-sans text-gray-300">eventi curati</p>
               </div>
-              <div>
-                <p className="font-sans"><strong className="text-white">Spazio minimo postazione:</strong> 2×1,5 m.</p>
+
+              <div className="bg-gradient-to-b from-[#4169e1]/10 to-transparent border border-[#4169e1]/30 rounded-2xl p-8 text-center hover:border-[#4169e1] transition-all duration-300">
+                <div className="text-5xl font-bold text-[#4169e1] mb-4">15+</div>
+                <p className="font-sans text-gray-300">nazionalità di ospiti</p>
               </div>
-              <div>
-                <p className="font-sans"><strong className="text-white">Corrente:</strong> 3 kW dedicati consigliati (verifica con location).</p>
+
+              <div className="bg-gradient-to-b from-[#4169e1]/10 to-transparent border border-[#4169e1]/30 rounded-2xl p-8 text-center hover:border-[#4169e1] transition-all duration-300">
+                <div className="text-5xl font-bold text-[#4169e1] mb-4">Alto livello</div>
+                <p className="font-sans text-gray-300">collaborazioni con wedding planner</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Process Section */}
-      <section id="processo" className="py-24 bg-[#0a0a0a]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-6">
-              Processo
-            </h2>
-          </div>
+      {/* Process Section - Rimosso */}
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                number: "01",
-                title: "Contatto",
-                description: "Data, location, ospiti, preferenze.",
-              },
-              {
-                number: "02",
-                title: "Call 20′",
-                description: "Definiamo momenti chiave e divieti.",
-              },
-              {
-                number: "03",
-                title: "Run of Show",
-                description: "Timeline condivisa con planner e fornitori.",
-              },
-              {
-                number: "04",
-                title: "Evento",
-                description: "Regia silenziosa. Pista viva. Report finale se serve.",
-              },
-            ].map((step) => (
-              <div
-                key={step.number}
-                className="bg-black/50 border border-[#4169e1]/30 rounded-2xl p-8 hover:border-[#4169e1] transition-all duration-300 group"
-              >
-                <div className="text-6xl font-bold text-[#4169e1]/20 group-hover:text-[#4169e1]/40 transition-colors mb-4">
-                  {step.number}
-                </div>
-                <h3 className="font-display text-2xl font-bold text-white mb-4">{step.title}</h3>
-                <p className="font-sans text-gray-400">{step.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Recensioni - Rimossa */}
 
-      {/* 6. Recensioni - 3 Box */}
-            {/* Reviews Section */}
-      <section id="recensioni" className="py-24 bg-black">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-6">
-              Recensioni
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                text: "Timeline rispettata. Nessun intoppo tecnico.",
-                author: "Marco S.",
-                location: "Lugano",
-                year: "2024",
-              },
-              {
-                text: "Ha tenuto insieme cucina, foto e pista.",
-                author: "Laura M.",
-                location: "Como",
-                year: "2024",
-              },
-              {
-                text: "Richieste gestite bene, ritmo costante.",
-                author: "Luca P.",
-                location: "Milano",
-                year: "2023",
-              },
-            ].map((review, index) => (
-              <div
-                key={index}
-                className="bg-gradient-to-b from-[#4169e1]/10 to-transparent border border-[#4169e1]/30 rounded-2xl p-8 hover:border-[#4169e1] transition-all duration-300"
-              >
-                <div className="text-[#4169e1] text-4xl mb-4">"</div>
-                <p className="font-sans text-gray-300 mb-6 leading-relaxed">{review.text}</p>
-                <div className="border-t border-gray-800 pt-4">
-                  <p className="font-sans font-semibold text-white">{review.author}</p>
-                  <p className="font-sans text-sm text-gray-400">
-                    {review.location} · {review.year}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-24 bg-[#0a0a0a]">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-6">
-              FAQ
-            </h2>
-          </div>
-
-          <div className="space-y-6">
-            <div className="bg-black/50 border border-[#4169e1]/30 rounded-2xl p-8">
-              <h3 className="font-display text-xl text-white mb-4">Limite dB della location?</h3>
-              <p className="font-sans text-gray-300 leading-relaxed">
-                Lavoro con misurazione e settaggi adatti. Niente tagli improvvisi.
-              </p>
-            </div>
-
-            <div className="bg-black/50 border border-[#4169e1]/30 rounded-2xl p-8">
-              <h3 className="font-display text-xl text-white mb-4">Piano pioggia?</h3>
-              <p className="font-sans text-gray-300 leading-relaxed">
-                Setup alternativo previsto in scheda tecnica. Cambio in 15′ se il percorso è libero.
-              </p>
-            </div>
-
-            <div className="bg-black/50 border border-[#4169e1]/30 rounded-2xl p-8">
-              <h3 className="font-display text-xl text-white mb-4">Band + DJ?</h3>
-              <p className="font-sans text-gray-300 leading-relaxed">
-                Co-scaletta, transizioni senza "buchi", microfoni separati, livelli dedicati.
-              </p>
-            </div>
-
-            <div className="bg-black/50 border border-[#4169e1]/30 rounded-2xl p-8">
-              <h3 className="font-display text-xl text-white mb-4">Brani "da evitare"?</h3>
-              <p className="font-sans text-gray-300 leading-relaxed">
-                Lista "No" rispettata sempre.
-              </p>
-            </div>
-
-            <div className="bg-black/50 border border-[#4169e1]/30 rounded-2xl p-8">
-              <h3 className="font-display text-xl text-white mb-4">Se salta qualcosa?</h3>
-              <p className="font-sans text-gray-300 leading-relaxed">
-                Backup A/B. Alimentazioni separate quando possibile.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* FAQ - Rimossa */}
 
       {/* Contact Section */}
       <section id="contatti" className="py-24 bg-[#0a0a0a]">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-6">
-              Contatti
+              🎧 Vuoi sapere se sono disponibile per il tuo evento?
             </h2>
-            <p className="font-sans text-xl text-gray-400 max-w-2xl mx-auto">
-              Scrivi data, location, numero ospiti e 3 brani che vi rappresentano.
-              Ti rispondo con disponibilità e una proposta chiara.
-            </p>
           </div>
 
           <div className="bg-black/50 border border-[#4169e1]/30 rounded-2xl p-8 md:p-12">
-            <div className="space-y-6">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
+              <a
+                href="#contatti"
+                className="font-sans font-semibold px-10 py-4 bg-[#4169e1] text-white rounded-full hover:bg-[#3557c7] transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-[#4169e1]/50 text-center"
+              >
+                Richiedi informazioni
+              </a>
+              <a
+                href="https://wa.me/393123456789"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-sans font-semibold px-10 py-4 border-2 border-[#4169e1] text-[#4169e1] rounded-full hover:bg-[#4169e1] hover:text-white transition-all duration-300 text-center"
+              >
+                Invia richiesta WhatsApp
+              </a>
+            </div>
+
+            <div className="space-y-6 pt-8 border-t border-gray-800">
               <div className="flex items-start gap-4">
                 <div className="w-6 h-6 rounded-full bg-[#4169e1] flex items-center justify-center flex-shrink-0 mt-1">
                   <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -349,12 +219,6 @@ export default function Home() {
                   <p className="font-sans text-gray-300 text-lg">Italia Nord · Ticino · Canton Vallese</p>
                 </div>
               </div>
-            </div>
-
-            <div className="mt-12 pt-8 border-t border-gray-800">
-              <p className="font-sans text-gray-400 text-center">
-                Se vuoi, attivo il link "Richiedi un brano" per gli inviti.
-              </p>
             </div>
           </div>
         </div>
