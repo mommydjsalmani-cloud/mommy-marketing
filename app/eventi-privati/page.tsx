@@ -19,7 +19,21 @@ export default function EventiPrivati() {
       {/* Hero */}
       <section className="relative py-32 bg-gradient-to-b from-black via-gray-900 to-black">
         <div className="container-custom text-center">
-          <div className="text-6xl mb-6">🎉</div>
+          <div className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-6 text-accent">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2">
+              {/* Palloncini party */}
+              <circle cx="24" cy="28" r="10" strokeWidth="2"/>
+              <circle cx="40" cy="24" r="10" strokeWidth="2"/>
+              <circle cx="32" cy="18" r="8" strokeWidth="2"/>
+              <path d="M24 38L24 52M40 34L40 52M32 26L32 52" strokeLinecap="round"/>
+              <path d="M20 52L28 52M36 52L44 52M28 52L36 52" strokeLinecap="round" strokeWidth="2"/>
+              {/* Coriandoli */}
+              <circle cx="14" cy="42" r="1.5" fill="currentColor"/>
+              <circle cx="50" cy="38" r="1.5" fill="currentColor"/>
+              <circle cx="18" cy="48" r="1.5" fill="currentColor"/>
+              <circle cx="46" cy="46" r="1.5" fill="currentColor"/>
+            </svg>
+          </div>
           <h1 className="mb-6 text-white font-display">DJ per compleanni, anniversari, aziendali</h1>
           <p className="font-sans text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Trovare il "centro" della festa entro tre brani.<br />
@@ -34,12 +48,41 @@ export default function EventiPrivati() {
           <h2 className="font-display text-center mb-16 text-white">Formato</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-gray-800 border border-gray-700 p-8 rounded-xl">
-              <div className="text-4xl mb-4">🎂</div>
+              <div className="w-12 h-12 text-accent mb-4">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2">
+                  {/* Torta compleanno */}
+                  <rect x="16" y="32" width="32" height="16" rx="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <rect x="20" y="24" width="24" height="8" rx="1" strokeLinecap="round" strokeLinejoin="round" opacity="0.5"/>
+                  {/* Candeline */}
+                  <line x1="24" y1="24" x2="24" y2="18" strokeLinecap="round"/>
+                  <line x1="32" y1="24" x2="32" y2="16" strokeLinecap="round"/>
+                  <line x1="40" y1="24" x2="40" y2="18" strokeLinecap="round"/>
+                  {/* Fiamme */}
+                  <path d="M24 18C24 18 22 16 24 14" strokeLinecap="round"/>
+                  <path d="M32 16C32 16 30 14 32 12" strokeLinecap="round"/>
+                  <path d="M40 18C40 18 38 16 40 14" strokeLinecap="round"/>
+                  {/* Decorazioni */}
+                  <path d="M20 40H44M22 36H42" strokeLinecap="round" opacity="0.3"/>
+                </svg>
+              </div>
               <h3 className="font-display text-white mb-4">18/30/40 e anniversari</h3>
               <p className="font-sans text-gray-400 leading-relaxed">Set flessibile, momenti parlati chiari.</p>
             </div>
             <div className="bg-gray-800 border border-gray-700 p-8 rounded-xl">
-              <div className="text-4xl mb-4">🏢</div>
+              <div className="w-12 h-12 text-accent mb-4">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2">
+                  {/* Edificio aziendale */}
+                  <rect x="16" y="12" width="32" height="40" rx="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M24 12V8H40V12" strokeLinecap="round" strokeLinejoin="round"/>
+                  {/* Finestre */}
+                  <rect x="22" y="20" width="6" height="6" rx="0.5"/>
+                  <rect x="36" y="20" width="6" height="6" rx="0.5"/>
+                  <rect x="22" y="30" width="6" height="6" rx="0.5"/>
+                  <rect x="36" y="30" width="6" height="6" rx="0.5"/>
+                  {/* Porta */}
+                  <rect x="28" y="42" width="8" height="10" rx="1" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
               <h3 className="font-display text-white mb-4">Aziendali</h3>
               <p className="font-sans text-gray-400 leading-relaxed">Volumi controllati, finestre speech, transizioni pulite.</p>
             </div>
@@ -98,7 +141,17 @@ export default function EventiPrivati() {
       <section id="corporate" className="py-20 bg-black">
         <div className="container-custom max-w-4xl">
           <div className="text-center mb-12">
-            <div className="text-6xl mb-6">🏢</div>
+            <div className="w-16 h-16 mx-auto mb-6 text-accent">
+              <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2">
+                <rect x="16" y="20" width="32" height="32"/>
+                <path d="M16 20L24 12L40 12L48 20" strokeLinecap="round" strokeLinejoin="round"/>
+                <rect x="22" y="28" width="6" height="6"/>
+                <rect x="36" y="28" width="6" height="6"/>
+                <rect x="22" y="40" width="6" height="6"/>
+                <rect x="36" y="40" width="6" height="6"/>
+                <rect x="28" y="46" width="8" height="6"/>
+              </svg>
+            </div>
             <h2 className="mb-6 text-white uppercase tracking-wider">Eventi Corporate</h2>
             <p className="text-gray-300 leading-relaxed max-w-2xl mx-auto">
               Sfilate, presentazioni prodotto, cocktail aziendali. Professionalità, discrezione e adattamento al contesto.

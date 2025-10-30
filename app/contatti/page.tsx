@@ -76,7 +76,13 @@ export default function Contatti() {
               
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="text-3xl">📧</div>
+                  <div className="w-10 h-10 text-accent flex-shrink-0">
+                    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2">
+                      <rect x="8" y="16" width="48" height="32" rx="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M8 20L32 36L56 20" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M8 44L24 32M56 44L40 32" strokeLinecap="round" strokeLinejoin="round" opacity="0.5"/>
+                    </svg>
+                  </div>
                   <div>
                     <h3 className="font-bold mb-2">Email</h3>
                     <a href="mailto:info@djmommy.it" className="text-accent hover:underline font-medium text-base">
@@ -86,7 +92,14 @@ export default function Contatti() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="text-3xl">📱</div>
+                  <div className="w-10 h-10 text-accent flex-shrink-0">
+                    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2">
+                      <rect x="16" y="12" width="32" height="40" rx="4" strokeLinecap="round" strokeLinejoin="round"/>
+                      <circle cx="32" cy="46" r="2" fill="currentColor"/>
+                      <rect x="20" y="16" width="24" height="24" rx="1" strokeLinecap="round" strokeLinejoin="round" opacity="0.3"/>
+                      <path d="M24 22H40M24 26H40M24 30H36" strokeLinecap="round" opacity="0.5"/>
+                    </svg>
+                  </div>
                   <div>
                     <h3 className="font-bold mb-2">Telefono</h3>
                     <a href="tel:+391234567890" className="text-accent hover:underline font-medium text-base">
@@ -96,7 +109,13 @@ export default function Contatti() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="text-3xl">💬</div>
+                  <div className="w-10 h-10 text-accent flex-shrink-0">
+                    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2">
+                      <rect x="12" y="12" width="40" height="40" rx="8" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M20 28L28 36L44 20" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3"/>
+                      <circle cx="32" cy="32" r="16" opacity="0.1" fill="currentColor"/>
+                    </svg>
+                  </div>
                   <div>
                     <h3 className="font-bold mb-2">WhatsApp</h3>
                     <a 
@@ -113,7 +132,17 @@ export default function Contatti() {
 
               {/* Zone coperte */}
               <div className="mt-12 card bg-white border-2 border-gray-200 p-6">
-                <h3 className="mb-4 font-bold">📍 Zone coperte</h3>
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="w-6 h-6 text-accent flex-shrink-0">
+                    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2.5">
+                      <path d="M32 12L32 40M32 40L28 36M32 40L36 36" strokeLinecap="round" strokeLinejoin="round"/>
+                      <circle cx="32" cy="12" r="6" fill="currentColor"/>
+                      <circle cx="32" cy="12" r="3" fill="white"/>
+                      <path d="M20 48C20 48 24 40 32 40C40 40 44 48 44 48" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                  <h3 className="font-bold">Zone coperte</h3>
+                </div>
                 <p className="mb-4 font-semibold">
                   Opero principalmente in Lombardia e nelle regioni limitrofe:
                 </p>
