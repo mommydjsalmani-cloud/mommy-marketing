@@ -44,23 +44,23 @@ export default function Contatti() {
   return (
     <div>
       {/* Breadcrumb */}
-      <nav aria-label="Breadcrumb" className="bg-gray-50 py-3">
+      <nav aria-label="Breadcrumb" className="bg-white border-b border-gray-200 py-3">
         <div className="container-custom">
           <ol className="flex items-center space-x-2 text-sm">
             <li>
-              <Link href="/" className="text-gray-600 hover:text-accent">Home</Link>
+              <Link href="/" className="text-gray-700 hover:text-accent font-medium">Home</Link>
             </li>
-            <li className="text-gray-400">/</li>
-            <li className="text-gray-900 font-medium" aria-current="page">Contatti</li>
+            <li className="text-gray-500">/</li>
+            <li className="text-gray-900 font-bold" aria-current="page">Contatti</li>
           </ol>
         </div>
       </nav>
 
       {/* Hero */}
-      <section className="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
+      <section className="py-16 bg-gradient-to-br from-gray-100 to-gray-200">
         <div className="container-custom text-center">
-          <h1 className="mb-6">Contatti</h1>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+          <h1 className="mb-6 text-gray-900">Contatti</h1>
+          <p className="text-lg md:text-xl text-gray-800 max-w-3xl mx-auto font-medium">
             Scrivimi o chiamami per verificare la disponibilità e ricevere un preventivo personalizzato.
           </p>
         </div>
