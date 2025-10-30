@@ -59,8 +59,8 @@ export default function Contatti() {
       {/* Hero */}
       <section className="py-16 bg-gradient-to-br from-gray-100 to-gray-200">
         <div className="container-custom text-center">
-          <h1 className="mb-6 text-gray-900">Contatti</h1>
-          <p className="text-lg md:text-xl text-gray-800 max-w-3xl mx-auto font-medium">
+          <h1 className="mb-6">Contatti</h1>
+          <p className="text-lg md:text-xl max-w-3xl mx-auto font-semibold leading-relaxed">
             Scrivimi o chiamami per verificare la disponibilità e ricevere un preventivo personalizzato.
           </p>
         </div>
@@ -72,13 +72,13 @@ export default function Contatti() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Left: Contact Info */}
             <div>
-              <h2 className="mb-8 text-gray-900">Informazioni di contatto</h2>
+              <h2 className="mb-8">Informazioni di contatto</h2>
               
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="text-3xl">📧</div>
                   <div>
-                    <h3 className="font-bold text-gray-900 mb-2">Email</h3>
+                    <h3 className="font-bold mb-2">Email</h3>
                     <a href="mailto:info@djmommy.it" className="text-accent hover:underline font-medium text-base">
                       info@djmommy.it
                     </a>
@@ -88,7 +88,7 @@ export default function Contatti() {
                 <div className="flex items-start gap-4">
                   <div className="text-3xl">📱</div>
                   <div>
-                    <h3 className="font-bold text-gray-900 mb-2">Telefono</h3>
+                    <h3 className="font-bold mb-2">Telefono</h3>
                     <a href="tel:+391234567890" className="text-accent hover:underline font-medium text-base">
                       +39 123 456 7890
                     </a>
@@ -98,7 +98,7 @@ export default function Contatti() {
                 <div className="flex items-start gap-4">
                   <div className="text-3xl">💬</div>
                   <div>
-                    <h3 className="font-bold text-gray-900 mb-2">WhatsApp</h3>
+                    <h3 className="font-bold mb-2">WhatsApp</h3>
                     <a 
                       href="https://wa.me/391234567890" 
                       target="_blank" 
@@ -113,11 +113,11 @@ export default function Contatti() {
 
               {/* Zone coperte */}
               <div className="mt-12 card bg-white border-2 border-gray-200 p-6">
-                <h3 className="mb-4 text-gray-900 font-bold">📍 Zone coperte</h3>
-                <p className="text-gray-900 mb-4 font-medium">
+                <h3 className="mb-4 font-bold">📍 Zone coperte</h3>
+                <p className="mb-4 font-semibold">
                   Opero principalmente in Lombardia e nelle regioni limitrofe:
                 </p>
-                <ul className="space-y-2 text-gray-800 text-sm">
+                <ul className="space-y-2 text-sm">
                   <li className="font-medium">• Milano e provincia</li>
                   <li className="font-medium">• Bergamo e provincia</li>
                   <li className="font-medium">• Brescia e provincia</li>
@@ -125,7 +125,7 @@ export default function Contatti() {
                   <li className="font-medium">• Emilia Romagna (Bologna, Modena, Parma)</li>
                   <li className="font-medium">• Piemonte (Torino, Alessandria, Novara)</li>
                 </ul>
-                <p className="text-sm text-gray-700 mt-4 font-medium">
+                <p className="text-sm mt-4 font-medium">
                   Per eventi in altre zone, contattami per valutare la fattibilità.
                 </p>
               </div>
@@ -134,7 +134,7 @@ export default function Contatti() {
             {/* Right: Form */}
             <div>
               <div className="card bg-white border-2 border-gray-200 p-6 md:p-8">
-                <h2 className="mb-6 text-gray-900">Richiesta informazioni</h2>
+                <h2 className="mb-6">Richiesta informazioni</h2>
                 
                 {isSubmitted && (
                   <div className="bg-green-100 border border-green-400 text-green-800 px-4 py-3 rounded mb-6">
@@ -144,7 +144,7 @@ export default function Contatti() {
 
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div>
-                    <label htmlFor="nome" className="block text-sm font-semibold text-gray-900 mb-2">
+                    <label htmlFor="nome" className="block text-sm font-bold mb-2">
                       Nome e Cognome *
                     </label>
                     <input
@@ -154,14 +154,14 @@ export default function Contatti() {
                       required
                       value={formData.nome}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent bg-white text-gray-900 placeholder-gray-500"
+                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent bg-white placeholder-gray-500 font-medium"
                       placeholder="Mario Rossi"
                     />
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="email" className="block text-sm font-semibold text-gray-900 mb-2">
+                      <label htmlFor="email" className="block text-sm font-bold mb-2">
                         Email *
                       </label>
                       <input
@@ -171,13 +171,13 @@ export default function Contatti() {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent bg-white text-gray-900 placeholder-gray-500"
+                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent bg-white placeholder-gray-500 font-medium"
                         placeholder="email@esempio.it"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="telefono" className="block text-sm font-semibold text-gray-900 mb-2">
+                      <label htmlFor="telefono" className="block text-sm font-bold mb-2">
                         Telefono
                       </label>
                       <input
@@ -186,7 +186,7 @@ export default function Contatti() {
                         name="telefono"
                         value={formData.telefono}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent bg-white text-gray-900 placeholder-gray-500"
+                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent bg-white placeholder-gray-500 font-medium"
                         placeholder="+39 123 456 7890"
                       />
                     </div>
@@ -194,7 +194,7 @@ export default function Contatti() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="tipoEvento" className="block text-sm font-semibold text-gray-900 mb-2">
+                      <label htmlFor="tipoEvento" className="block text-sm font-bold mb-2">
                         Tipo di evento *
                       </label>
                       <select
@@ -203,7 +203,7 @@ export default function Contatti() {
                         required
                         value={formData.tipoEvento}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent bg-white text-gray-900"
+                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent bg-white font-medium"
                       >
                         <option value="">Seleziona...</option>
                         <option value="matrimonio">Matrimonio</option>
@@ -218,7 +218,7 @@ export default function Contatti() {
                     </div>
 
                     <div>
-                      <label htmlFor="data" className="block text-sm font-semibold text-gray-900 mb-2">
+                      <label htmlFor="data" className="block text-sm font-bold mb-2">
                         Data evento
                       </label>
                       <input
@@ -227,13 +227,13 @@ export default function Contatti() {
                         name="data"
                         value={formData.data}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent bg-white text-gray-900"
+                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent bg-white font-medium"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label htmlFor="location" className="block text-sm font-semibold text-gray-900 mb-2">
+                    <label htmlFor="location" className="block text-sm font-bold mb-2">
                       Location / Città
                     </label>
                     <input
@@ -243,12 +243,12 @@ export default function Contatti() {
                       placeholder="es. Milano"
                       value={formData.location}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent bg-white text-gray-900 placeholder-gray-500"
+                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent bg-white placeholder-gray-500 font-medium"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="messaggio" className="block text-sm font-semibold text-gray-900 mb-2">
+                    <label htmlFor="messaggio" className="block text-sm font-bold mb-2">
                       Messaggio
                     </label>
                     <textarea
@@ -257,14 +257,14 @@ export default function Contatti() {
                       rows={4}
                       value={formData.messaggio}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent bg-white text-gray-900 placeholder-gray-500"
+                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent bg-white placeholder-gray-500 font-medium"
                       placeholder="Raccontami del tuo evento..."
                     ></textarea>
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full bg-accent hover:bg-accent-hover text-white px-8 py-4 rounded-lg font-bold transition-colors text-base"
+                    className="w-full bg-accent hover:bg-accent-hover text-white px-8 py-4 rounded-lg font-bold transition-colors text-base shadow-md hover:shadow-lg"
                   >
                     Invia richiesta
                   </button>
