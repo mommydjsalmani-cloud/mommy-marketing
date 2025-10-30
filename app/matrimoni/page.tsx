@@ -12,10 +12,12 @@ export default function Matrimoni() {
       title: "Accoglienza & Cerimonia",
       icon: (
         <svg className="w-full h-full" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M32 8L40 16L48 8M32 8V28M24 16L32 8L40 16" strokeLinecap="round" strokeLinejoin="round"/>
-          <rect x="20" y="28" width="24" height="28" rx="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M26 38H38M26 44H38" strokeLinecap="round"/>
-          <circle cx="32" cy="18" r="3" fill="currentColor"/>
+          {/* Chiesa con campanile */}
+          <path d="M32 8L44 20V54H20V20L32 8Z" strokeLinecap="round" strokeLinejoin="round"/>
+          <rect x="28" y="44" width="8" height="10" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M24 30H40M24 36H40" strokeLinecap="round"/>
+          <rect x="30" y="4" width="4" height="6" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M28 6H36" strokeLinecap="round"/>
         </svg>
       ),
       description: "Dalla musica di benvenuto agli ingressi, fino ai momenti chiave della cerimonia.",
@@ -26,12 +28,15 @@ export default function Matrimoni() {
       title: "Aperitivo",
       icon: (
         <svg className="w-full h-full" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M20 16L24 36C24 40 26 44 32 44C38 44 40 40 40 36L44 16" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M32 44V54M26 54H38" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M18 16H46" strokeLinecap="round"/>
-          <circle cx="32" cy="12" r="2" fill="currentColor"/>
-          <circle cx="28" cy="10" r="1.5" fill="currentColor" opacity="0.6"/>
-          <circle cx="36" cy="10" r="1.5" fill="currentColor" opacity="0.6"/>
+          {/* Calice champagne */}
+          <path d="M20 12L22 28C22 34 26 38 32 38C38 38 42 34 44 28L46 12Z" strokeLinecap="round" strokeLinejoin="round"/>
+          <line x1="32" y1="38" x2="32" y2="52" strokeLinecap="round"/>
+          <line x1="24" y1="52" x2="40" y2="52" strokeLinecap="round" strokeWidth="3"/>
+          <path d="M18 12H48" strokeLinecap="round"/>
+          {/* Bollicine */}
+          <circle cx="28" cy="18" r="1.5" fill="currentColor"/>
+          <circle cx="32" cy="22" r="1.5" fill="currentColor"/>
+          <circle cx="36" cy="18" r="1.5" fill="currentColor"/>
         </svg>
       ),
       description: "Musica lounge e soft che accompagna le conversazioni senza coprire le voci.",
@@ -42,11 +47,15 @@ export default function Matrimoni() {
       title: "Dinner Set",
       icon: (
         <svg className="w-full h-full" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2">
-          <circle cx="32" cy="32" r="18" strokeLinecap="round" strokeLinejoin="round"/>
-          <circle cx="32" cy="32" r="14" strokeLinecap="round" strokeLinejoin="round" opacity="0.4"/>
-          <path d="M22 28L32 32L42 36" strokeLinecap="round"/>
-          <path d="M20 32H16M48 32H44M32 16V20M32 44V48" strokeLinecap="round"/>
-          <circle cx="32" cy="32" r="3" fill="currentColor"/>
+          {/* Piatto con posate */}
+          <circle cx="32" cy="32" r="16" strokeLinecap="round" strokeLinejoin="round"/>
+          <circle cx="32" cy="32" r="12" strokeLinecap="round" strokeLinejoin="round" opacity="0.3"/>
+          {/* Forchetta */}
+          <path d="M14 20V34M11 20V28M17 20V28" strokeLinecap="round"/>
+          <line x1="14" y1="28" x2="14" y2="44" strokeLinecap="round" strokeWidth="2.5"/>
+          {/* Coltello */}
+          <line x1="50" y1="20" x2="50" y2="44" strokeLinecap="round" strokeWidth="2.5"/>
+          <path d="M48 20L52 20L52 26L48 26Z" fill="currentColor"/>
         </svg>
       ),
       description: "Sottofondo musicale durante la cena, con cue precisi per momenti speciali.",
@@ -57,11 +66,19 @@ export default function Matrimoni() {
       title: "Party Finale & DJ Set",
       icon: (
         <svg className="w-full h-full" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2">
-          <rect x="14" y="20" width="36" height="28" rx="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <circle cx="24" cy="32" r="6" strokeLinecap="round" strokeLinejoin="round"/>
-          <circle cx="40" cy="32" r="6" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M30 20V14M34 20V14M26 48L32 54L38 48" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M24 32L24 38M40 32L40 38" strokeLinecap="round" strokeWidth="3"/>
+          {/* Console DJ */}
+          <rect x="12" y="24" width="40" height="24" rx="2" strokeLinecap="round" strokeLinejoin="round"/>
+          {/* Piatti */}
+          <circle cx="22" cy="36" r="7" strokeWidth="1.5"/>
+          <circle cx="42" cy="36" r="7" strokeWidth="1.5"/>
+          <circle cx="22" cy="36" r="2" fill="currentColor"/>
+          <circle cx="42" cy="36" r="2" fill="currentColor"/>
+          {/* Slider */}
+          <line x1="32" y1="28" x2="32" y2="38" strokeLinecap="round" strokeWidth="1.5"/>
+          <rect x="30" y="31" width="4" height="3" rx="0.5" fill="currentColor"/>
+          {/* Onde sonore */}
+          <path d="M8 36C8 36 6 32 6 28C6 24 8 20 8 20" strokeLinecap="round" opacity="0.5"/>
+          <path d="M56 36C56 36 58 32 58 28C58 24 56 20 56 20" strokeLinecap="round" opacity="0.5"/>
         </svg>
       ),
       description: "DJ set dinamico con lettura del pubblico in tempo reale e musica live.",
@@ -87,11 +104,12 @@ export default function Matrimoni() {
         <div className="container-custom text-center">
           <div className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4 md:mb-6 text-accent">
             <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2">
-              <circle cx="32" cy="28" r="12" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M32 40C32 40 20 46 20 52C20 56 25 58 32 58C39 58 44 56 44 52C44 46 32 40 32 40Z" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M26 28L28 22L32 18L36 22L38 28" strokeLinecap="round" strokeLinejoin="round" fill="currentColor" opacity="0.2"/>
-              <circle cx="32" cy="12" r="6" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M26 12L38 12" strokeLinecap="round"/>
+              {/* Fedi nuziali intrecciate */}
+              <circle cx="26" cy="32" r="12" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5"/>
+              <circle cx="38" cy="32" r="12" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5"/>
+              <path d="M26 20V24M38 20V24" strokeLinecap="round" strokeWidth="2"/>
+              <circle cx="26" cy="32" r="8" opacity="0.3" strokeLinecap="round" strokeLinejoin="round"/>
+              <circle cx="38" cy="32" r="8" opacity="0.3" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </div>
           <h1 className="mb-4 md:mb-6 text-white font-display px-4">DJ per Matrimoni</h1>
@@ -181,11 +199,17 @@ export default function Matrimoni() {
             <div className="text-center mb-4 md:mb-6">
               <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 text-accent">
                 <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2">
-                  <circle cx="32" cy="32" r="24" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M32 8V56M8 32H56" strokeLinecap="round" strokeLinejoin="round" opacity="0.3"/>
-                  <path d="M16 18C16 18 20 28 32 28C44 28 48 18 48 18" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M16 46C16 46 20 36 32 36C44 36 48 46 48 46" strokeLinecap="round" strokeLinejoin="round"/>
-                  <ellipse cx="32" cy="32" rx="20" ry="10" strokeLinecap="round" strokeLinejoin="round" opacity="0.3"/>
+                  {/* Globo terrestre */}
+                  <circle cx="32" cy="32" r="22" strokeWidth="2"/>
+                  {/* Meridiani */}
+                  <ellipse cx="32" cy="32" rx="10" ry="22" opacity="0.4"/>
+                  <ellipse cx="32" cy="32" rx="22" ry="10" opacity="0.4"/>
+                  {/* Paralleli */}
+                  <path d="M14 20C14 20 20 22 32 22C44 22 50 20 50 20" strokeLinecap="round"/>
+                  <path d="M14 44C14 44 20 42 32 42C44 42 50 44 50 44" strokeLinecap="round"/>
+                  {/* Pin location */}
+                  <path d="M32 24L32 28M28 30L32 28L36 30" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"/>
+                  <circle cx="32" cy="30" r="3" fill="currentColor"/>
                 </svg>
               </div>
               <h3 className="font-display text-xl md:text-2xl text-white mb-3 md:mb-4 px-4">Destination Wedding</h3>
@@ -212,11 +236,15 @@ export default function Matrimoni() {
             <div className="text-center mb-4 md:mb-6">
               <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 text-accent">
                 <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M20 14L20 50C20 52 22 54 24 54L32 50L40 54C42 54 44 52 44 50V14" strokeLinecap="round" strokeLinejoin="round"/>
-                  <circle cx="32" cy="26" r="8" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M28 26V30M36 26V30M32 22V26" strokeLinecap="round" strokeWidth="3"/>
-                  <path d="M24 38H40M26 44H38" strokeLinecap="round" opacity="0.5"/>
-                  <rect x="18" y="10" width="28" height="6" rx="1" strokeLinecap="round" strokeLinejoin="round"/>
+                  {/* Smartphone */}
+                  <rect x="18" y="8" width="28" height="48" rx="3" strokeWidth="2"/>
+                  <circle cx="32" cy="52" r="2" fill="currentColor"/>
+                  {/* Note musicali */}
+                  <circle cx="26" cy="24" r="3" strokeWidth="1.5"/>
+                  <circle cx="38" cy="28" r="3" strokeWidth="1.5"/>
+                  <path d="M29 24V16L41 14V28" strokeWidth="1.5" strokeLinecap="round"/>
+                  {/* Onde audio */}
+                  <path d="M24 36H40M22 40H42M26 44H38" strokeLinecap="round" opacity="0.4"/>
                 </svg>
               </div>
               <h2 className="font-display text-xl md:text-2xl text-white mb-4 md:mb-6 px-4">App "Richiedi un Brano"</h2>
