@@ -10,28 +10,60 @@ export default function Matrimoni() {
     {
       id: 0,
       title: "Accoglienza & Cerimonia",
-      icon: "💒",
+      icon: (
+        <svg className="w-full h-full" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M32 8L40 16L48 8M32 8V28M24 16L32 8L40 16" strokeLinecap="round" strokeLinejoin="round"/>
+          <rect x="20" y="28" width="24" height="28" rx="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M26 38H38M26 44H38" strokeLinecap="round"/>
+          <circle cx="32" cy="18" r="3" fill="currentColor"/>
+        </svg>
+      ),
       description: "Dalla musica di benvenuto agli ingressi, fino ai momenti chiave della cerimonia.",
       details: "Curo la colonna sonora dall'accoglienza degli ospiti fino all'uscita degli sposi. Coordino microfoni per letture e celebrante, testando tutto in anticipo. Volume e atmosfera calibrati per emozionare senza sovrastare."
     },
     {
       id: 1,
       title: "Aperitivo",
-      icon: "🥂",
+      icon: (
+        <svg className="w-full h-full" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M20 16L24 36C24 40 26 44 32 44C38 44 40 40 40 36L44 16" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M32 44V54M26 54H38" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M18 16H46" strokeLinecap="round"/>
+          <circle cx="32" cy="12" r="2" fill="currentColor"/>
+          <circle cx="28" cy="10" r="1.5" fill="currentColor" opacity="0.6"/>
+          <circle cx="36" cy="10" r="1.5" fill="currentColor" opacity="0.6"/>
+        </svg>
+      ),
       description: "Musica lounge e soft che accompagna le conversazioni senza coprire le voci.",
       details: "Selezione musicale elegante e discreta. Volume ottimale per permettere conversazioni naturali. Coordino i cambi di mood con wedding planner e catering per transizioni fluide e armoniose."
     },
     {
       id: 2,
       title: "Dinner Set",
-      icon: "🍽️",
+      icon: (
+        <svg className="w-full h-full" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2">
+          <circle cx="32" cy="32" r="18" strokeLinecap="round" strokeLinejoin="round"/>
+          <circle cx="32" cy="32" r="14" strokeLinecap="round" strokeLinejoin="round" opacity="0.4"/>
+          <path d="M22 28L32 32L42 36" strokeLinecap="round"/>
+          <path d="M20 32H16M48 32H44M32 16V20M32 44V48" strokeLinecap="round"/>
+          <circle cx="32" cy="32" r="3" fill="currentColor"/>
+        </svg>
+      ),
       description: "Sottofondo musicale durante la cena, con cue precisi per momenti speciali.",
       details: "Musica selezionata per accompagnare la cena senza distrarre. Entrata sposi, brindisi e taglio torta sincronizzati con fotografo e cucina. Microfoni pronti per interventi e discorsi degli ospiti."
     },
     {
       id: 3,
       title: "Party Finale & DJ Set",
-      icon: "🎵",
+      icon: (
+        <svg className="w-full h-full" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2">
+          <rect x="14" y="20" width="36" height="28" rx="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <circle cx="24" cy="32" r="6" strokeLinecap="round" strokeLinejoin="round"/>
+          <circle cx="40" cy="32" r="6" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M30 20V14M34 20V14M26 48L32 54L38 48" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M24 32L24 38M40 32L40 38" strokeLinecap="round" strokeWidth="3"/>
+        </svg>
+      ),
       description: "DJ set dinamico con lettura del pubblico in tempo reale e musica live.",
       details: "Alternanza di generi e ritmi (house, pop, R&B, hip hop, '70-'80, latino) con mashup e transizioni creative. Coordino musicisti e cantanti live quando presenti. Gli ospiti inviano richieste tramite app dedicata per mantenere energia e coinvolgimento costanti."
     }
@@ -53,7 +85,15 @@ export default function Matrimoni() {
       {/* Hero */}
       <section className="relative py-16 md:py-32 bg-gradient-to-b from-black via-gray-900 to-black">
         <div className="container-custom text-center">
-          <div className="text-5xl md:text-6xl mb-4 md:mb-6">💍</div>
+          <div className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4 md:mb-6 text-accent">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2">
+              <circle cx="32" cy="28" r="12" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M32 40C32 40 20 46 20 52C20 56 25 58 32 58C39 58 44 56 44 52C44 46 32 40 32 40Z" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M26 28L28 22L32 18L36 22L38 28" strokeLinecap="round" strokeLinejoin="round" fill="currentColor" opacity="0.2"/>
+              <circle cx="32" cy="12" r="6" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M26 12L38 12" strokeLinecap="round"/>
+            </svg>
+          </div>
           <h1 className="mb-4 md:mb-6 text-white font-display px-4">DJ per Matrimoni</h1>
           <p className="font-sans text-base md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
             La musica accompagna ogni momento, ma quando si tratta del tuo matrimonio, deve raccontare la tua storia.<br className="hidden sm:block" />
@@ -86,14 +126,14 @@ export default function Matrimoni() {
               <button
                 key={phase.id}
                 onClick={() => setActivePhase(phase.id)}
-                className={`p-5 md:p-6 rounded-xl border-2 transition-all text-center min-h-[120px] md:min-h-[140px] flex flex-col items-center justify-center ${
+                className={`p-5 md:p-6 rounded-xl border-2 transition-all text-center min-h-[140px] md:min-h-[160px] flex flex-col items-center justify-center gap-3 ${
                   activePhase === phase.id
-                    ? 'border-accent bg-gray-800 text-white'
-                    : 'border-gray-700 bg-gray-800/50 text-gray-400 hover:border-gray-600'
+                    ? 'border-accent bg-gray-800 text-accent'
+                    : 'border-gray-700 bg-gray-800/50 text-gray-400 hover:border-gray-600 hover:text-gray-300'
                 }`}
               >
-                <div className="text-3xl md:text-4xl mb-3 md:mb-4">{phase.icon}</div>
-                <h3 className="font-display text-[10px] md:text-sm font-semibold leading-tight px-1">{phase.title}</h3>
+                <div className="w-12 h-12 md:w-14 md:h-14">{phase.icon}</div>
+                <h3 className="font-display text-[10px] md:text-xs font-semibold leading-tight px-1">{phase.title}</h3>
               </button>
             ))}
           </div>
@@ -101,7 +141,7 @@ export default function Matrimoni() {
           {/* Active Phase Content */}
           <div className="bg-gray-800 border border-gray-700 p-6 md:p-10 rounded-2xl">
             <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6">
-              <div className="text-5xl md:text-6xl mx-auto md:mx-0">{phases[activePhase].icon}</div>
+              <div className="w-16 h-16 md:w-20 md:h-20 mx-auto md:mx-0 text-accent flex-shrink-0">{phases[activePhase].icon}</div>
               <div className="flex-1">
                 <h3 className="font-display text-xl md:text-2xl font-bold text-white mb-3 md:mb-4 text-center md:text-left">
                   {phases[activePhase].title}
@@ -139,7 +179,15 @@ export default function Matrimoni() {
           {/* Destination Wedding */}
           <div className="bg-gray-800 border border-gray-700 p-6 md:p-10 rounded-2xl">
             <div className="text-center mb-4 md:mb-6">
-              <div className="text-4xl md:text-5xl mb-3 md:mb-4">🌍</div>
+              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 text-accent">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2">
+                  <circle cx="32" cy="32" r="24" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M32 8V56M8 32H56" strokeLinecap="round" strokeLinejoin="round" opacity="0.3"/>
+                  <path d="M16 18C16 18 20 28 32 28C44 28 48 18 48 18" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M16 46C16 46 20 36 32 36C44 36 48 46 48 46" strokeLinecap="round" strokeLinejoin="round"/>
+                  <ellipse cx="32" cy="32" rx="20" ry="10" strokeLinecap="round" strokeLinejoin="round" opacity="0.3"/>
+                </svg>
+              </div>
               <h3 className="font-display text-xl md:text-2xl text-white mb-3 md:mb-4 px-4">Destination Wedding</h3>
             </div>
             <div className="space-y-3 md:space-y-4 text-gray-300 leading-relaxed">
@@ -162,7 +210,15 @@ export default function Matrimoni() {
         <div className="container-custom max-w-4xl">
           <div className="bg-gray-800 border border-gray-700 p-6 md:p-10 rounded-2xl">
             <div className="text-center mb-4 md:mb-6">
-              <div className="text-4xl md:text-5xl mb-3 md:mb-4">🎵</div>
+              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 text-accent">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M20 14L20 50C20 52 22 54 24 54L32 50L40 54C42 54 44 52 44 50V14" strokeLinecap="round" strokeLinejoin="round"/>
+                  <circle cx="32" cy="26" r="8" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M28 26V30M36 26V30M32 22V26" strokeLinecap="round" strokeWidth="3"/>
+                  <path d="M24 38H40M26 44H38" strokeLinecap="round" opacity="0.5"/>
+                  <rect x="18" y="10" width="28" height="6" rx="1" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
               <h2 className="font-display text-xl md:text-2xl text-white mb-4 md:mb-6 px-4">App "Richiedi un Brano"</h2>
             </div>
             <div className="space-y-3 md:space-y-4 text-gray-300 leading-relaxed">
