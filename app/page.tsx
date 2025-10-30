@@ -21,7 +21,7 @@ export default function Home() {
             Matrimoni | Eventi Privati | Locali | Destination Wedding
           </p>
           <p className="font-sans text-base md:text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
-            Dal 2003 — musica e regia per eventi in Svizzera, Toscana, Lombardia e Veneto
+            Dal 2003 — musica e regia per eventi in Svizzera, Toscana, Lombardia, Emilia Romagna e Veneto
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a
