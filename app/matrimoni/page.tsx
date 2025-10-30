@@ -86,14 +86,14 @@ export default function Matrimoni() {
               <button
                 key={phase.id}
                 onClick={() => setActivePhase(phase.id)}
-                className={`p-4 md:p-6 rounded-xl border-2 transition-all text-center ${
+                className={`p-5 md:p-6 rounded-xl border-2 transition-all text-center min-h-[120px] md:min-h-[140px] flex flex-col items-center justify-center ${
                   activePhase === phase.id
                     ? 'border-accent bg-gray-800 text-white'
                     : 'border-gray-700 bg-gray-800/50 text-gray-400 hover:border-gray-600'
                 }`}
               >
-                <div className="text-3xl md:text-4xl mb-2 md:mb-3">{phase.icon}</div>
-                <h3 className="font-display text-xs md:text-sm font-semibold leading-tight">{phase.title}</h3>
+                <div className="text-3xl md:text-4xl mb-3 md:mb-4">{phase.icon}</div>
+                <h3 className="font-display text-[10px] md:text-sm font-semibold leading-tight px-1">{phase.title}</h3>
               </button>
             ))}
           </div>
