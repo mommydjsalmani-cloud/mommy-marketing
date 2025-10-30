@@ -27,11 +27,11 @@ export default function Footer() {
                   Eventi Privati
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/recensioni" className="text-gray-400 hover:text-accent transition-colors text-sm">
                   Recensioni
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="/contatti" className="text-gray-400 hover:text-accent transition-colors text-sm">
                   Contatti

@@ -14,7 +14,7 @@ export default function Header() {
   const navLinks = [
     { href: '/matrimoni', label: 'Matrimoni' },
     { href: '/eventi-privati', label: 'Eventi Privati' },
-    { href: '/recensioni', label: 'Recensioni' },
+    // { href: '/recensioni', label: 'Recensioni' }, // Temporaneamente nascosto
     { href: 'https://bangerrequest-mio.vercel.app/', label: 'Richiedi Canzone', highlight: true, external: true },
     { href: '/contatti', label: 'Contatti' },
   ];
