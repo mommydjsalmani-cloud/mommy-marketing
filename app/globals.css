@@ -26,11 +26,17 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-inter), Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  font-size: 1rem;
+  font-size: 0.9375rem;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+}
+
+@media (min-width: 640px) {
+  body {
+    font-size: 1rem;
+  }
 }
 
 /* Tipografia Titoli */
@@ -83,38 +89,39 @@ div:not(.bg-white):not(.card) h3 {
 }
 
 h1 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   letter-spacing: 0.02em;
 }
 
 h2 {
-  font-size: 0.875rem;
+  font-size: 1.125rem;
   letter-spacing: 0.015em;
 }
 
 h3 {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   letter-spacing: 0.01em;
 }
 
 h4 {
-  font-size: 0.625rem;
+  font-size: 0.75rem;
   letter-spacing: 0.01em;
 }
 
 @media (min-width: 640px) {
   h1 {
-    font-size: 2.25rem;
-    letter-spacing: 0.06em;
+    font-size: 2rem;
+    letter-spacing: 0.03em;
   }
   
   h2 {
     font-size: 1.5rem;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.02em;
   }
   
   h3 {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
+    letter-spacing: 0.015em;
   }
 }
 

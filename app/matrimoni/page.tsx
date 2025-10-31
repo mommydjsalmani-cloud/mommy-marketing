@@ -151,7 +151,7 @@ export default function Matrimoni() {
                 }`}
               >
                 <div className="w-10 h-10 md:w-14 md:h-14">{phase.icon}</div>
-                <h3 className="font-display font-semibold leading-tight px-0.5" style={{fontSize: '0.75rem', letterSpacing: '0'}}>{phase.title}</h3>
+                <h3 className="font-display font-semibold leading-[1.1] px-1" style={{fontSize: '0.65rem', letterSpacing: '0.01em'}}>{phase.title}</h3>
               </button>
             ))}
           </div>

@@ -163,7 +163,7 @@ export default function Contatti() {
             {/* Right: Form */}
             <div>
               <div className="card bg-gray-800 border-2 border-gray-700 p-6 md:p-8">
-                <h2 className="mb-6 text-white uppercase leading-tight" style={{fontSize: '1.25rem', letterSpacing: '0.015em'}}>Richiesta informazioni</h2>
+                <h2 className="mb-6 text-white uppercase leading-tight" style={{fontSize: '1.125rem', letterSpacing: '0.02em'}}>Richiesta informazioni</h2>
                 
                 {isSubmitted && (
                   <div className="bg-green-900 border border-green-600 text-green-200 px-4 py-3 rounded mb-6">
