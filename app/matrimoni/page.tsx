@@ -63,7 +63,7 @@ export default function Matrimoni() {
     },
     {
       id: 3,
-      title: "Party Finale & DJ Set",
+      title: "Party Finale",
       icon: (
         <svg className="w-full h-full" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2">
           {/* Console DJ */}
@@ -151,7 +151,7 @@ export default function Matrimoni() {
                 }`}
               >
                 <div className="w-10 h-10 md:w-14 md:h-14">{phase.icon}</div>
-                <h3 className="font-display font-semibold leading-tight px-0.5" style={{fontSize: '0.7rem', letterSpacing: '0'}}>{phase.title}</h3>
+                <h3 className="font-display font-semibold leading-tight px-0.5" style={{fontSize: '0.75rem', letterSpacing: '0'}}>{phase.title}</h3>
               </button>
             ))}
           </div>
