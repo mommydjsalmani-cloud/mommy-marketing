@@ -134,12 +134,12 @@ export default function Home() {
 
               <div className="bg-gradient-to-b from-[#4169e1]/10 to-transparent border border-[#4169e1]/30 rounded-2xl p-8 text-center hover:border-[#4169e1] transition-all duration-300">
                 <div className="text-5xl font-bold text-[#4169e1] mb-4">15+</div>
-                <p className="font-sans text-gray-300">nazionalità di ospiti</p>
+                <p className="font-sans text-gray-300">destination wedding da oltre 15 nazioni</p>
               </div>
 
               <div className="bg-gradient-to-b from-[#4169e1]/10 to-transparent border border-[#4169e1]/30 rounded-2xl p-8 text-center hover:border-[#4169e1] transition-all duration-300">
-                <div className="text-5xl font-bold text-[#4169e1] mb-4">Alto livello</div>
-                <p className="font-sans text-gray-300">collaborazioni con wedding planner</p>
+                <div className="text-5xl font-bold text-[#4169e1] mb-4">Service</div>
+                <p className="font-sans text-gray-300">audio compreso</p>
               </div>
             </div>
           </div>
