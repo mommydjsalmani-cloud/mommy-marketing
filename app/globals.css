@@ -83,23 +83,23 @@ div:not(.bg-white):not(.card) h3 {
 }
 
 h1 {
-  font-size: 1.5rem;
-  letter-spacing: 0.04em;
-}
-
-h2 {
-  font-size: 1.125rem;
-  letter-spacing: 0.025em;
-}
-
-h3 {
-  font-size: 0.875rem;
+  font-size: 1.25rem;
   letter-spacing: 0.02em;
 }
 
-h4 {
-  font-size: 0.75rem;
+h2 {
+  font-size: 0.875rem;
   letter-spacing: 0.015em;
+}
+
+h3 {
+  font-size: 0.75rem;
+  letter-spacing: 0.01em;
+}
+
+h4 {
+  font-size: 0.625rem;
+  letter-spacing: 0.01em;
 }
 
 @media (min-width: 640px) {
