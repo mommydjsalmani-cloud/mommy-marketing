@@ -44,35 +44,35 @@ export default function Contatti() {
   return (
     <div>
       {/* Breadcrumb */}
-      <nav aria-label="Breadcrumb" className="bg-white border-b border-gray-200 py-3">
+      <nav aria-label="Breadcrumb" className="bg-gray-900 border-b border-gray-800 py-3">
         <div className="container-custom">
           <ol className="flex items-center space-x-2 text-sm">
             <li>
-              <Link href="/" className="text-gray-700 hover:text-accent font-medium">Home</Link>
+              <Link href="/" className="text-gray-300 hover:text-accent font-medium">Home</Link>
             </li>
-            <li className="text-gray-500">/</li>
-            <li className="text-gray-900 font-bold" aria-current="page">Contatti</li>
+            <li className="text-gray-600">/</li>
+            <li className="text-white font-bold" aria-current="page">Contatti</li>
           </ol>
         </div>
       </nav>
 
       {/* Hero */}
-      <section className="py-12 md:py-16 bg-gradient-to-br from-gray-100 to-gray-200">
+      <section className="py-12 md:py-16 bg-gradient-to-br from-gray-900 to-black">
         <div className="container-custom text-center px-4">
-          <h1 className="mb-6">Contatti</h1>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto font-semibold leading-relaxed">
+          <h1 className="mb-6 text-white">Contatti</h1>
+          <p className="text-lg md:text-xl max-w-3xl mx-auto font-semibold leading-relaxed text-gray-300">
             Scrivimi o chiamami per verificare la disponibilità e ricevere un preventivo personalizzato.
           </p>
         </div>
       </section>
 
       {/* Contact Info + Form */}
-      <section className="py-12 md:py-16 bg-white">
+      <section className="py-12 md:py-16 bg-black">
         <div className="container-custom max-w-5xl px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
             {/* Left: Contact Info */}
             <div>
-              <h2 className="mb-8">Informazioni di contatto</h2>
+              <h2 className="mb-8 text-white">Informazioni di contatto</h2>
               
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
@@ -84,7 +84,7 @@ export default function Contatti() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-bold mb-2">Email</h3>
+                    <h3 className="font-bold mb-2 text-white">Email</h3>
                     <a href="mailto:info@djmommy.it" className="text-accent hover:underline font-medium text-base">
                       info@djmommy.it
                     </a>
@@ -101,7 +101,7 @@ export default function Contatti() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-bold mb-2">Telefono</h3>
+                    <h3 className="font-bold mb-2 text-white">Telefono</h3>
                     <a href="tel:+391234567890" className="text-accent hover:underline font-medium text-base">
                       +39 123 456 7890
                     </a>
@@ -117,7 +117,7 @@ export default function Contatti() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-bold mb-2">WhatsApp</h3>
+                    <h3 className="font-bold mb-2 text-white">WhatsApp</h3>
                     <a 
                       href="https://wa.me/391234567890" 
                       target="_blank" 
@@ -131,7 +131,7 @@ export default function Contatti() {
               </div>
 
               {/* Zone coperte */}
-              <div className="mt-12 card bg-white border-2 border-gray-200 p-6">
+              <div className="mt-12 card bg-gray-800 border-2 border-gray-700 p-6">
                 <div className="flex items-center gap-2 mb-4">
                   <div className="w-6 h-6 text-accent flex-shrink-0">
                     <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -141,12 +141,12 @@ export default function Contatti() {
                       <path d="M20 48C20 48 24 40 32 40C40 40 44 48 44 48" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </div>
-                  <h3 className="font-bold">Zone coperte</h3>
+                  <h3 className="font-bold text-white">Zone coperte</h3>
                 </div>
-                <p className="mb-4 font-semibold">
+                <p className="mb-4 font-semibold text-white">
                   Opero principalmente in Lombardia e nelle regioni limitrofe:
                 </p>
-                <ul className="space-y-2 text-sm">
+                <ul className="space-y-2 text-sm text-gray-300">
                   <li className="font-medium">• Milano e provincia</li>
                   <li className="font-medium">• Bergamo e provincia</li>
                   <li className="font-medium">• Brescia e provincia</li>
@@ -154,7 +154,7 @@ export default function Contatti() {
                   <li className="font-medium">• Emilia Romagna (Bologna, Modena, Parma)</li>
                   <li className="font-medium">• Piemonte (Torino, Alessandria, Novara)</li>
                 </ul>
-                <p className="text-sm mt-4 font-medium">
+                <p className="text-sm mt-4 font-medium text-gray-400">
                   Per eventi in altre zone, contattami per valutare la fattibilità.
                 </p>
               </div>
@@ -162,18 +162,18 @@ export default function Contatti() {
 
             {/* Right: Form */}
             <div>
-              <div className="card bg-white border-2 border-gray-200 p-6 md:p-8">
-                <h2 className="mb-6">Richiesta informazioni</h2>
+              <div className="card bg-gray-800 border-2 border-gray-700 p-6 md:p-8">
+                <h2 className="mb-6 text-white">Richiesta informazioni</h2>
                 
                 {isSubmitted && (
-                  <div className="bg-green-100 border border-green-400 text-green-800 px-4 py-3 rounded mb-6">
+                  <div className="bg-green-900 border border-green-600 text-green-200 px-4 py-3 rounded mb-6">
                     <strong>Grazie!</strong> Ti risponderò al più presto.
                   </div>
                 )}
 
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div>
-                    <label htmlFor="nome" className="block text-sm font-bold mb-2">
+                    <label htmlFor="nome" className="block text-sm font-bold mb-2 text-white">
                       Nome e Cognome *
                     </label>
                     <input
@@ -183,7 +183,7 @@ export default function Contatti() {
                       required
                       value={formData.nome}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent bg-white placeholder-gray-500 font-medium"
+                      className="w-full px-4 py-3 border-2 border-gray-600 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent bg-gray-900 text-white placeholder-gray-400 font-medium"
                       placeholder="Mario Rossi"
                     />
                   </div>
@@ -200,7 +200,7 @@ export default function Contatti() {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent bg-white placeholder-gray-500 font-medium"
+                        className="w-full px-4 py-3 border-2 border-gray-600 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent bg-gray-900 text-white placeholder-gray-400 font-medium"
                         placeholder="email@esempio.it"
                       />
                     </div>
@@ -215,7 +215,7 @@ export default function Contatti() {
                         name="telefono"
                         value={formData.telefono}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent bg-white placeholder-gray-500 font-medium"
+                        className="w-full px-4 py-3 border-2 border-gray-600 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent bg-gray-900 text-white placeholder-gray-400 font-medium"
                         placeholder="+39 123 456 7890"
                       />
                     </div>
@@ -232,7 +232,7 @@ export default function Contatti() {
                         required
                         value={formData.tipoEvento}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent bg-white font-medium"
+                        className="w-full px-4 py-3 border-2 border-gray-600 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent bg-gray-900 text-white font-medium"
                       >
                         <option value="">Seleziona...</option>
                         <option value="matrimonio">Matrimonio</option>
@@ -256,7 +256,7 @@ export default function Contatti() {
                         name="data"
                         value={formData.data}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent bg-white font-medium"
+                        className="w-full px-4 py-3 border-2 border-gray-600 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent bg-gray-900 text-white font-medium"
                       />
                     </div>
                   </div>
@@ -272,7 +272,7 @@ export default function Contatti() {
                       placeholder="es. Milano"
                       value={formData.location}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent bg-white placeholder-gray-500 font-medium"
+                      className="w-full px-4 py-3 border-2 border-gray-600 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent bg-gray-900 text-white placeholder-gray-400 font-medium"
                     />
                   </div>
 
@@ -286,7 +286,7 @@ export default function Contatti() {
                       rows={4}
                       value={formData.messaggio}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent bg-white placeholder-gray-500 font-medium"
+                      className="w-full px-4 py-3 border-2 border-gray-600 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent bg-gray-900 text-white placeholder-gray-400 font-medium"
                       placeholder="Raccontami del tuo evento..."
                     ></textarea>
                   </div>
