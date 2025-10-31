@@ -13,14 +13,14 @@ export default function Home() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
-          <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-[#4169e1]">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-[#4169e1] px-2">
             DJ & Music Planner
           </h1>
-          <p className="font-sans text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="font-sans text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed px-2">
             Matrimoni | Eventi Privati | Locali | Destination Wedding
           </p>
-          <p className="font-sans text-base md:text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
+          <p className="font-sans text-base md:text-lg text-gray-400 mb-12 max-w-2xl mx-auto px-2">
             Dal 2003 — musica e regia per eventi in Svizzera, Toscana, Lombardia, Emilia Romagna e Veneto
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -52,7 +52,7 @@ export default function Home() {
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#4169e1] to-transparent"></div>
         </div>
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-12">
             <div className="text-center">
               <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-4">
@@ -84,7 +84,7 @@ export default function Home() {
 
       {/* Approccio */}
       <section className="py-24 bg-[#0a0a0a]">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-6">
               Approccio
@@ -108,7 +108,7 @@ export default function Home() {
 
       {/* Esperienza Internazionale */}
       <section id="esperienza" className="py-24 bg-black">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-6">
               Esperienza Internazionale
@@ -154,7 +154,7 @@ export default function Home() {
 
       {/* Contact Section */}
       <section id="contatti" className="py-24 bg-[#0a0a0a]">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4 mb-6 px-4">
               <div className="w-12 h-12 md:w-14 md:h-14 text-accent flex-shrink-0">
