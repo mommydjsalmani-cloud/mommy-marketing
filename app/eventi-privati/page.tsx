@@ -17,9 +17,9 @@ export default function EventiPrivati() {
       </nav>
 
       {/* Hero */}
-      <section className="relative py-32 bg-gradient-to-b from-black via-gray-900 to-black">
-        <div className="container-custom text-center">
-          <div className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-6 text-accent">
+      <section className="relative py-16 md:py-32 bg-gradient-to-b from-black via-gray-900 to-black">
+        <div className="container-custom text-center px-4">
+          <div className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4 md:mb-6 text-accent">
             <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2">
               {/* Palloncini party */}
               <circle cx="24" cy="28" r="10" strokeWidth="2"/>
@@ -34,19 +34,19 @@ export default function EventiPrivati() {
               <circle cx="46" cy="46" r="1.5" fill="currentColor"/>
             </svg>
           </div>
-          <h1 className="mb-6 text-white font-display">DJ per compleanni, anniversari, aziendali</h1>
-          <p className="font-sans text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Trovare il "centro" della festa entro tre brani.<br />
-            Poi mantenerlo.
+          <h1 className="mb-4 md:mb-6 text-white font-display">DJ per compleanni, anniversari, aziendali</h1>
+          <p className="font-sans text-base md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Trovare il "centro" della festa entro tre brani.<br className="hidden sm:block" />
+            <span className="block sm:inline mt-2 sm:mt-0">Poi mantenerlo.</span>
           </p>
         </div>
       </section>
 
       {/* Format */}
-      <section className="py-20 bg-gray-900">
-        <div className="container-custom">
-          <h2 className="font-display text-center mb-16 text-white">Formato</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <section className="py-12 md:py-20 bg-gray-900">
+        <div className="container-custom px-4">
+          <h2 className="font-display text-center mb-8 md:mb-16 text-white">Formato</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
             <div className="bg-gray-800 border border-gray-700 p-8 rounded-xl">
               <div className="w-12 h-12 text-accent mb-4">
                 <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2">

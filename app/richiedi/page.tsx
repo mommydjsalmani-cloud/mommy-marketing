@@ -1,9 +1,9 @@
 export default function Richiedi() {
   return (
-    <div className="py-16">
-      <div className="container-custom max-w-3xl">
-        <h1 className="text-center mb-6">Richiedi un Brano</h1>
-        <div className="card bg-gray-50 p-8 text-center">
+    <div className="py-12 md:py-16">
+      <div className="container-custom max-w-3xl px-4">
+        <h1 className="text-center mb-4 md:mb-6">Richiedi un Brano</h1>
+        <div className="card bg-gray-50 p-6 md:p-8 text-center">
           <div className="w-16 h-16 mx-auto mb-6 text-accent">
             <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2">
               <circle cx="28" cy="36" r="8" strokeWidth="2"/>

@@ -57,8 +57,8 @@ export default function Contatti() {
       </nav>
 
       {/* Hero */}
-      <section className="py-16 bg-gradient-to-br from-gray-100 to-gray-200">
-        <div className="container-custom text-center">
+      <section className="py-12 md:py-16 bg-gradient-to-br from-gray-100 to-gray-200">
+        <div className="container-custom text-center px-4">
           <h1 className="mb-6">Contatti</h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto font-semibold leading-relaxed">
             Scrivimi o chiamami per verificare la disponibilità e ricevere un preventivo personalizzato.
@@ -67,9 +67,9 @@ export default function Contatti() {
       </section>
 
       {/* Contact Info + Form */}
-      <section className="py-16 bg-white">
-        <div className="container-custom max-w-5xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <section className="py-12 md:py-16 bg-white">
+        <div className="container-custom max-w-5xl px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
             {/* Left: Contact Info */}
             <div>
               <h2 className="mb-8">Informazioni di contatto</h2>

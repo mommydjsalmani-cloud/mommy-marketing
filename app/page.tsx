@@ -156,8 +156,8 @@ export default function Home() {
       <section id="contatti" className="py-24 bg-[#0a0a0a]">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="flex items-center justify-center gap-4 mb-6">
-              <div className="w-12 h-12 text-accent">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4 mb-6 px-4">
+              <div className="w-12 h-12 md:w-14 md:h-14 text-accent flex-shrink-0">
                 <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2">
                   <circle cx="32" cy="32" r="20"/>
                   <circle cx="32" cy="32" r="12"/>
@@ -165,7 +165,7 @@ export default function Home() {
                   <path d="M18 18L14 14M46 18L50 14M18 46L14 50M46 46L50 50" strokeLinecap="round"/>
                 </svg>
               </div>
-              <h2 className="font-display text-4xl md:text-5xl font-bold text-white">
+              <h2 className="font-display text-2xl md:text-4xl lg:text-5xl font-bold text-white text-center">
                 Vuoi sapere se sono disponibile per il tuo evento?
               </h2>
             </div>

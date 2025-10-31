@@ -130,19 +130,19 @@ export default function Recensioni() {
       </nav>
 
       {/* Hero */}
-      <section className="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
-        <div className="container-custom text-center">
-          <h1 className="mb-6">Recensioni</h1>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+      <section className="py-12 md:py-16 bg-gradient-to-br from-gray-50 to-gray-100">
+        <div className="container-custom text-center px-4">
+          <h1 className="mb-4 md:mb-6">Recensioni</h1>
+          <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto">
             La soddisfazione dei miei clienti è la mia migliore pubblicità. Ecco cosa dicono di me.
           </p>
         </div>
       </section>
 
       {/* Stats */}
-      <section className="py-12 bg-white">
-        <div className="container-custom">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+      <section className="py-8 md:py-12 bg-white">
+        <div className="container-custom px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-accent mb-2">500+</div>
               <div className="text-gray-600 text-sm">Eventi</div>
@@ -170,9 +170,9 @@ export default function Recensioni() {
       </section>
 
       {/* Reviews Grid */}
-      <section className="py-16 bg-gray-50">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <section className="py-12 md:py-16 bg-gray-50">
+        <div className="container-custom px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {reviews.map((review, index) => (
               <div key={index} className="card bg-white p-6">
                 <div className="flex items-start gap-3 mb-4">
