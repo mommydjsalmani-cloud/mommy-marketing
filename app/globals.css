@@ -160,12 +160,18 @@ a {
 .container-custom {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 20px;
 }
 
 @media (min-width: 768px) {
   .container-custom {
-    padding: 0 24px;
+    padding: 0 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-custom {
+    padding: 0 48px;
   }
 }
 
