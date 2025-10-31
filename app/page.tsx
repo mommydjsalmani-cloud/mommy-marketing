@@ -14,13 +14,13 @@ export default function Home() {
 
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-[#4169e1] px-2">
+          <h1 className="font-display text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-[#4169e1] px-2">
             DJ & Music Planner
           </h1>
-          <p className="font-sans text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed px-2">
+          <p className="font-sans text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed px-2">
             Matrimoni | Eventi Privati | Locali | Destination Wedding
           </p>
-          <p className="font-sans text-base md:text-lg text-gray-400 mb-12 max-w-2xl mx-auto px-2">
+          <p className="font-sans text-sm sm:text-base md:text-lg text-gray-400 mb-12 max-w-2xl mx-auto px-2">
             Dal 2003 — musica e regia per eventi in Svizzera, Toscana, Lombardia, Emilia Romagna e Veneto
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -55,26 +55,26 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-12">
             <div className="text-center">
-              <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-4">
+              <h3 className="font-display text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-4">
                 Matrimonio & Destination Wedding
               </h3>
-              <p className="font-sans text-lg text-gray-300 leading-relaxed">
+              <p className="font-sans text-base md:text-lg text-gray-300 leading-relaxed">
                 Eventi curati nei dettagli, con musica pensata per ogni momento.
               </p>
             </div>
             <div className="text-center">
-              <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-4">
+              <h3 className="font-display text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-4">
                 Eventi Privati & Locali
               </h3>
-              <p className="font-sans text-lg text-gray-300 leading-relaxed">
+              <p className="font-sans text-base md:text-lg text-gray-300 leading-relaxed">
                 Feste, anniversari, corporate e serate live con regia musicale completa.
               </p>
             </div>
             <div className="text-center">
-              <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-4">
+              <h3 className="font-display text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-4">
                 Regia & Collaborazioni
               </h3>
-              <p className="font-sans text-lg text-gray-300 leading-relaxed">
+              <p className="font-sans text-base md:text-lg text-gray-300 leading-relaxed">
                 Gestione e coordinamento di musicisti, performer e cantanti dal vivo.
               </p>
             </div>
@@ -86,19 +86,19 @@ export default function Home() {
       <section className="py-24 bg-[#0a0a0a]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
               Approccio
             </h2>
           </div>
           <div className="bg-black/50 border border-[#4169e1]/30 rounded-2xl p-8 md:p-12">
             <div className="space-y-4 text-gray-300">
-              <p className="font-sans text-lg leading-relaxed">
+              <p className="font-sans text-base md:text-lg leading-relaxed">
                 Da oltre vent'anni mi occupo di musica e direzione artistica per eventi.
               </p>
-              <p className="font-sans text-lg leading-relaxed">
+              <p className="font-sans text-base md:text-lg leading-relaxed">
                 In ogni serata creo un percorso musicale che spazia da house, pop, R&B e hip hop fino ai classici '70–'80 e ai ritmi latini.
               </p>
-              <p className="font-sans text-lg leading-relaxed">
+              <p className="font-sans text-base md:text-lg leading-relaxed">
                 Grazie a un'applicazione che ho sviluppato, gli ospiti possono inviare richieste musicali in tempo reale, rendendo ogni evento ancora più personale.
               </p>
             </div>
@@ -110,17 +110,17 @@ export default function Home() {
       <section id="esperienza" className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
               Esperienza Internazionale
             </h2>
           </div>
 
           <div className="max-w-4xl mx-auto">
             <div className="bg-black/50 border border-[#4169e1]/30 rounded-2xl p-8 md:p-12 mb-12">
-              <p className="font-sans text-lg text-gray-300 leading-relaxed mb-6">
+              <p className="font-sans text-base md:text-lg text-gray-300 leading-relaxed mb-6">
                 Ho curato la musica per matrimoni ed eventi con ospiti provenienti da Irlanda, Stati Uniti, India, Australia e molti altri paesi.
               </p>
-              <p className="font-sans text-lg text-gray-300 leading-relaxed">
+              <p className="font-sans text-base md:text-lg text-gray-300 leading-relaxed">
                 Collaboro spesso con wedding planner e venue internazionali, lavorando in contesti esclusivi in <strong className="text-white">Svizzera, Toscana, Lombardia e Veneto</strong>.
               </p>
             </div>
@@ -128,18 +128,18 @@ export default function Home() {
             {/* Numeri */}
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-gradient-to-b from-[#4169e1]/10 to-transparent border border-[#4169e1]/30 rounded-2xl p-8 text-center hover:border-[#4169e1] transition-all duration-300">
-                <div className="text-5xl font-bold text-[#4169e1] mb-4">1000+</div>
-                <p className="font-sans text-gray-300">eventi curati</p>
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#4169e1] mb-4">1000+</div>
+                <p className="font-sans text-sm md:text-base text-gray-300">eventi curati</p>
               </div>
 
               <div className="bg-gradient-to-b from-[#4169e1]/10 to-transparent border border-[#4169e1]/30 rounded-2xl p-8 text-center hover:border-[#4169e1] transition-all duration-300">
-                <div className="text-5xl font-bold text-[#4169e1] mb-4">15+</div>
-                <p className="font-sans text-gray-300">destination wedding da oltre 15 nazioni</p>
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#4169e1] mb-4">15+</div>
+                <p className="font-sans text-sm md:text-base text-gray-300">destination wedding da oltre 15 nazioni</p>
               </div>
 
               <div className="bg-gradient-to-b from-[#4169e1]/10 to-transparent border border-[#4169e1]/30 rounded-2xl p-8 text-center hover:border-[#4169e1] transition-all duration-300">
-                <div className="text-5xl font-bold text-[#4169e1] mb-4">Service</div>
-                <p className="font-sans text-gray-300">audio compreso</p>
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#4169e1] mb-4">Service</div>
+                <p className="font-sans text-sm md:text-base text-gray-300">audio compreso</p>
               </div>
             </div>
           </div>
