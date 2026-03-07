@@ -93,7 +93,8 @@ const contactSchema = z.object({
     .optional()
     .transform(val => val || ''),
   recaptchaToken: z.string()
-    .min(1, 'Token reCAPTCHA mancante'),
+    .min(1, 'Token reCAPTCHA mancante')
+    .optional(),
   website: z.string()
     .max(0, 'Honeypot field deve essere vuoto') // Deve essere vuoto (honeypot)
     .optional()
@@ -119,12 +120,17 @@ function containsSpam(text: string): boolean {
 }
 
 // Verifica token reCAPTCHA v3
-async function verifyRecaptcha(token: string, ip: string): Promise<{ success: boolean; score: number; error?: string }> {
+async function verifyRecaptcha(token: string | undefined, ip: string): Promise<{ success: boolean; score: number; error?: string }> {
   const secretKey = process.env.RECAPTCHA_SECRET_KEY;
 
   if (!secretKey) {
-    console.error('[RECAPTCHA_ERROR] Secret key non configurata');
-    return { success: false, score: 0, error: 'CAPTCHA non configurato' };
+    // In sviluppo/preview senza chiave configurata, consenti il passaggio
+    console.warn('[RECAPTCHA_WARNING] Secret key non configurata - verifica saltata');
+    return { success: true, score: 1.0 };
+  }
+
+  if (!token) {
+    return { success: false, score: 0, error: 'missing-token' };
   }
 
   try {

@@ -28,12 +28,16 @@ export default function Contatti() {
     setError('');
 
     try {
-      // Genera token reCAPTCHA
-      if (!executeRecaptcha) {
-        throw new Error('reCAPTCHA non disponibile');
-      }
+      // Genera token reCAPTCHA solo se la chiave è configurata
+      const recaptchaEnabled = !!process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+      let recaptchaToken: string | undefined;
 
-      const recaptchaToken = await executeRecaptcha('contact_form');
+      if (recaptchaEnabled) {
+        if (!executeRecaptcha) {
+          throw new Error('reCAPTCHA non disponibile');
+        }
+        recaptchaToken = await executeRecaptcha('contact_form');
+      }
 
       const response = await fetch('/api/contact', {
         method: 'POST',
@@ -42,7 +46,7 @@ export default function Contatti() {
         },
         body: JSON.stringify({
           ...formData,
-          recaptchaToken,
+          ...(recaptchaToken ? { recaptchaToken } : {}),
         }),
       });
 
