@@ -1,20 +1,26 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0a0a0a] to-black"></div>
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#4169e1] rounded-full filter blur-[128px] animate-pulse"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#4169e1] rounded-full filter blur-[128px] animate-pulse delay-1000"></div>
+      <section className="relative min-h-screen grid items-center overflow-hidden bg-black lg:grid-cols-2">
+        <div className="relative h-[52svh] min-h-80 lg:order-2 lg:h-screen lg:min-h-[700px]">
+          <Image
+            src="/mommy-dj-live.webp"
+            alt="Mommy DJ alla console con giradischi, tra luci viola e blu"
+            fill
+            priority
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="object-cover object-[center_45%]"
+          />
+          <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/10 lg:bg-gradient-to-r lg:from-black lg:via-black/10 lg:to-transparent" />
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-display text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-[#4169e1] px-2">
+        <div className="relative z-10 mx-auto w-full max-w-3xl px-6 pb-24 pt-8 text-center lg:order-1 lg:px-12 lg:py-32">
+          <h1 className="font-display text-2xl sm:text-3xl md:text-5xl lg:text-5xl xl:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-[#4169e1] px-2">
             DJ & Music Planner
           </h1>
           <p className="font-sans text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed px-2">
@@ -40,9 +46,11 @@ export default function Home() {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        <div className="pointer-events-none absolute inset-x-0 bottom-8 z-20 flex justify-center" aria-hidden="true">
+          <div className="animate-bounce motion-reduce:animate-none">
           <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
             <div className="w-1 h-3 bg-white/50 rounded-full mt-2"></div>
+          </div>
           </div>
         </div>
       </section>
