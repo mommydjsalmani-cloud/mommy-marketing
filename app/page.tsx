@@ -91,15 +91,30 @@ export default function Home() {
       </section>
 
       {/* Approccio */}
-      <section className="py-24 bg-[#0a0a0a]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="font-display text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-white mb-6">
-              Approccio
-            </h2>
-          </div>
-          <div className="bg-black/50 border border-[#4169e1]/30 rounded-2xl p-8 md:p-12">
-            <div className="space-y-4 text-gray-300">
+      <section id="approccio" aria-labelledby="approccio-title" className="py-20 sm:py-24 bg-[#0a0a0a]">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8">
+          <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+            <figure className="min-w-0">
+              <div className="overflow-hidden rounded-2xl">
+                <Image
+                  src="/mommy-dj-ritratto.webp"
+                  alt="Ritratto di Mommy DJ sorridente, con le braccia incrociate, tra luci viola e blu"
+                  width={1400}
+                  height={1400}
+                  sizes="(min-width: 1280px) 576px, (min-width: 1024px) 50vw, 100vw"
+                  className="block h-auto w-full"
+                />
+              </div>
+              <figcaption className="mt-4 font-sans text-sm uppercase tracking-widest text-gray-400">
+                Mommy DJ — DJ & Music Planner
+              </figcaption>
+            </figure>
+            <div className="min-w-0">
+              <p className="mb-4 font-sans text-sm uppercase tracking-widest text-[#8ca5f4]">Il mio approccio</p>
+              <h2 id="approccio-title" className="mb-8 font-display text-2xl sm:text-3xl xl:text-4xl font-bold text-white">
+                La persona dietro la musica
+              </h2>
+              <div className="space-y-5 text-gray-300">
               <p className="font-sans text-base md:text-lg leading-relaxed">
                 Da oltre vent'anni mi occupo di musica e direzione artistica per eventi.
               </p>
@@ -109,6 +124,15 @@ export default function Home() {
               <p className="font-sans text-base md:text-lg leading-relaxed">
                 Grazie a un'applicazione che ho sviluppato, gli ospiti possono inviare richieste musicali in tempo reale, rendendo ogni evento ancora più personale.
               </p>
+              </div>
+              <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4 font-sans text-sm font-semibold">
+                <Link href="/contatti" className="text-white underline decoration-[#4169e1] underline-offset-8 hover:text-[#8ca5f4]">
+                  Parliamo del tuo evento
+                </Link>
+                <Link href="/richiedi" className="text-gray-300 underline decoration-gray-600 underline-offset-8 hover:text-white">
+                  Richiedi una canzone
+                </Link>
+              </div>
             </div>
           </div>
         </div>
