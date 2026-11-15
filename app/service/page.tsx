@@ -42,23 +42,23 @@ export default function Service() {
                 <h3 className="text-xl font-bold text-white mt-6 mb-4">Caratteristiche tecniche:</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-accent-strong rounded-full mt-2 flex-shrink-0"></div>
                     <span className="font-medium">Sistemi line array per una copertura uniforme in tutta la location</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-accent-strong rounded-full mt-2 flex-shrink-0"></div>
                     <span className="font-medium">Subwoofer attivi per bassi profondi e controllati</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-accent-strong rounded-full mt-2 flex-shrink-0"></div>
                     <span className="font-medium">Mixer digitali di ultima generazione</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-accent-strong rounded-full mt-2 flex-shrink-0"></div>
                     <span className="font-medium">Microfoni wireless professionali per cerimonie e discorsi</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-accent-strong rounded-full mt-2 flex-shrink-0"></div>
                     <span className="font-medium">Processori audio per un suono ottimizzato</span>
                   </li>
                 </ul>
@@ -133,23 +133,23 @@ export default function Service() {
                 <h3 className="text-xl font-bold text-white mt-6 mb-4">Caratteristiche tecniche:</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-accent-strong rounded-full mt-2 flex-shrink-0"></div>
                     <span className="font-medium">Teste mobili LED per effetti dinamici e colorati</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-accent-strong rounded-full mt-2 flex-shrink-0"></div>
                     <span className="font-medium">Par LED RGBW per illuminazione d'ambiente</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-accent-strong rounded-full mt-2 flex-shrink-0"></div>
                     <span className="font-medium">Strobo e laser per momenti ad alta energia</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-accent-strong rounded-full mt-2 flex-shrink-0"></div>
                     <span className="font-medium">Macchine del fumo e nebbia per effetti atmosferici</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-accent-strong rounded-full mt-2 flex-shrink-0"></div>
                     <span className="font-medium">Controller DMX per programmazione e sincronizzazione</span>
                   </li>
                 </ul>
@@ -228,7 +228,7 @@ export default function Service() {
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
             <Link
               href="/contatti"
-              className="font-sans inline-block w-full sm:w-auto bg-gradient-to-r from-accent to-blue-600 hover:from-blue-600 hover:to-accent text-white px-10 md:px-12 py-4 rounded-full font-bold transition-all duration-300 uppercase tracking-wider text-sm shadow-xl hover:shadow-2xl hover:scale-105"
+              className="font-sans inline-block w-full sm:w-auto bg-gradient-to-r from-accent-strong to-accent-hover hover:from-accent-hover hover:to-accent-strong text-white px-10 md:px-12 py-4 rounded-full font-bold transition-all duration-300 uppercase tracking-wider text-sm shadow-xl hover:shadow-2xl hover:scale-105"
             >
               Richiedi informazioni
             </Link>
@@ -236,7 +236,7 @@ export default function Service() {
               href="https://wa.me/393462122933"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-sans inline-block w-full sm:w-auto bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-500 text-white px-10 md:px-12 py-4 rounded-full font-bold transition-all duration-300 uppercase tracking-wider text-sm shadow-xl hover:shadow-2xl hover:scale-105"
+              className="font-sans inline-block w-full sm:w-auto bg-gradient-to-r from-accent-strong to-accent-hover hover:from-accent-hover hover:to-accent-strong text-white px-10 md:px-12 py-4 rounded-full font-bold transition-all duration-300 uppercase tracking-wider text-sm shadow-xl hover:shadow-2xl hover:scale-105"
             >
               Scrivimi su WhatsApp
             </a>

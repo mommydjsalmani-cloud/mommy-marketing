@@ -121,7 +121,7 @@ export default function Recensioni() {
         <div className="container-custom">
           <ol className="flex items-center space-x-2 text-sm">
             <li>
-              <Link href="/" className="text-gray-600 hover:text-accent">Home</Link>
+              <Link href="/" className="text-gray-600 hover:text-accent-strong">Home</Link>
             </li>
             <li className="text-gray-400">/</li>
             <li className="text-gray-900 font-medium" aria-current="page">Recensioni</li>
@@ -144,15 +144,15 @@ export default function Recensioni() {
         <div className="container-custom px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-accent mb-2">500+</div>
+              <div className="text-3xl md:text-4xl font-bold text-accent-strong mb-2">500+</div>
               <div className="text-gray-600 text-sm">Eventi</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-accent mb-2">10+</div>
+              <div className="text-3xl md:text-4xl font-bold text-accent-strong mb-2">10+</div>
               <div className="text-gray-600 text-sm">Anni Esperienza</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-accent mb-2">98%</div>
+              <div className="text-3xl md:text-4xl font-bold text-accent-strong mb-2">98%</div>
               <div className="text-gray-600 text-sm">Clienti Soddisfatti</div>
             </div>
             <div className="text-center">
@@ -176,7 +176,7 @@ export default function Recensioni() {
             {reviews.map((review, index) => (
               <div key={index} className="card bg-white p-6">
                 <div className="flex items-start gap-3 mb-4">
-                  <div className="w-8 h-8 text-accent flex-shrink-0">{review.icon}</div>
+                  <div className="w-8 h-8 text-accent-strong flex-shrink-0">{review.icon}</div>
                   <div className="flex-1">
                     <h3 className="font-bold text-lg">{review.name}</h3>
                     <p className="text-sm text-gray-600">{review.event}</p>
@@ -201,7 +201,7 @@ export default function Recensioni() {
       <section className="py-12 bg-white">
         <div className="container-custom max-w-3xl">
           <div className="flex items-center justify-center gap-3 text-gray-600">
-            <div className="w-6 h-6 text-accent flex-shrink-0">
+            <div className="w-6 h-6 text-accent-strong flex-shrink-0">
               <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="3.5">
                 <rect x="12" y="16" width="40" height="32" rx="2"/>
                 <circle cx="32" cy="32" r="8"/>
@@ -217,7 +217,7 @@ export default function Recensioni() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-accent text-white">
+      <section className="py-16 bg-accent-strong text-white">
         <div className="container-custom text-center">
           <h2 className="mb-6">Vuoi essere il prossimo cliente soddisfatto?</h2>
           <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto opacity-90">
@@ -229,7 +229,7 @@ export default function Recensioni() {
               e.preventDefault();
               window.location.href = '/#contatto-rapido';
             }}
-            className="inline-block bg-white text-accent hover:bg-gray-100 px-8 py-4 rounded-full font-semibold transition-colors"
+            className="inline-block bg-white text-accent-strong hover:bg-gray-100 px-8 py-4 rounded-full font-semibold transition-colors"
           >
             Richiedi disponibilità
           </a>

@@ -114,22 +114,22 @@ export default function EventiPrivati() {
           <h2 className="text-center mb-16 text-white uppercase tracking-wider">Come lavoro</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="text-center">
-              <div className="w-12 h-12 bg-accent text-white rounded-full flex items-center justify-center text-lg font-bold mx-auto mb-4">1</div>
+              <div className="w-12 h-12 bg-accent-strong text-white rounded-full flex items-center justify-center text-lg font-bold mx-auto mb-4">1</div>
               <h3 className="text-white mb-2 uppercase tracking-wide text-xs">Brief rapido</h3>
               <p className="text-gray-400 text-sm">Capiamo tipo di evento e atmosfera desiderata</p>
             </div>
             <div className="text-center">
-              <div className="w-12 h-12 bg-accent text-white rounded-full flex items-center justify-center text-lg font-bold mx-auto mb-4">2</div>
+              <div className="w-12 h-12 bg-accent-strong text-white rounded-full flex items-center justify-center text-lg font-bold mx-auto mb-4">2</div>
               <h3 className="text-white mb-2 uppercase tracking-wide text-xs">Paletti musicali</h3>
               <p className="text-gray-400 text-sm">Definiamo generi e brani chiave</p>
             </div>
             <div className="text-center">
-              <div className="w-12 h-12 bg-accent text-white rounded-full flex items-center justify-center text-lg font-bold mx-auto mb-4">3</div>
+              <div className="w-12 h-12 bg-accent-strong text-white rounded-full flex items-center justify-center text-lg font-bold mx-auto mb-4">3</div>
               <h3 className="text-white mb-2 uppercase tracking-wide text-xs">Orari definiti</h3>
               <p className="text-gray-400 text-sm">Timeline e timing dell'evento</p>
             </div>
             <div className="text-center">
-              <div className="w-12 h-12 bg-accent text-white rounded-full flex items-center justify-center text-lg font-bold mx-auto mb-4">4</div>
+              <div className="w-12 h-12 bg-accent-strong text-white rounded-full flex items-center justify-center text-lg font-bold mx-auto mb-4">4</div>
               <h3 className="text-white mb-2 uppercase tracking-wide text-xs">Richieste live</h3>
               <p className="text-gray-400 text-sm">Gli ospiti usano la mia app</p>
             </div>
@@ -190,7 +190,7 @@ export default function EventiPrivati() {
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center px-4">
             <Link
               href="/contatti"
-              className="font-sans inline-block w-full sm:w-auto bg-gradient-to-r from-accent to-blue-600 hover:from-blue-600 hover:to-accent text-white px-10 md:px-12 py-4 rounded-full font-bold transition-all duration-300 uppercase tracking-wider text-sm shadow-xl hover:shadow-2xl hover:scale-105"
+              className="font-sans inline-block w-full sm:w-auto bg-gradient-to-r from-accent-strong to-accent-hover hover:from-accent-hover hover:to-accent-strong text-white px-10 md:px-12 py-4 rounded-full font-bold transition-all duration-300 uppercase tracking-wider text-sm shadow-xl hover:shadow-2xl hover:scale-105"
             >
               Richiedi informazioni
             </Link>
@@ -198,7 +198,7 @@ export default function EventiPrivati() {
               href="https://wa.me/393462122933"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-sans inline-block w-full sm:w-auto bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-500 text-white px-10 md:px-12 py-4 rounded-full font-bold transition-all duration-300 uppercase tracking-wider text-sm shadow-xl hover:shadow-2xl hover:scale-105"
+              className="font-sans inline-block w-full sm:w-auto bg-gradient-to-r from-accent-strong to-accent-hover hover:from-accent-hover hover:to-accent-strong text-white px-10 md:px-12 py-4 rounded-full font-bold transition-all duration-300 uppercase tracking-wider text-sm shadow-xl hover:shadow-2xl hover:scale-105"
             >
               Scrivimi su WhatsApp
             </a>

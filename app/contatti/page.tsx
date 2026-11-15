@@ -159,7 +159,7 @@ export default function Contatti() {
                       href="https://wa.me/393462122933" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="inline-flex w-full sm:w-auto justify-center items-center gap-2 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-500 text-white px-6 py-3 rounded-full font-bold transition-all duration-300 text-sm shadow-lg hover:shadow-xl hover:scale-105 uppercase tracking-wide"
+                      className="inline-flex w-full sm:w-auto justify-center items-center gap-2 bg-gradient-to-r from-accent-strong to-accent-hover hover:from-accent-hover hover:to-accent-strong text-white px-6 py-3 rounded-full font-bold transition-all duration-300 text-sm shadow-lg hover:shadow-xl hover:scale-105 uppercase tracking-wide"
                     >
                       Scrivimi su WhatsApp
                     </a>
@@ -331,7 +331,7 @@ export default function Contatti() {
                   <button
                     type="submit"
                     disabled={isLoading}
-                    className="w-full bg-gradient-to-r from-[#4169e1] to-blue-600 hover:from-blue-600 hover:to-[#4169e1] text-white px-8 py-4 rounded-full font-bold transition-all duration-300 text-base shadow-xl hover:shadow-2xl transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none uppercase tracking-wide"
+                    className="w-full bg-gradient-to-r from-accent-strong to-accent-hover hover:from-accent-hover hover:to-accent-strong text-white px-8 py-4 rounded-full font-bold transition-all duration-300 text-base shadow-xl hover:shadow-2xl transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none uppercase tracking-wide"
                   >
                     {isLoading ? 'Invio in corso...' : 'Invia richiesta'}
                   </button>

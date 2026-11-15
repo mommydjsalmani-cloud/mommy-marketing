@@ -13,7 +13,7 @@ export default function FloatingContactWidget() {
           {/* Telefono */}
           <a
             href="tel:+393462122933"
-            className="w-14 h-14 rounded-full bg-accent hover:bg-blue-600 text-white flex items-center justify-center shadow-xl hover:scale-110 transition-all duration-300"
+            className="w-14 h-14 rounded-full bg-accent-strong hover:bg-accent-hover text-white flex items-center justify-center shadow-xl hover:scale-110 transition-all duration-300"
             aria-label="Telefono"
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -26,7 +26,7 @@ export default function FloatingContactWidget() {
             href="https://wa.me/393462122933"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 text-white flex items-center justify-center shadow-xl hover:scale-110 transition-all duration-300"
+            className="w-14 h-14 rounded-full bg-accent-strong hover:bg-accent-hover text-white flex items-center justify-center shadow-xl hover:scale-110 transition-all duration-300"
             aria-label="WhatsApp"
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -37,7 +37,7 @@ export default function FloatingContactWidget() {
           {/* Email */}
           <a
             href="mailto:info@mommydj.com"
-            className="w-14 h-14 rounded-full bg-accent hover:bg-blue-600 text-white flex items-center justify-center shadow-xl hover:scale-110 transition-all duration-300"
+            className="w-14 h-14 rounded-full bg-accent-strong hover:bg-accent-hover text-white flex items-center justify-center shadow-xl hover:scale-110 transition-all duration-300"
             aria-label="Email"
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -51,7 +51,7 @@ export default function FloatingContactWidget() {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={`w-16 h-16 rounded-full ${
-          isOpen ? 'bg-red-500 hover:bg-red-600' : 'bg-accent hover:bg-blue-600'
+          isOpen ? 'bg-accent-hover hover:bg-accent-strong' : 'bg-accent-strong hover:bg-accent-hover'
         } text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300`}
         aria-label={isOpen ? 'Chiudi' : 'Contatti'}
       >

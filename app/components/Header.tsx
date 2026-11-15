@@ -177,7 +177,7 @@ export default function Header() {
               {/* CTA */}
               <Link
                 href="/#contatti"
-                className="bg-gradient-to-r from-accent to-blue-600 hover:from-blue-600 hover:to-accent text-white px-7 py-3 rounded-full font-sans font-bold transition-all duration-300 text-sm uppercase tracking-wide whitespace-nowrap shadow-lg hover:shadow-xl hover:scale-105"
+                className="bg-gradient-to-r from-accent-strong to-accent-hover hover:from-accent-hover hover:to-accent-strong text-white px-7 py-3 rounded-full font-sans font-bold transition-all duration-300 text-sm uppercase tracking-wide whitespace-nowrap shadow-lg hover:shadow-xl hover:scale-105"
               >
                 Verifica disponibilità
               </Link>
@@ -277,7 +277,7 @@ export default function Header() {
                 <div className="mt-8">
                   <Link
                     href="/#contatti"
-                    className="block w-full bg-gradient-to-r from-accent to-blue-600 hover:from-blue-600 hover:to-accent text-white px-8 py-5 rounded-full font-sans font-bold text-center transition-all duration-300 text-lg uppercase tracking-wide focus:outline-none focus:ring-4 focus:ring-accent/50 shadow-xl hover:scale-105"
+                    className="block w-full bg-gradient-to-r from-accent-strong to-accent-hover hover:from-accent-hover hover:to-accent-strong text-white px-8 py-5 rounded-full font-sans font-bold text-center transition-all duration-300 text-lg uppercase tracking-wide focus:outline-none focus:ring-4 focus:ring-accent/50 shadow-xl hover:scale-105"
                     onClick={() => setIsMenuOpen(false)}
                     tabIndex={0}
                   >

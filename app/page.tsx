@@ -20,7 +20,7 @@ export default function Home() {
 
         {/* Content */}
         <div className="relative z-10 mx-auto w-full max-w-3xl px-6 pb-24 pt-8 text-center lg:order-1 lg:px-12 lg:py-32">
-          <h1 className="font-display text-2xl sm:text-3xl md:text-5xl lg:text-5xl xl:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-[#4169e1] px-2">
+          <h1 className="font-display text-2xl sm:text-3xl md:text-5xl lg:text-5xl xl:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-accent px-2">
             DJ & Music Planner
           </h1>
           <p className="font-sans text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed px-2">
@@ -32,7 +32,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <a
               href="#contatti"
-              className="font-sans font-bold w-full sm:w-auto px-10 md:px-12 py-4 bg-gradient-to-r from-accent to-blue-600 hover:from-blue-600 hover:to-accent text-white rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl uppercase tracking-wider text-sm text-center"
+              className="font-sans font-bold w-full sm:w-auto px-10 md:px-12 py-4 bg-gradient-to-r from-accent-strong to-accent-hover hover:from-accent-hover hover:to-accent-strong text-white rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl uppercase tracking-wider text-sm text-center"
             >
               Verifica disponibilità
             </a>
@@ -58,7 +58,7 @@ export default function Home() {
       {/* Cosa Faccio */}
       <section className="py-24 bg-black relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#4169e1] to-transparent"></div>
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent to-transparent"></div>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-12">
@@ -110,7 +110,7 @@ export default function Home() {
               </figcaption>
             </figure>
             <div className="min-w-0">
-              <p className="mb-4 font-sans text-sm uppercase tracking-widest text-[#8ca5f4]">Il mio approccio</p>
+              <p className="mb-4 font-sans text-sm uppercase tracking-widest text-accent-soft">Il mio approccio</p>
               <h2 id="approccio-title" className="mb-8 font-display text-2xl sm:text-3xl xl:text-4xl font-bold text-white">
                 La persona dietro la musica
               </h2>
@@ -126,7 +126,7 @@ export default function Home() {
               </p>
               </div>
               <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4 font-sans text-sm font-semibold">
-                <Link href="/contatti" className="text-white underline decoration-[#4169e1] underline-offset-8 hover:text-[#8ca5f4]">
+                <Link href="/contatti" className="text-white underline decoration-accent underline-offset-8 hover:text-accent-soft">
                   Parliamo del tuo evento
                 </Link>
                 <Link href="/richiedi" className="text-gray-300 underline decoration-gray-600 underline-offset-8 hover:text-white">
@@ -148,7 +148,7 @@ export default function Home() {
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <div className="bg-black/50 border border-[#4169e1]/30 rounded-2xl p-8 md:p-12 mb-12">
+            <div className="bg-black/50 border border-accent/30 rounded-2xl p-8 md:p-12 mb-12">
               <p className="font-sans text-base md:text-lg text-gray-300 leading-relaxed mb-6">
                 Ho curato la musica per matrimoni ed eventi con ospiti provenienti da Irlanda, Stati Uniti, India, Australia e molti altri paesi.
               </p>
@@ -159,18 +159,18 @@ export default function Home() {
 
             {/* Numeri */}
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-gradient-to-b from-[#4169e1]/10 to-transparent border border-[#4169e1]/30 rounded-2xl p-8 text-center hover:border-[#4169e1] transition-all duration-300">
-                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#4169e1] mb-4">1000+</div>
+              <div className="bg-gradient-to-b from-accent/10 to-transparent border border-accent/30 rounded-2xl p-8 text-center hover:border-accent transition-all duration-300">
+                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-accent mb-4">1000+</div>
                 <p className="font-sans text-xs sm:text-sm md:text-base text-gray-300">eventi curati</p>
               </div>
 
-              <div className="bg-gradient-to-b from-[#4169e1]/10 to-transparent border border-[#4169e1]/30 rounded-2xl p-8 text-center hover:border-[#4169e1] transition-all duration-300">
-                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#4169e1] mb-4">15+</div>
+              <div className="bg-gradient-to-b from-accent/10 to-transparent border border-accent/30 rounded-2xl p-8 text-center hover:border-accent transition-all duration-300">
+                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-accent mb-4">15+</div>
                 <p className="font-sans text-xs sm:text-sm md:text-base text-gray-300">destination wedding da oltre 15 nazioni</p>
               </div>
 
-              <div className="bg-gradient-to-b from-[#4169e1]/10 to-transparent border border-[#4169e1]/30 rounded-2xl p-8 text-center hover:border-[#4169e1] transition-all duration-300">
-                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#4169e1] mb-4">Service</div>
+              <div className="bg-gradient-to-b from-accent/10 to-transparent border border-accent/30 rounded-2xl p-8 text-center hover:border-accent transition-all duration-300">
+                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-accent mb-4">Service</div>
                 <p className="font-sans text-xs sm:text-sm md:text-base text-gray-300">audio compreso</p>
               </div>
             </div>
@@ -203,11 +203,11 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="bg-black/50 border border-[#4169e1]/30 rounded-2xl p-8 md:p-12">
+          <div className="bg-black/50 border border-accent/30 rounded-2xl p-8 md:p-12">
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
               <Link
                 href="/contatti"
-                className="font-sans font-bold w-full sm:w-auto px-10 py-4 bg-gradient-to-r from-accent to-blue-600 hover:from-blue-600 hover:to-accent text-white rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl text-center uppercase tracking-wider text-sm"
+                className="font-sans font-bold w-full sm:w-auto px-10 py-4 bg-gradient-to-r from-accent-strong to-accent-hover hover:from-accent-hover hover:to-accent-strong text-white rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl text-center uppercase tracking-wider text-sm"
               >
                 Richiedi informazioni
               </Link>
@@ -215,7 +215,7 @@ export default function Home() {
                 href="https://wa.me/393462122933"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-sans font-bold w-full sm:w-auto px-10 py-4 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-500 text-white rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl text-center uppercase tracking-wider text-sm"
+                className="font-sans font-bold w-full sm:w-auto px-10 py-4 bg-gradient-to-r from-accent-strong to-accent-hover hover:from-accent-hover hover:to-accent-strong text-white rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl text-center uppercase tracking-wider text-sm"
               >
                 Scrivimi su WhatsApp
               </a>
@@ -223,7 +223,7 @@ export default function Home() {
 
             <div className="space-y-6 pt-8 border-t border-gray-800">
               <div className="flex items-start gap-4">
-                <div className="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-1">
+                <div className="w-6 h-6 rounded-full bg-accent-strong flex items-center justify-center flex-shrink-0 mt-1">
                   <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
@@ -237,7 +237,7 @@ export default function Home() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-1">
+                <div className="w-6 h-6 rounded-full bg-accent-strong flex items-center justify-center flex-shrink-0 mt-1">
                   <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
