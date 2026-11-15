@@ -4,6 +4,10 @@
   "framework": "nextjs",
   "rewrites": [
     {
+      "source": "/richiedi",
+      "destination": "https://bangerrequest-mio.vercel.app/richiedi"
+    },
+    {
       "source": "/richiedi/:path*",
       "destination": "https://bangerrequest-mio.vercel.app/richiedi/:path*"
     }
