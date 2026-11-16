@@ -129,7 +129,7 @@ export default function Home() {
             <h2 id="musica-title">La selezione musicale</h2>
             <p>
               House e tech house sono le mie radici, ma il repertorio è più ampio:
-              pop, rock, disco, funk, dance, R&amp;B, hip hop, latino e reggaeton,
+              pop, rock, disco, funk, dance, EDM, elettronica, R&amp;B, hip hop, latino e reggaeton,
               insieme ai classici italiani e internazionali dagli anni ’70 a oggi.
             </p>
             <p>
@@ -143,6 +143,7 @@ export default function Home() {
             <li>Classici italiani</li>
             <li>Disco, funk e revival</li>
             <li>Dance e commerciale</li>
+            <li>EDM ed elettronica</li>
             <li>R&amp;B e hip hop</li>
             <li>Latino e reggaeton</li>
             <li>House e tech house</li>
