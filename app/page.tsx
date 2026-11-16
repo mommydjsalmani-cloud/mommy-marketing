@@ -1,255 +1,165 @@
 import Image from "next/image";
 import Link from "next/link";
+import styles from "./press-kit.module.css";
 
 export default function Home() {
   return (
-    <div>
-      {/* Hero Section */}
-      <section className="relative min-h-screen grid items-center overflow-hidden bg-black lg:grid-cols-2">
-        <div className="relative h-[52svh] min-h-80 lg:order-2 lg:h-screen lg:min-h-[700px]">
+    <div className={styles.kit}>
+      <section className={styles.hero} aria-labelledby="mommy-title">
+        <div className={styles.heroMedia}>
           <Image
             src="/mommy-dj-live.webp"
-            alt="Mommy DJ alla console con giradischi, tra luci viola e blu"
+            alt="Mommy DJ al mixer e ai giradischi durante un DJ set"
             fill
             priority
-            sizes="(min-width: 1024px) 50vw, 100vw"
-            className="object-cover object-[center_45%]"
+            sizes="(min-width: 900px) 50vw, 100vw"
+            className={styles.heroPhoto}
           />
-          <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/10 lg:bg-gradient-to-r lg:from-black lg:via-black/10 lg:to-transparent" />
         </div>
-
-        {/* Content */}
-        <div className="relative z-10 mx-auto w-full max-w-3xl px-6 pb-24 pt-8 text-center lg:order-1 lg:px-12 lg:py-32">
-          <h1 className="font-display text-2xl sm:text-3xl md:text-5xl lg:text-5xl xl:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-accent px-2">
-            DJ & Music Planner
-          </h1>
-          <p className="font-sans text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed px-2">
-            Matrimoni | Eventi Privati | Locali | Destination Wedding
+        <div className={styles.heroInner}>
+          <p className={styles.heroLabel}>DJ · Matrimoni · Eventi privati</p>
+          <h1 id="mommy-title" className={styles.heroTitle}>Mommy DJ</h1>
+          <p className={styles.heroSummary}>
+            Un percorso nei club, con la house e la tech house.
+            Oggi anche al fianco di coppie e wedding planner,
+            per la parte musicale del ricevimento.
           </p>
-          <p className="font-sans text-sm sm:text-base md:text-lg text-gray-400 mb-12 max-w-2xl mx-auto px-2">
-            Dal 2003 — musica e regia per eventi in Svizzera, Toscana, Lombardia, Emilia Romagna e Veneto
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <a
-              href="#contatti"
-              className="font-sans font-bold w-full sm:w-auto px-10 md:px-12 py-4 bg-gradient-to-r from-accent-strong to-accent-hover hover:from-accent-hover hover:to-accent-strong text-white rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl uppercase tracking-wider text-sm text-center"
-            >
-              Verifica disponibilità
-            </a>
-            <a
-              href="#processo"
-              className="font-sans font-semibold w-full sm:w-auto px-10 py-4 border-2 border-white/20 text-white rounded-full hover:border-accent hover:text-accent transition-all duration-300 text-center"
-            >
-              Guarda il video di presentazione
-            </a>
+          <div className={styles.actions}>
+            <Link href="/contatti" className={styles.primaryLink}>Contatti</Link>
+            <a href="#profilo" className={styles.secondaryLink}>Il mio percorso</a>
           </div>
         </div>
+        <a href="#profilo" className={styles.scrollLink} aria-label="Scorri al profilo">
+          <span>Scorri</span><span aria-hidden="true">↓</span>
+        </a>
+      </section>
 
-        {/* Scroll Indicator */}
-        <div className="pointer-events-none absolute inset-x-0 bottom-8 z-20 flex justify-center" aria-hidden="true">
-          <div className="animate-bounce motion-reduce:animate-none">
-          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white/50 rounded-full mt-2"></div>
-          </div>
+      <nav className={styles.sectionNav} aria-label="Sezioni del press kit">
+        <div className={styles.sectionNavInner}>
+          <a href="#profilo">Profilo</a>
+          <a href="#matrimoni">Matrimoni selezionati</a>
+          <a href="#musica">Musica</a>
+          <a href="#contatti">Contatti</a>
+        </div>
+      </nav>
+
+      <section id="profilo" className={styles.section} aria-labelledby="profilo-title">
+        <div className={styles.profileGrid}>
+          <figure className={styles.portraitFigure}>
+            <picture>
+              <source
+                type="image/webp"
+                srcSet="/mommy-dj-ritratto-640.webp 640w, /mommy-dj-ritratto-1280.webp 1280w, /mommy-dj-ritratto-1920.webp 1920w"
+                sizes="(min-width: 1280px) 504px, (min-width: 900px) calc(45vw - 72px), (min-width: 636px) 580px, (min-width: 540px) calc(100vw - 56px), calc(100vw - 44px)"
+              />
+              <Image
+                src="/mommy-dj-ritratto-1920.webp"
+                alt="Mommy DJ, ritratto tra luci viola e blu"
+                width={1920}
+                height={1920}
+                unoptimized
+                loading="lazy"
+                className={styles.portrait}
+              />
+            </picture>
+            <figcaption>Mommy DJ</figcaption>
+          </figure>
+          <div className={styles.profileText}>
+            <p className={styles.eyebrow}>Profilo</p>
+            <h2 id="profilo-title">Mommy DJ</h2>
+            <p>
+              Sono cresciuto nella periferia di Modena. Ho cominciato da adolescente,
+              con giradischi Technics e mixer Stanton. A 17 anni suonavo nel privé
+              del Cenerentola, a Rubiera.
+            </p>
+            <p>
+              Del mio percorso fanno parte Le Scuderie, Echoes, Matis e Cassero.
+            </p>
+            <p>
+              Tra il 2007 e il 2008 ho anche gestito Le Scuderie insieme a un socio,
+              occupandomi dell’intero locale e del personale. Un’esperienza che fa
+              parte del mio percorso anche sul piano organizzativo.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Cosa Faccio */}
-      <section className="py-24 bg-black relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent to-transparent"></div>
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-12">
-            <div className="text-center">
-              <h3 className="font-display text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold text-white mb-4">
-                Matrimonio & Destination Wedding
-              </h3>
-              <p className="font-sans text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">
-                Eventi curati nei dettagli, con musica pensata per ogni momento.
-              </p>
-            </div>
-            <div className="text-center">
-              <h3 className="font-display text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold text-white mb-4">
-                Eventi Privati & Locali
-              </h3>
-              <p className="font-sans text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">
-                Feste, anniversari, corporate e serate live con regia musicale completa.
-              </p>
-            </div>
-            <div className="text-center">
-              <h3 className="font-display text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold text-white mb-4">
-                Regia & Collaborazioni
-              </h3>
-              <p className="font-sans text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">
-                Gestione e coordinamento di musicisti, performer e cantanti dal vivo.
-              </p>
-            </div>
+      <section id="matrimoni" className={styles.workSection} aria-labelledby="matrimoni-title">
+        <div className={styles.section}>
+          <div className={styles.workHeading}>
+            <p className={styles.eyebrow}>Esperienze</p>
+            <h2 id="matrimoni-title">Matrimoni selezionati</h2>
+            <p className={styles.workIntro}>
+              Ho curato la parte musicale dei matrimoni di Cariba Heine,
+              attrice della serie H2O, e di Oliver Krause, figlio di Kyle Krause,
+              proprietario e presidente del Parma Calcio. In entrambi ho seguito
+              l’aperitivo con gli artisti, la musica durante la cena e il DJ set conclusivo.
+            </p>
           </div>
-        </div>
-      </section>
-
-      {/* Approccio */}
-      <section id="approccio" aria-labelledby="approccio-title" className="py-20 sm:py-24 bg-[#0a0a0a]">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8">
-          <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-            <figure className="min-w-0">
-              <div className="overflow-hidden rounded-2xl">
-                <Image
-                  src="/mommy-dj-ritratto.webp"
-                  alt="Ritratto di Mommy DJ sorridente, con le braccia incrociate, tra luci viola e blu"
-                  width={1400}
-                  height={1400}
-                  sizes="(min-width: 1280px) 576px, (min-width: 1024px) 50vw, 100vw"
-                  className="block h-auto w-full"
-                />
+          <div className={styles.workList}>
+            <article className={styles.workRow}>
+              <div>
+                <h3>Cariba Heine</h3>
+                <p className={styles.workDescription}>Attrice della serie televisiva H2O</p>
               </div>
-              <figcaption className="mt-4 font-sans text-sm uppercase tracking-widest text-gray-400">
-                Mommy DJ — DJ & Music Planner
-              </figcaption>
-            </figure>
-            <div className="min-w-0">
-              <p className="mb-4 font-sans text-sm uppercase tracking-widest text-accent-soft">Il mio approccio</p>
-              <h2 id="approccio-title" className="mb-8 font-display text-2xl sm:text-3xl xl:text-4xl font-bold text-white">
-                La persona dietro la musica
-              </h2>
-              <div className="space-y-5 text-gray-300">
-              <p className="font-sans text-base md:text-lg leading-relaxed">
-                Da oltre vent'anni mi occupo di musica e direzione artistica per eventi.
-              </p>
-              <p className="font-sans text-base md:text-lg leading-relaxed">
-                In ogni serata creo un percorso musicale che spazia da house, pop, R&B e hip hop fino ai classici '70–'80 e ai ritmi latini.
-              </p>
-              <p className="font-sans text-base md:text-lg leading-relaxed">
-                Grazie a un'applicazione che ho sviluppato, gli ospiti possono inviare richieste musicali in tempo reale, rendendo ogni evento ancora più personale.
-              </p>
+              <p className={styles.workDetail}>Parte musicale del ricevimento</p>
+            </article>
+            <article className={styles.workRow}>
+              <div>
+                <h3>Oliver Krause</h3>
+                <p className={styles.workDescription}>
+                  Figlio di Kyle Krause, proprietario e presidente del Parma Calcio
+                </p>
               </div>
-              <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4 font-sans text-sm font-semibold">
-                <Link href="/contatti" className="text-white underline decoration-accent underline-offset-8 hover:text-accent-soft">
-                  Parliamo del tuo evento
-                </Link>
-                <Link href="/richiedi" className="text-gray-300 underline decoration-gray-600 underline-offset-8 hover:text-white">
-                  Richiedi una canzone
-                </Link>
-              </div>
-            </div>
+              <p className={styles.workDetail}>Castello di Tabiano<br />Settembre 2023</p>
+            </article>
           </div>
+          <ul className={styles.receptionParts} aria-label="Parte musicale seguita nei due matrimoni">
+            <li>Aperitivo con gli artisti</li>
+            <li>Musica per la cena</li>
+            <li>DJ set conclusivo</li>
+          </ul>
         </div>
       </section>
 
-      {/* Esperienza Internazionale */}
-      <section id="esperienza" className="py-24 bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-display text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold text-white mb-6 leading-tight">
-              Esperienza Internazionale
-            </h2>
+      <section id="musica" className={styles.section} aria-labelledby="musica-title">
+        <div className={styles.musicGrid}>
+          <div className={styles.musicText}>
+            <p className={styles.eyebrow}>Musica</p>
+            <h2 id="musica-title">La selezione musicale</h2>
+            <p>
+              House e tech house sono le mie radici, ma il repertorio è più ampio:
+              pop, rock, disco, funk, dance, R&amp;B, hip hop, latino e reggaeton,
+              insieme ai classici italiani e internazionali dagli anni ’70 a oggi.
+            </p>
+            <p>
+              Quando una coppia mi contatta, cerco prima di capire come immagina
+              il matrimonio e cosa si aspetta da me. Da lì comincia il confronto
+              sulla musica, anche con la wedding planner coinvolta nella preparazione.
+            </p>
           </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-black/50 border border-accent/30 rounded-2xl p-8 md:p-12 mb-12">
-              <p className="font-sans text-base md:text-lg text-gray-300 leading-relaxed mb-6">
-                Ho curato la musica per matrimoni ed eventi con ospiti provenienti da Irlanda, Stati Uniti, India, Australia e molti altri paesi.
-              </p>
-              <p className="font-sans text-base md:text-lg text-gray-300 leading-relaxed">
-                Collaboro spesso con wedding planner e venue internazionali, lavorando in contesti esclusivi in <strong className="text-white">Svizzera, Toscana, Lombardia e Veneto</strong>.
-              </p>
-            </div>
-
-            {/* Numeri */}
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-gradient-to-b from-accent/10 to-transparent border border-accent/30 rounded-2xl p-8 text-center hover:border-accent transition-all duration-300">
-                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-accent mb-4">1000+</div>
-                <p className="font-sans text-xs sm:text-sm md:text-base text-gray-300">eventi curati</p>
-              </div>
-
-              <div className="bg-gradient-to-b from-accent/10 to-transparent border border-accent/30 rounded-2xl p-8 text-center hover:border-accent transition-all duration-300">
-                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-accent mb-4">15+</div>
-                <p className="font-sans text-xs sm:text-sm md:text-base text-gray-300">destination wedding da oltre 15 nazioni</p>
-              </div>
-
-              <div className="bg-gradient-to-b from-accent/10 to-transparent border border-accent/30 rounded-2xl p-8 text-center hover:border-accent transition-all duration-300">
-                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-accent mb-4">Service</div>
-                <p className="font-sans text-xs sm:text-sm md:text-base text-gray-300">audio compreso</p>
-              </div>
-            </div>
-          </div>
+          <ul className={styles.genres} aria-label="Generi e repertorio musicale">
+            <li>Pop e rock</li>
+            <li>Classici italiani</li>
+            <li>Disco, funk e revival</li>
+            <li>Dance e commerciale</li>
+            <li>R&amp;B e hip hop</li>
+            <li>Latino e reggaeton</li>
+            <li>House e tech house</li>
+          </ul>
         </div>
       </section>
 
-      {/* Process Section - Rimosso */}
-
-      {/* Recensioni - Rimossa */}
-
-      {/* FAQ - Rimossa */}
-
-      {/* Contact Section */}
-      <section id="contatti" className="py-24 bg-[#0a0a0a]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4 mb-6 px-4">
-              <div className="w-12 h-12 md:w-14 md:h-14 text-accent flex-shrink-0">
-                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="3.5">
-                  <circle cx="32" cy="32" r="20"/>
-                  <circle cx="32" cy="32" r="12"/>
-                  <path d="M12 32L8 32M56 32L52 32M32 12L32 8M32 56L32 52" strokeLinecap="round"/>
-                  <path d="M18 18L14 14M46 18L50 14M18 46L14 50M46 46L50 50" strokeLinecap="round"/>
-                </svg>
-              </div>
-              <h2 className="font-display text-2xl md:text-4xl lg:text-5xl font-bold text-white text-center">
-                Vuoi sapere se sono disponibile per il tuo evento?
-              </h2>
-            </div>
-          </div>
-
-          <div className="bg-black/50 border border-accent/30 rounded-2xl p-8 md:p-12">
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-              <Link
-                href="/contatti"
-                className="font-sans font-bold w-full sm:w-auto px-10 py-4 bg-gradient-to-r from-accent-strong to-accent-hover hover:from-accent-hover hover:to-accent-strong text-white rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl text-center uppercase tracking-wider text-sm"
-              >
-                Richiedi informazioni
-              </Link>
-              <a
-                href="https://wa.me/393462122933"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-sans font-bold w-full sm:w-auto px-10 py-4 bg-gradient-to-r from-accent-strong to-accent-hover hover:from-accent-hover hover:to-accent-strong text-white rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl text-center uppercase tracking-wider text-sm"
-              >
-                Scrivimi su WhatsApp
-              </a>
-            </div>
-
-            <div className="space-y-6 pt-8 border-t border-gray-800">
-              <div className="flex items-start gap-4">
-                <div className="w-6 h-6 rounded-full bg-accent-strong flex items-center justify-center flex-shrink-0 mt-1">
-                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="font-display text-xl text-white mb-2">Email</h3>
-                  <a href="mailto:info@mommydj.com" className="font-sans text-accent hover:underline text-lg">
-                    info@mommydj.com
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-6 h-6 rounded-full bg-accent-strong flex items-center justify-center flex-shrink-0 mt-1">
-                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="font-display text-xl text-white mb-2">WhatsApp</h3>
-                  <a href="https://wa.me/393462122933" className="font-sans text-accent hover:underline text-lg">
-                    +39 346 212 2933
-                  </a>
-                </div>
-              </div>
-            </div>
+      <section id="contatti" className={styles.contactSection} aria-labelledby="contatti-title">
+        <div className={styles.section}>
+          <p className={styles.eyebrow}>Contatti</p>
+          <h2 id="contatti-title">Mommy DJ</h2>
+          <a href="mailto:info@mommydj.com" className={styles.email}>info@mommydj.com</a>
+          <div className={styles.contactLinks}>
+            <a href="tel:+393462122933">+39 346 212 2933</a>
+            <a href="https://wa.me/393462122933" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <Link href="/contatti">Richiedi informazioni</Link>
+            <Link href="/richiedi">Richiedi una canzone</Link>
           </div>
         </div>
       </section>
