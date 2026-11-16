@@ -1,12 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
+import AnimatedWords from "./components/motion/AnimatedWords";
+import MotionScope from "./components/motion/MotionScope";
 import styles from "./press-kit.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.kit}>
+    <MotionScope className={styles.kit}>
       <section className={styles.hero} aria-labelledby="mommy-title">
-        <div className={styles.heroMedia}>
+        <div className={styles.heroMedia} data-reveal="image">
           <Image
             src="/mommy-dj-live.webp"
             alt="Mommy DJ al mixer e ai giradischi durante un DJ set"
@@ -17,14 +19,14 @@ export default function Home() {
           />
         </div>
         <div className={styles.heroInner}>
-          <p className={styles.heroLabel}>DJ · Matrimoni · Eventi privati</p>
-          <h1 id="mommy-title" className={styles.heroTitle}>Mommy DJ</h1>
-          <p className={styles.heroSummary}>
+          <p className={styles.heroLabel} data-reveal="fade" data-reveal-delay="80">DJ · Matrimoni · Eventi privati</p>
+          <h1 id="mommy-title" className={styles.heroTitle} data-reveal="words" data-reveal-delay="120"><AnimatedWords text="Mommy DJ" /></h1>
+          <p className={styles.heroSummary} data-reveal="fade" data-reveal-delay="210">
             Un percorso nei club, con la house e la tech house.
             Oggi anche al fianco di coppie e wedding planner,
             per la parte musicale del ricevimento.
           </p>
-          <div className={styles.actions}>
+          <div className={styles.actions} data-reveal="fade" data-reveal-delay="280">
             <Link href="/contatti" className={styles.primaryLink}>Contatti</Link>
             <a href="#profilo" className={styles.secondaryLink}>Il mio percorso</a>
           </div>
@@ -45,7 +47,7 @@ export default function Home() {
 
       <section id="profilo" className={styles.section} aria-labelledby="profilo-title">
         <div className={styles.profileGrid}>
-          <figure className={styles.portraitFigure}>
+          <figure className={styles.portraitFigure} data-reveal="image">
             <picture>
               <source
                 type="image/webp"
@@ -65,22 +67,22 @@ export default function Home() {
             <figcaption>Mommy DJ</figcaption>
           </figure>
           <div className={styles.profileText}>
-            <p className={styles.eyebrow}>Profilo</p>
-            <h2 id="profilo-title">Mommy DJ</h2>
-            <p>
+            <p className={styles.eyebrow} data-reveal="fade" data-reveal-delay="60">Profilo</p>
+            <h2 id="profilo-title" data-reveal="words" data-reveal-delay="100"><AnimatedWords text="Mommy DJ" /></h2>
+            <p data-reveal="fade" data-reveal-delay="160">
               Sono cresciuto nella periferia di Modena. Ho cominciato da adolescente,
               con giradischi Technics e mixer Stanton. A 17 anni suonavo nel privé
               del Cenerentola, a Rubiera.
             </p>
-            <p>
+            <p data-reveal="fade" data-reveal-delay="210">
               Del mio percorso fanno parte Le Scuderie, Echoes, Matis e Cassero.
             </p>
-            <p>
+            <p data-reveal="fade" data-reveal-delay="240">
               Tra il 2007 e il 2008 ho anche gestito Le Scuderie insieme a un socio,
               occupandomi dell’intero locale e del personale. Un’esperienza che fa
               parte del mio percorso anche sul piano organizzativo.
             </p>
-            <p>
+            <p data-reveal="fade" data-reveal-delay="270">
               Realizzo DJ set anche per sfilate di moda, collaborando con Modenamoremio
               negli eventi dedicati ai negozi del centro di Modena. Ho inoltre partecipato
               come DJ a iniziative a sostegno di Aut Aut Modena APS, associazione che
@@ -93,9 +95,9 @@ export default function Home() {
       <section id="matrimoni" className={styles.workSection} aria-labelledby="matrimoni-title">
         <div className={styles.section}>
           <div className={styles.workHeading}>
-            <p className={styles.eyebrow}>Esperienze</p>
-            <h2 id="matrimoni-title">Matrimoni selezionati</h2>
-            <p className={styles.workIntro}>
+            <p className={styles.eyebrow} data-reveal="fade">Esperienze</p>
+            <h2 id="matrimoni-title" data-reveal="words" data-reveal-delay="80"><AnimatedWords text="Matrimoni selezionati" /></h2>
+            <p className={styles.workIntro} data-reveal="fade" data-reveal-delay="160">
               Ho curato la parte musicale dei matrimoni di Cariba Heine,
               attrice della serie H2O, e di Oliver Krause, figlio di Kyle Krause,
               proprietario e presidente del Parma Calcio. In entrambi ho seguito
@@ -103,14 +105,14 @@ export default function Home() {
             </p>
           </div>
           <div className={styles.workList}>
-            <article className={styles.workRow}>
+            <article className={styles.workRow} data-reveal="fade">
               <div>
                 <h3>Cariba Heine</h3>
                 <p className={styles.workDescription}>Attrice della serie televisiva H2O</p>
               </div>
               <p className={styles.workDetail}>Parte musicale del ricevimento</p>
             </article>
-            <article className={styles.workRow}>
+            <article className={styles.workRow} data-reveal="fade" data-reveal-delay="90">
               <div>
                 <h3>Oliver Krause</h3>
                 <p className={styles.workDescription}>
@@ -120,7 +122,7 @@ export default function Home() {
               <p className={styles.workDetail}>Castello di Tabiano<br />Settembre 2023</p>
             </article>
           </div>
-          <ul className={styles.receptionParts} aria-label="Parte musicale seguita nei due matrimoni">
+          <ul className={styles.receptionParts} aria-label="Parte musicale seguita nei due matrimoni" data-reveal="fade">
             <li>Aperitivo con gli artisti</li>
             <li>Musica per la cena</li>
             <li>DJ set conclusivo</li>
@@ -131,20 +133,20 @@ export default function Home() {
       <section id="musica" className={styles.section} aria-labelledby="musica-title">
         <div className={styles.musicGrid}>
           <div className={styles.musicText}>
-            <p className={styles.eyebrow}>Musica</p>
-            <h2 id="musica-title">La selezione musicale</h2>
-            <p>
+            <p className={styles.eyebrow} data-reveal="fade">Musica</p>
+            <h2 id="musica-title" data-reveal="words" data-reveal-delay="80"><AnimatedWords text="La selezione musicale" /></h2>
+            <p data-reveal="fade" data-reveal-delay="160">
               House e tech house sono le mie radici, ma il repertorio è più ampio:
               pop, rock, disco, funk, dance, EDM, elettronica, R&amp;B, hip hop, latino e reggaeton,
               insieme ai classici italiani e internazionali dagli anni ’70 a oggi.
             </p>
-            <p>
+            <p data-reveal="fade" data-reveal-delay="220">
               Quando una coppia mi contatta, cerco prima di capire come immagina
               il matrimonio e cosa si aspetta da me. Da lì comincia il confronto
               sulla musica, anche con la wedding planner coinvolta nella preparazione.
             </p>
           </div>
-          <ul className={styles.genres} aria-label="Generi e repertorio musicale">
+          <ul className={styles.genres} aria-label="Generi e repertorio musicale" data-reveal="fade" data-reveal-delay="160">
             <li>Pop e rock</li>
             <li>Classici italiani</li>
             <li>Disco, funk e revival</li>
@@ -159,10 +161,10 @@ export default function Home() {
 
       <section id="contatti" className={styles.contactSection} aria-labelledby="contatti-title">
         <div className={styles.section}>
-          <p className={styles.eyebrow}>Contatti</p>
-          <h2 id="contatti-title">Mommy DJ</h2>
-          <a href="mailto:info@mommydj.com" className={styles.email}>info@mommydj.com</a>
-          <div className={styles.contactLinks}>
+          <p className={styles.eyebrow} data-reveal="fade">Contatti</p>
+          <h2 id="contatti-title" data-reveal="words" data-reveal-delay="80"><AnimatedWords text="Mommy DJ" /></h2>
+          <a href="mailto:info@mommydj.com" className={styles.email} data-reveal="fade" data-reveal-delay="160">info@mommydj.com</a>
+          <div className={styles.contactLinks} data-reveal="fade" data-reveal-delay="220">
             <a href="tel:+393462122933">+39 346 212 2933</a>
             <a href="https://wa.me/393462122933" target="_blank" rel="noopener noreferrer">WhatsApp</a>
             <Link href="/contatti">Richiedi informazioni</Link>
@@ -170,6 +172,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </div>
+    </MotionScope>
   );
 }

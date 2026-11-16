@@ -1,0 +1,22 @@
+.scope section { animation: none; opacity: 1; }
+.scope [data-motion-pending] { opacity: 0; }
+.wordMask { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.16em; margin-bottom: -0.16em; }
+.word { display: inline-block; transform-origin: left bottom; }
+.curtain {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: #000;
+  transform: translate3d(0, 100%, 0);
+  pointer-events: auto;
+}
+.curtain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 75% 100%, rgba(141, 70, 192, 0.45), transparent 60%), linear-gradient(0deg, rgba(176, 59, 142, 0.2), transparent 45%);
+}
+@media (prefers-reduced-motion: reduce) {
+  .scope [data-motion-pending] { opacity: 1; }
+  .curtain { display: none; }
+}

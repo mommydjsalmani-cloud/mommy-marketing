@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import AnimatedWords from "../components/motion/AnimatedWords";
+import MotionScope from "../components/motion/MotionScope";
 
 export default function Matrimoni() {
   const [activePhase, setActivePhase] = useState(0);
@@ -87,7 +89,7 @@ export default function Matrimoni() {
   ];
 
   return (
-    <div>
+    <MotionScope>
       {/* Breadcrumb */}
       <nav className="bg-gray-900 border-b border-gray-800 py-3">
         <div className="container-custom">
@@ -102,7 +104,7 @@ export default function Matrimoni() {
       {/* Hero */}
       <section className="relative py-16 md:py-32 bg-gradient-to-b from-black via-gray-900 to-black">
         <div className="container-custom text-center">
-          <div className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4 md:mb-6 text-accent">
+          <div className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4 md:mb-6 text-accent" data-reveal="fade">
             <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="3.5">
               {/* Fedi nuziali intrecciate */}
               <circle cx="26" cy="32" r="12" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3.5"/>
@@ -112,12 +114,12 @@ export default function Matrimoni() {
               <circle cx="38" cy="32" r="8" opacity="0.3" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </div>
-          <h1 className="mb-4 md:mb-6 text-white font-display px-4">DJ per Matrimoni</h1>
-          <p className="font-sans text-base md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
+          <h1 className="mb-4 md:mb-6 text-white font-display px-4" data-reveal="words" data-reveal-delay="80"><AnimatedWords text="DJ per Matrimoni" /></h1>
+          <p className="font-sans text-base md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4" data-reveal="fade" data-reveal-delay="160">
             La musica accompagna ogni momento, ma quando si tratta del tuo matrimonio, deve raccontare la tua storia.<br className="hidden sm:block" />
             <span className="block sm:inline mt-2 sm:mt-0">Dalla cerimonia al party finale, curo ogni dettaglio sonoro, creando un'atmosfera che rispecchia voi e i vostri ospiti.</span>
           </p>
-          <div className="mt-8 md:mt-10 px-4">
+          <div className="mt-8 md:mt-10 px-4" data-reveal="fade" data-reveal-delay="220">
             <a
               href="#contatti"
               className="font-sans inline-block w-full sm:w-auto bg-gradient-to-r from-accent-strong to-accent-hover hover:from-accent-hover hover:to-accent-strong text-white px-10 md:px-14 py-4 md:py-5 rounded-full font-bold transition-all duration-300 uppercase tracking-wider text-sm md:text-base shadow-lg hover:shadow-2xl hover:scale-105 text-center"
@@ -286,6 +288,6 @@ export default function Matrimoni() {
           </div>
         </div>
       </section>
-    </div>
+    </MotionScope>
   );
 }

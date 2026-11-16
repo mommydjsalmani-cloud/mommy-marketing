@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import LogoIntro from "./components/LogoIntro";
 import RecaptchaProvider from "./components/RecaptchaProvider";
 import FloatingContactWidget from "./components/FloatingContactWidget";
+import NavigationMotion from "./components/motion/NavigationMotion";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -64,6 +65,7 @@ export default function RootLayout({
       >
         <RecaptchaProvider>
           <LogoIntro />
+          <NavigationMotion />
           <a href="#main-content" className="skip-to-content">
             Salta al contenuto
           </a>
