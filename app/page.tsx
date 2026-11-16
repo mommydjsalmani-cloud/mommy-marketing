@@ -80,6 +80,12 @@ export default function Home() {
               occupandomi dell’intero locale e del personale. Un’esperienza che fa
               parte del mio percorso anche sul piano organizzativo.
             </p>
+            <p>
+              Realizzo DJ set anche per sfilate di moda, collaborando con Modenamoremio
+              negli eventi dedicati ai negozi del centro di Modena. Ho inoltre partecipato
+              come DJ a iniziative a sostegno di Aut Aut Modena APS, associazione che
+              affianca le persone autistiche e le loro famiglie.
+            </p>
           </div>
         </div>
       </section>
