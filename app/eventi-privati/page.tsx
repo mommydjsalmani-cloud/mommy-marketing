@@ -1,6 +1,7 @@
 'use client';
 
 import Link from "next/link";
+import EquipmentBlock from "../components/EquipmentBlock";
 
 export default function EventiPrivati() {
   return (
@@ -36,8 +37,8 @@ export default function EventiPrivati() {
           </div>
           <h1 className="mb-4 md:mb-6 text-white font-display">DJ per compleanni, anniversari, aziendali</h1>
           <p className="font-sans text-base md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Trovare il "centro" della festa entro tre brani.<br className="hidden sm:block" />
-            <span className="block sm:inline mt-2 sm:mt-0">Poi mantenerlo.</span>
+            DJ set per compleanni, anniversari, feste ed eventi aziendali.<br className="hidden sm:block" />
+            <span className="block sm:inline mt-2 sm:mt-0">Definiamo insieme musica, tempi e impianto in base al luogo e agli ospiti.</span>
           </p>
         </div>
       </section>
@@ -90,23 +91,7 @@ export default function EventiPrivati() {
         </div>
       </section>
 
-      {/* Cosa porto */}
-      <section className="py-20 bg-black">
-        <div className="container-custom max-w-4xl">
-          <h2 className="font-display text-center mb-12 text-white">Dotazione</h2>
-          <div className="bg-gray-900 border border-gray-800 p-8 md:p-10 rounded-2xl">
-            <p className="font-sans text-gray-300 leading-relaxed mb-6">
-              Consolle, impianto dimensionato, microfoni, luci base.
-            </p>
-            <div>
-              <h3 className="font-display text-white font-semibold mb-3 text-sm">Extra</h3>
-              <p className="font-sans text-gray-400 leading-relaxed">
-                uplighting, seconda postazione, sax live.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <EquipmentBlock eventType="private" />
 
       {/* Come lavoro */}
       <section className="py-20 bg-gray-900">
@@ -126,7 +111,7 @@ export default function EventiPrivati() {
             <div className="text-center">
               <div className="w-12 h-12 bg-accent-strong text-white rounded-full flex items-center justify-center text-lg font-bold mx-auto mb-4">3</div>
               <h3 className="text-white mb-2 uppercase tracking-wide text-xs">Orari definiti</h3>
-              <p className="text-gray-400 text-sm">Timeline e timing dell'evento</p>
+              <p className="text-gray-400 text-sm">Timeline e timing dell&apos;evento</p>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 bg-accent-strong text-white rounded-full flex items-center justify-center text-lg font-bold mx-auto mb-4">4</div>
@@ -189,10 +174,10 @@ export default function EventiPrivati() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center px-4">
             <Link
-              href="/contatti"
+              href="/contatti#modulo"
               className="font-sans inline-block w-full sm:w-auto bg-gradient-to-r from-accent-strong to-accent-hover hover:from-accent-hover hover:to-accent-strong text-white px-10 md:px-12 py-4 rounded-full font-bold transition-all duration-300 uppercase tracking-wider text-sm shadow-xl hover:shadow-2xl hover:scale-105"
             >
-              Richiedi informazioni
+              Chiedi disponibilità
             </Link>
             <a
               href="https://wa.me/393462122933"

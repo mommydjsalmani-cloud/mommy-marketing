@@ -1,0 +1,4 @@
+.formPanel[id] { border: 1px solid rgba(201,154,232,.32); background: #15121d; padding: 32px; border-radius: 16px; scroll-margin-top: 110px; }
+.formPanel .formTitle { color: #fff; font-family: var(--font-brand),sans-serif; font-size: 1.5rem; line-height: 1.2; letter-spacing: -.03em; text-transform: none; font-weight: 600; margin-bottom: 18px; }
+.formIntro { color: #d7d0e1; font-size: .85rem; line-height: 1.7; margin-bottom: 28px; }
+@media (max-width: 600px) { .formPanel[id] { padding: 24px 20px; scroll-margin-top: 90px; } .formPanel .formTitle { font-size: 1.35rem; } }

@@ -64,16 +64,9 @@ export default function MotionScope({ children, className = "" }: {
 
     elements.forEach((element) => element.setAttribute("data-motion-pending", ""));
 
-    // Let the existing, once-per-session logo introduction finish first.
-    let introDelay = 0;
-    try {
-      if (!sessionStorage.getItem("logoIntroShown")) introDelay = 1600;
-    } catch {
-      // Storage restrictions must never hide the content.
-    }
     const timer = window.setTimeout(() => {
       elements.forEach((element) => observer.observe(element));
-    }, introDelay);
+    }, 0);
 
     const showAll = () => {
       observer.disconnect();

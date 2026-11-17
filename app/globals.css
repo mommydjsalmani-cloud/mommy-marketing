@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
 @theme inline {
+  --font-sans: var(--font-brand);
+  --font-display: var(--font-brand);
   --color-accent: var(--accent);
   --color-accent-strong: var(--accent-strong);
   --color-accent-hover: var(--accent-hover);
@@ -41,7 +43,7 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-inter), Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-family: var(--font-brand), Montserrat, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   font-size: 0.9375rem;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -73,9 +75,9 @@ body {
 
 /* Tipografia Titoli */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-michroma), Michroma, system-ui, sans-serif;
+  font-family: var(--font-brand), Montserrat, system-ui, sans-serif;
   line-height: 1.2;
-  font-weight: 400;
+  font-weight: 650;
   text-transform: uppercase;
 }
 
@@ -179,7 +181,7 @@ h4 {
 
 /* Paragrafi e testo body */
 p {
-  font-family: var(--font-inter), Inter, system-ui, sans-serif;
+  font-family: var(--font-brand), Montserrat, system-ui, sans-serif;
   letter-spacing: normal;
   line-height: 1.6;
 }
@@ -264,8 +266,13 @@ a {
   }
 }
 
+@keyframes mainAppear {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 main {
-  animation: fadeIn 0.4s ease-out;
+  animation: mainAppear 0.4s ease-out;
 }
 
 section {

@@ -1,0 +1,46 @@
+.header { position: sticky; top: 0; z-index: 100; height: 88px; background: rgba(8,6,12,.96); border-bottom: 1px solid rgba(201,154,232,.16); backdrop-filter: blur(20px); }
+.inner { width: min(100% - 64px,1440px); height: 100%; display: flex; align-items: center; gap: 22px; margin: auto; }
+.brand { display: flex; align-items: center; flex: 0 0 auto; }
+.logo { width: 112px; height: 64px; object-fit: contain; }
+.desktopNav { display: flex; align-items: center; justify-content: flex-end; flex: 1; min-width: 0; gap: 20px; }
+.desktopNav a { color: #d7d0e1; white-space: nowrap; font-size: .7rem; font-weight: 600; padding: 12px 0; }
+.desktopNav a:hover { color: #c99ae8; }
+.navUnavailable { display: flex; align-items: center; justify-content: space-between; gap: 8px; color: #b1a8bf; font-size: .67rem; line-height: 1.4; cursor: default; }
+.desktopNav .navUnavailable { white-space: nowrap; }
+.navUnavailable small { border: 1px solid rgba(201,154,232,.24); border-radius: 4px; padding: 3px 5px; color: #c99ae8; font-size: .45rem; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; white-space: nowrap; }
+.requestLink { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; color: #c99ae8; font-size: .66rem; padding-block: 12px; }
+.requestLink > span { font-size: 1rem; }
+.primary, .mobilePrimary { display: inline-flex; align-items: center; justify-content: center; color: #fff; background: linear-gradient(110deg,#b03b8e,#8d46c0); min-height: 44px; padding: 12px 20px; border-radius: 28px; font-size: .73rem; font-weight: 600; line-height: 1.4; white-space: nowrap; flex: 0 0 auto; }
+.menuButton { display: none; width: 40px; height: 44px; align-items: center; justify-content: center; color: #fff; border: none; background: none; flex: 0 0 auto; }
+.mobileMenu { display: none; }
+@media (max-width: 1199px) {
+ .header { height: 70px; }
+ .inner { width: calc(100% - 40px); gap: 14px; }
+ .desktopNav, .requestLink { display: none; }
+ .primary { margin-left: auto; }
+ .logo { width: 94px; height: 48px; }
+ .menuButton { display: flex; }
+ .mobileMenu { display: block; position: fixed; top: 70px; inset-inline: 0; bottom: 0; z-index: 90; background: #0b0811; border-top: 1px solid rgba(201,154,232,.14); overflow-y: auto; }
+ .mobilePanel { width: min(100%,640px); min-height: 100%; margin: auto; display: flex; flex-direction: column; padding: 20px 28px max(24px,env(safe-area-inset-bottom)); gap: 20px; }
+ .dialogTop { display: flex; justify-content: space-between; align-items: center; color: #b1a8bf; font-size: .7rem; text-transform: uppercase; letter-spacing: .12em; }
+ .dialogTop button { min-height: 40px; border: 0; background: none; color: #d7d0e1; font-size: .8rem; letter-spacing: 0; text-transform: none; }
+ .dialogTop button span { font-size: 1.3rem; margin-left: 10px; }
+ .mobileNav { display: grid; gap: 0; }
+ .mobileNav > a, .mobileNav > .navUnavailable { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; color: #fff; border-bottom: 1px solid rgba(201,154,232,.16); font-size: clamp(1rem,4.2vw,1.3rem); font-weight: 650; text-transform: uppercase; line-height: 1.3; letter-spacing: -.015em; }
+ .mobileNav a > span { color: #c99ae8; font-size: 1.1rem; }
+ .mobileNav > .navUnavailable { color: #b1a8bf; }
+ .mobilePrimary { gap: 28px; justify-content: space-between; padding: 14px 22px; font-size: .85rem; }
+ .guestArea { border: 1px solid rgba(201,154,232,.24); padding: 14px; border-radius: 10px; }
+ .guestArea p { color: #b1a8bf; font-size: .7rem; }
+ .guestArea a { display: flex; align-items: center; justify-content: space-between; color: #c99ae8; font-size: 1rem; margin-top: 8px; min-height: 34px; }
+ .guestArea .guestNote { margin-top: 4px; font-size: .7rem; }
+ .whatsapp { color: #d7d0e1; font-size: .8rem; margin-top: auto; padding-top: 4px; }
+}
+@media (max-width: 380px) {
+ .inner { width: calc(100% - 28px); gap: 8px; }
+ .logo { width: 76px; }
+ .primary { padding: 11px 12px; font-size: .7rem; }
+ .menuButton { width: 34px; }
+ .mobilePanel { padding-inline: 20px; gap: 18px; }
+}
+@media (prefers-reduced-motion: reduce) { .header a { transition: none; } }

@@ -1,31 +1,23 @@
 import type { Metadata } from "next";
-import { Inter, Michroma } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import LogoIntro from "./components/LogoIntro";
 import RecaptchaProvider from "./components/RecaptchaProvider";
 import FloatingContactWidget from "./components/FloatingContactWidget";
 import NavigationMotion from "./components/motion/NavigationMotion";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const michroma = Michroma({
-  variable: "--font-michroma",
-  weight: "400",
+const brand = Montserrat({
+  variable: "--font-brand",
   subsets: ["latin"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Mommy DJ - Musica e Regia per Matrimoni ed Eventi privati",
-  description: "DJ professionista per matrimoni, eventi privati e aziendali. 20 anni di esperienza, app richieste live, coordinamento con planner e fornitori.",
+  title: "Mommy DJ | DJ e regia musicale per matrimoni ed eventi privati",
+  description: "Curo la musica dall’aperitivo al party finale e mi coordino con chi organizza l’evento. DJ per matrimoni ed eventi privati.",
   openGraph: {
-    title: "Mommy DJ - Musica e Regia per Matrimoni ed Eventi privati",
+    title: "Mommy DJ | DJ e regia musicale per matrimoni ed eventi privati",
     description: "DJ professionista per matrimoni, eventi privati e aziendali in Italia e Svizzera.",
     type: "website",
   },
@@ -46,10 +38,10 @@ export default function RootLayout({
       "addressCountry": "IT"
     },
     "areaServed": ["IT", "CH"],
-    "telephone": "+39-123-456-7890",
+    "telephone": "+39-346-212-2933",
     "email": "info@mommydj.com",
     "priceRange": "€€-€€€",
-    "url": "https://mommy-marketing.vercel.app"
+    "url": "https://mommydj.com"
   };
 
   return (
@@ -61,10 +53,9 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} ${michroma.variable} antialiased`}
+        className={`${brand.variable} antialiased`}
       >
         <RecaptchaProvider>
-          <LogoIntro />
           <NavigationMotion />
           <a href="#main-content" className="skip-to-content">
             Salta al contenuto

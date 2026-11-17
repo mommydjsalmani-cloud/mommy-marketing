@@ -1,6 +1,7 @@
 'use client';
 
 import Link from "next/link";
+import EquipmentBlock from "../components/EquipmentBlock";
 import { useState } from "react";
 import AnimatedWords from "../components/motion/AnimatedWords";
 import MotionScope from "../components/motion/MotionScope";
@@ -117,14 +118,14 @@ export default function Matrimoni() {
           <h1 className="mb-4 md:mb-6 text-white font-display px-4" data-reveal="words" data-reveal-delay="80"><AnimatedWords text="DJ per Matrimoni" /></h1>
           <p className="font-sans text-base md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4" data-reveal="fade" data-reveal-delay="160">
             La musica accompagna ogni momento, ma quando si tratta del tuo matrimonio, deve raccontare la tua storia.<br className="hidden sm:block" />
-            <span className="block sm:inline mt-2 sm:mt-0">Dalla cerimonia al party finale, curo ogni dettaglio sonoro, creando un'atmosfera che rispecchia voi e i vostri ospiti.</span>
+            <span className="block sm:inline mt-2 sm:mt-0">Dalla cerimonia al party finale, curo ogni dettaglio sonoro, creando un&apos;atmosfera che rispecchia voi e i vostri ospiti.</span>
           </p>
           <div className="mt-8 md:mt-10 px-4" data-reveal="fade" data-reveal-delay="220">
             <a
-              href="#contatti"
+              href="/contatti#modulo"
               className="font-sans inline-block w-full sm:w-auto bg-gradient-to-r from-accent-strong to-accent-hover hover:from-accent-hover hover:to-accent-strong text-white px-10 md:px-14 py-4 md:py-5 rounded-full font-bold transition-all duration-300 uppercase tracking-wider text-sm md:text-base shadow-lg hover:shadow-2xl hover:scale-105 text-center"
             >
-              Verifica disponibilità
+              Chiedi disponibilità
             </a>
           </div>
         </div>
@@ -178,6 +179,8 @@ export default function Matrimoni() {
         </div>
       </section>
 
+      <EquipmentBlock eventType="wedding" />
+
       {/* Approccio */}
       <section className="py-12 md:py-20 bg-black">
         <div className="container-custom max-w-4xl">
@@ -185,7 +188,7 @@ export default function Matrimoni() {
           <div className="bg-gray-800 border border-gray-700 p-6 md:p-10 rounded-2xl mb-8 md:mb-12">
             <div className="space-y-4 md:space-y-6 text-gray-300 leading-relaxed">
               <p className="font-sans text-base md:text-lg">
-                Prima di ogni evento dedico tempo all'ascolto della coppia e alla costruzione della scaletta.
+                Prima di ogni evento dedico tempo all&apos;ascolto della coppia e alla costruzione della scaletta.
               </p>
               <p className="font-sans text-base md:text-lg">
                 Mi confronto con la wedding planner, il catering e i tecnici audio per curare anche tempi e regia generale.
@@ -221,7 +224,7 @@ export default function Matrimoni() {
                 Ho lavorato con coppie provenienti da Irlanda, Inghilterra, Stati Uniti, India, Francia, Australia e molti altri paesi.
               </p>
               <p className="font-sans text-base md:text-lg">
-                Comprendere culture musicali diverse è fondamentale per creare un'atmosfera accogliente per tutti gli ospiti.
+                Comprendere culture musicali diverse è fondamentale per creare un&apos;atmosfera accogliente per tutti gli ospiti.
               </p>
               <p className="font-sans text-base md:text-lg">
                 Lavoro regolarmente in <strong className="text-white">Svizzera, Toscana, Lombardia e Veneto</strong>, collaborando con le migliori wedding planner italiane e internazionali.
@@ -249,15 +252,16 @@ export default function Matrimoni() {
                   <path d="M24 36H40M22 40H42M26 44H38" strokeLinecap="round" opacity="0.4"/>
                 </svg>
               </div>
-              <h2 className="font-display text-xl md:text-2xl text-white mb-4 md:mb-6 px-4">App "Richiedi un Brano"</h2>
+              <h2 className="font-display text-xl md:text-2xl text-white mb-4 md:mb-6 px-4">Richiedi una canzone</h2>
             </div>
             <div className="space-y-3 md:space-y-4 text-gray-300 leading-relaxed">
               <p className="font-sans text-base md:text-lg text-center">
-                Durante il party, gli ospiti possono inviare le loro richieste musicali in tempo reale tramite un'app dedicata che ho sviluppato personalmente.
+                Durante la festa, gli invitati possono aprire il link o il QR code dell’evento e inviare una richiesta musicale dal telefono.
               </p>
               <p className="font-sans text-base md:text-lg text-center">
-                In questo modo ogni persona partecipa e la pista rimane sempre viva.
+                La funzione serve a chiedere un brano al DJ durante l’evento.
               </p>
+              <p className="text-center"><a href="/richiedi" className="inline-flex min-h-11 items-center gap-3 text-accent underline underline-offset-4">Richiedi una canzone <span aria-hidden="true">↗</span></a></p>
             </div>
           </div>
         </div>
@@ -272,10 +276,10 @@ export default function Matrimoni() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center px-4">
             <Link
-              href="/contatti"
+              href="/contatti#modulo"
               className="font-sans inline-block w-full sm:w-auto bg-gradient-to-r from-accent-strong to-accent-hover hover:from-accent-hover hover:to-accent-strong text-white px-10 md:px-12 py-4 rounded-full font-bold transition-all duration-300 uppercase tracking-wider text-sm shadow-xl hover:shadow-2xl hover:scale-105"
             >
-              Richiedi informazioni
+              Chiedi disponibilità
             </Link>
             <a
               href="https://wa.me/393462122933"

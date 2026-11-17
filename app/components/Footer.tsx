@@ -1,57 +1,19 @@
-import Link from 'next/link';
+import Link from "next/link";
+import ArrowIcon from "./ArrowIcon";
+import { navigationLinks, contactFormHref } from "../data/navigation";
+import styles from "./footer.module.css";
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
-
   return (
-    <footer className="bg-gray-800 text-white py-12 border-t border-gray-700">
-      <div className="container-custom px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="text-xl font-bold mb-4">Mommy DJ</h3>
-            <p className="text-gray-400 text-sm leading-relaxed">
-              Musica su misura per matrimoni ed eventi privati.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-bold mb-4">Link Utili</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/matrimoni" className="text-gray-400 hover:text-accent transition-colors text-sm">
-                  Matrimoni
-                </Link>
-              </li>
-              <li>
-                <Link href="/eventi-privati" className="text-gray-400 hover:text-accent transition-colors text-sm">
-                  Eventi Privati
-                </Link>
-              </li>
-              {/* <li>
-                <Link href="/recensioni" className="text-gray-400 hover:text-accent transition-colors text-sm">
-                  Recensioni
-                </Link>
-              </li> */}
-              <li>
-                <Link href="/contatti" className="text-gray-400 hover:text-accent transition-colors text-sm">
-                  Contatti
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-bold mb-4">Contatti</h3>
-            <ul className="space-y-2 text-gray-400 text-sm">
-              <li>Email: info@mommydj.com</li>
-              <li>Tel: +39 346 212 2933</li>
-            </ul>
-          </div>
+    <footer className={styles.footer}>
+      <div className={styles.inner}>
+        <div className={styles.grid}>
+          <div><h2>Mommy DJ</h2><p>DJ e regia musicale per matrimoni ed eventi privati.</p><a href="https://instagram.com/mommymusicentertainment" target="_blank" rel="noopener noreferrer" className={styles.instagram}>Instagram <ArrowIcon /></a></div>
+          <nav aria-label="Link nel footer"><h3>Esplora</h3><ul>{navigationLinks.map((link) => <li key={link.href}><Link href={link.href}>{link.label}</Link></li>)}</ul></nav>
+          <div><h3>Contatti</h3><ul><li><Link href={contactFormHref}>Chiedi disponibilità <ArrowIcon /></Link></li><li><a href="mailto:info@mommydj.com">info@mommydj.com</a></li><li><a href="tel:+393462122933">+39 346 212 2933</a></li><li><a href="https://wa.me/393462122933" target="_blank" rel="noopener noreferrer">WhatsApp <ArrowIcon /></a></li></ul></div>
+          <div className={styles.guest}><h3>Durante la festa</h3><a href="/richiedi">Richiedi una canzone <span aria-hidden="true">♪</span></a><p>La funzione per gli invitati all’evento.</p></div>
         </div>
-
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
-          <p>&copy; {currentYear} Mommy DJ. Tutti i diritti riservati.</p>
-        </div>
+        <div className={styles.bottom}><span>© {new Date().getFullYear()} Mommy DJ</span><span>Music entertainment</span></div>
       </div>
     </footer>
   );

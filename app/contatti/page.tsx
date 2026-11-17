@@ -1,6 +1,7 @@
 'use client';
 
 import Link from "next/link";
+import styles from "./contact-form.module.css";
 import { useState } from "react";
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 
@@ -170,22 +171,23 @@ export default function Contatti() {
 
             {/* Right: Form */}
             <div>
-              <div className="card bg-gray-800 border-2 border-gray-700 p-6 md:p-8">
-                <h2 className="mb-6 text-white uppercase leading-tight" style={{fontSize: '1.125rem', letterSpacing: '0.02em'}}>Richiesta informazioni</h2>
+              <div id="modulo" className={styles.formPanel}>
+                <h2 id="modulo-title" className={styles.formTitle}>Chiedi disponibilità e preventivo</h2>
+                <p className={styles.formIntro}>Indicami data, luogo e tipo di evento. Nel messaggio puoi raccontarmi cosa immagini per la musica.</p>
                 
                 {isSubmitted && (
-                  <div className="bg-green-900 border border-green-600 text-green-200 px-4 py-3 rounded mb-6">
+                  <div role="status" aria-live="polite" className="bg-green-900 border border-green-600 text-green-200 px-4 py-3 rounded mb-6">
                     <strong>Grazie!</strong> Ti risponderò al più presto.
                   </div>
                 )}
 
                 {error && (
-                  <div className="bg-red-900 border border-red-600 text-red-200 px-4 py-3 rounded mb-6">
+                  <div role="alert" className="bg-red-900 border border-red-600 text-red-200 px-4 py-3 rounded mb-6">
                     <strong>Errore:</strong> {error}
                   </div>
                 )}
 
-                <form onSubmit={handleSubmit} className="space-y-5">
+                <form onSubmit={handleSubmit} className="space-y-5" aria-labelledby="modulo-title">
                   <div>
                     <label htmlFor="nome" className="block text-sm font-bold mb-2 text-white">
                       Nome e Cognome *

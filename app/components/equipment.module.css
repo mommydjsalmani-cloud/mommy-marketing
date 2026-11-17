@@ -1,0 +1,9 @@
+.section { padding: 72px 0; background: #0c0911; border-block: 1px solid rgba(201,154,232,.16); }
+.inner { width: min(100% - 48px, 1120px); margin: auto; display: grid; grid-template-columns: .8fr 1.2fr; gap: 72px; }
+.eyebrow { color: #c99ae8; font-size: .65rem; text-transform: uppercase; letter-spacing: .14em; margin-bottom: 18px; }
+.section h2 { font-family: var(--font-brand), sans-serif; font-weight: 700; font-size: clamp(1.5rem,2.5vw,2.2rem); text-transform: uppercase; letter-spacing: -.035em; line-height: 1.12; }
+.copy p { color: #d7d0e1; font-size: .9rem; line-height: 1.85; }
+.copy p + p { margin-top: 18px; }
+.copy .note { color: #b1a8bf; font-size: .78rem; }
+.link { display: inline-flex; align-items: center; gap: 16px; color: #c99ae8; font-size: .8rem; margin-top: 24px; }
+@media (max-width: 760px) { .section { padding: 48px 0; } .inner { width: calc(100% - 40px); grid-template-columns: 1fr; gap: 28px; } }
