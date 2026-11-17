@@ -1,0 +1,5 @@
+.icon { display: block; width: 100%; height: 100%; overflow: visible; }
+.icon :where(path, circle, ellipse, rect, line) { vector-effect: non-scaling-stroke; }
+.tone { fill: currentColor; fill-opacity: .07; }
+.detail { opacity: .45; }
+.illustration { stroke-width: 2.2; }
