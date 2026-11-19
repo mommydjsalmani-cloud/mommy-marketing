@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import ArrowIcon from "./components/ArrowIcon";
+import HeroPhoto from "./components/HeroPhoto";
 import AnimatedWords from "./components/motion/AnimatedWords";
 import MotionScope from "./components/motion/MotionScope";
 import { hasMixes } from "./data/mixes";
@@ -10,15 +11,15 @@ export default function Home() {
   return (
     <MotionScope className={styles.home}>
       <section className={styles.hero} aria-labelledby="mommy-title">
-        <div className={styles.heroMedia} data-reveal="fade">
+        <div className={styles.heroMedia}>
           <div className={styles.heroFrame}>
-            <Image src="/mommy-dj-live.webp" alt="Mommy DJ al mixer e ai giradischi durante un DJ set" fill priority unoptimized sizes="(min-width: 1224px) calc(50vw + 23px), (min-width: 900px) calc(52vw - 1px), 100vw" className={styles.heroPhoto} />
+            <HeroPhoto className={styles.heroPhoto} />
           </div>
         </div>
         <div className={styles.heroCopy}>
           <p className={styles.eyebrow}>Mommy DJ · Music entertainment</p>
-          <h1 id="mommy-title" data-reveal="fade">DJ e regia musicale per <span>matrimoni ed eventi privati</span></h1>
-          <p className={styles.heroSummary} data-reveal="fade" data-reveal-delay="80">Curo la musica dall’aperitivo al party finale e mi coordino con chi organizza l’evento.</p>
+          <h1 id="mommy-title">DJ e regia musicale per <span>matrimoni ed eventi privati</span></h1>
+          <p className={styles.heroSummary}>Curo la musica dall’aperitivo al party finale e mi coordino con chi organizza l’evento.</p>
           <div className={styles.actions}>
             <Link href="/contatti#modulo" className={styles.primaryButton}>Chiedi disponibilità <span aria-hidden="true"><ArrowIcon /></span></Link>
             {hasMixes ? (
